@@ -2,14 +2,14 @@
 version: 1
 project:
   id: a71fc7a7-2462-4b73-9ee4-bac2dcbf731c
-  # title:
-  # description:
+  title: EOxHub Workspaces Documentation
+  description: Source of information for use cases, tutorials and examples
   # keywords: []
   # authors: []
   github: https://github.com/eoxhub-workspaces/documentation
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
 site:
   template: book-theme
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+  options:
+    favicon: https://hub-brands.eox.at/eoxhub/favicon.ico
+    logo: https://hub-brands.eox.at/eoxhub/eoxhub.svg
