@@ -31,7 +31,7 @@ The documentation is structured to guide users through a variety of resources
 The platform also provides access to a suite of integrated tools and services,
 such as:
 
-- **PygeoAPI** – For serving geospatial data through standardized OGC APIs.
+- **pygeoapi** – For serving geospatial data and processes through standardized OGC APIs.
 - **Credentials Manager** – To handle access to external and internal resources securely and efficiently.
 - **...and more** – Additional applications and services will be documented here as they become available or are integrated into the platform.
 
