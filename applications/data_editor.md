@@ -5,8 +5,6 @@ It is based on [git-clerk](https://github.com/EOX-A/git-clerk) - Open-Source Con
 
 It enables workspace owners to describe their datasets using simple forms, validate them against JSON schema definitions, and commit them via Git-based sessions.
 
-![data_editor](assets/data_editor.png)
-Data Editor schema validation for a new collection
 
 Data Editor collaborative publishing diagram 1
 ```{mermaid}
@@ -35,3 +33,9 @@ flowchart LR
 
 style K fill:#bbf,stroke:#333,stroke-width:2px
 ```
+
+![data_editor](assets/data_editor.png)
+Data Editor schema validation for a new collection
+
+For a more hands-on tutorial on how to publish insights by exposing data and creating a narrative, see chapter [**Publish Insights**](../use_cases/publish_insights.md)
+[A reference to a header](#targeting-headers).
