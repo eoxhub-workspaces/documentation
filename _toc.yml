@@ -24,7 +24,8 @@ sections:
   - file: tutorials/index
     title: Tutorials
     sections:
-      - file: tutorials/tutorial
+      - file: tutorials/wmts_tutorial
+      - file: tutorials/geojson_tutorial
       - file: tutorials/data_publication
       - file: tutorials/polaris
       - file: tutorials/polar_warp
