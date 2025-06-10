@@ -1,4 +1,4 @@
-# FAQFrequently asked questions
+# Frequently asked questions
 
 
 Q: What is EOxHub Workspaces?

@@ -1,4 +1,4 @@
-# Intergrating WMTS dataset using Data Editor
+# Integrating WMTS dataset using Data Editor
 
 ## Integrating a dataset from the Copernicus Marine Data Store into the eodashboard.org service
 

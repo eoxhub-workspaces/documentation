@@ -33,9 +33,47 @@ flowchart LR
 
 style K fill:#bbf,stroke:#333,stroke-width:2px
 ```
-
-![data_editor](assets/data_editor.png)
 Data Editor schema validation for a new collection
+![data_editor](assets/data_editor.png)
 
-For a more hands-on tutorial on how to publish insights by exposing data and creating a narrative, see chapter [**Publish Insights**](../use_cases/publish_insights.md)
-[A reference to a header](#targeting-headers).
+## Supported data types
+Currently supported data (resource) types are: 
+
+* Raw sources:
+  * COG source
+  * GeoJSON source
+  * FlatGeobuf source
+* SentinelHub
+* SentinelHub WMS
+* GeoDB
+* GeoDB Vector Tile
+* WMS
+* VEDA - Visualization, Exploration, and Data Analysis
+* XCube Server
+* Copernicus Marine Data Store WMTS
+
+
+List of all supported resources is kept up to date on [eodash wiki](https://github.com/eodash/eodash_catalog/wiki/Resource) so please visit this site as well. 
+
+
+
+## Required information
+
+All required fields are marked in the Data Editor. More information about each of the fields is available on the [GitHub wiki page](https://github.com/eodash/eodash_catalog/wiki)
+
+## Overview of the process
+
+Generally for including a supported type of EO collection into a eodash deployed within EOxHub, the steps are summarized as follows:
+
+- Start a new `session` in the Data Editor and create a new collection configuration file.
+- Fill metadata fields split into thematic groups. Mainly filling the [Resource](https://github.com/eodash/eodash_catalog/wiki/Resource) is important to visualize the data on the web map.
+- For raw data and client only rendering (GeoJSON, flatgeobuf or GeoTIFF as direct access), eodash supports an [OpenLayers flatstyle](https://openlayers.org/en/latest/apidoc/module-ol_style_flat.html). More information on styling can be [found here](https://eodash.org/data.html#vector-data).
+- eodash project offers [eodash-style-editor](https://github.com/eodash/eodash-style-editor) for editing the flatstyle definitions with updating the visualization in real time when definition is changed
+- To define interactions for the user (e.g. modify the style within the eodash app), the style can be extended with variables, combined with [JSON Form definition](https://eox-a.github.io/EOxElements/?path=/docs/elements-eox-jsonform--docs).
+- After finishing the updates confirmed by the layer live preview panel and approving of the corresponding Data editing session (GitHub Pull Request), the changes can be merged to production catalog.
+
+
+For a more hands-on tutorial on how to publish insights by exposing data see our tutorials [**Integrating GeoJSON file**](../tutorials/geojson_tutorial.md) and [**Integrating WMTS service**](../tutorials/wmts_tutorial.md)
+
+
+For learning how to include your data in Narrative publication, read section [**Narrative Editor**](../applications/narrative_editor.md) and follow tutorial [**Creating Narrative**](../tutorials/narrative_tutorial.md)

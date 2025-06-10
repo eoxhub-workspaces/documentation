@@ -1,4 +1,4 @@
-# Intergrating GeoJSON dataset using Data Editor
+# Integrating GeoJSON dataset using Data Editor
 
 ## Integrating a dataset from small GeoJSON file into the eodashboard.org service
 
