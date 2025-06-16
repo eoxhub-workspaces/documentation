@@ -4,6 +4,8 @@ EOxHub includes robust data visualization capabilities for both raster and vecto
 
 It exposes a [FastAPI](https://fastapi.tiangolo.com/) based interface, supporting image formats such as PNG and JPEG, and standard interfaces like WMTS.
 
+Future tutorials for eoAPI will become available in the tutorial section once possible
+
 ## Functionality
 
 ### Catalog Your Data

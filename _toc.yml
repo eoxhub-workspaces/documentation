@@ -12,14 +12,14 @@ sections:
   - file: applications/index
     title: Applications
     sections:
-      - file: applications/argo
+      - file: applications/jupyterlab
       - file: applications/conda_store
       - file: applications/data_editor
-      - file: applications/eoapi
-      - file: applications/headless_execution
-      - file: applications/jupyterlab
       - file: applications/narrative_editor
+      - file: applications/argo
+      - file: applications/headless_execution
       - file: applications/secret_manager
+      - file: applications/eoapi
 
   - file: tutorials/index
     title: Tutorials
@@ -34,9 +34,8 @@ sections:
     title: Use Cases
     sections:
       - file: use_cases/algorithm_development
-      - file: use_cases/data_generation
-      - file: use_cases/data_service
-      - file: use_cases/micro_services
+      - file: use_cases/result_generation
+      - file: use_cases/algorithm_as_a_service
       - file: use_cases/publish_insights
 
   - file: Network of Resources/index

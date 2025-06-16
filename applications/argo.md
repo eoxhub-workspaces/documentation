@@ -21,6 +21,8 @@ Argo Workflows also provides detailed logs for all executions, enabling workspac
 ![argo_workflow_single_job](assets/argo_workflow_single_job.png)
 Argo Workflows details of a finished workflow with details of a step
 
+Sample templates will become available in the tutorial section once possible
+
 ## Argo workflow steps
 
 Each workflow includes usually following types of steps:
