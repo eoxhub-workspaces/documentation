@@ -1,10 +1,13 @@
 # Data Editor
 
-Data Editor application, provides a traceable review and approval path of collection configurations before data is published to [eodash](https://eodash.org) STAC catalog.
+The Data Editor application, provides a traceable review and approval path of collection configurations before data is published to the configured STAC catalog. This STAC catalog is used in the [Publishing Dashboard](publishing_dashboard.md) which is based on [eodash](https://eodash.org).
+
 It is based on [git-clerk](https://github.com/EOX-A/git-clerk) - Open-Source Content Management System based on Git workflows with a friendly file-editing GUI.
 
 It enables workspace owners to describe their datasets using simple forms, validate them against JSON schema definitions, and commit them via Git-based sessions.
 
+```{note} Like any other application the Data Editor might not be available in your EOxHub Workspace. Contact your workspace admin to change this.
+```
 
 Data Editor collaborative publishing diagram 1
 ```{mermaid}
@@ -63,7 +66,7 @@ All required fields are marked in the Data Editor. More information about each o
 
 ## Overview of the process
 
-Generally for including a supported type of EO collection into a eodash deployed within EOxHub, the steps are summarized as follows:
+Generally for including a supported type of EO collection into an eodash deployment within EOxHub, the steps are summarized as follows:
 
 - Start a new `session` in the Data Editor and create a new collection configuration file.
 - Fill metadata fields split into thematic groups. Mainly filling the [Resource](https://github.com/eodash/eodash_catalog/wiki/Resource) is important to visualize the data on the web map.
@@ -76,4 +79,4 @@ Generally for including a supported type of EO collection into a eodash deployed
 For a more hands-on tutorial on how to publish insights by exposing data see our tutorials [**Integrating GeoJSON file**](../tutorials/geojson_tutorial.md) and [**Integrating WMTS service**](../tutorials/wmts_tutorial.md)
 
 
-For learning how to include your data in Narrative publication, read section [**Narrative Editor**](../applications/narrative_editor.md) and follow tutorial [**Creating Narrative**](../tutorials/narrative_tutorial.md)
+For learning how to include your data in Narrative publication, read the section [**Narrative Editor**](../applications/narrative_editor.md) and follow the tutorial [**Creating Narrative**](../tutorials/narrative_tutorial.md)

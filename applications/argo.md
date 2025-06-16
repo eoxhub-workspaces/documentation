@@ -9,6 +9,9 @@ A web-based workflow editor is included, offering operators an intuitive interfa
 ![argo_editor](assets/argo_editor.png)
 Argo Workflow Templates input mapping in web editor
 
+```{note} Like any other application Conda Store might not be available in your EOxHub Workspace. Contact your workspace admin to change this.
+```
+
 Applications are published in the platform as Docker images, which can be versioned and reused across different workflows. Argo’s native support for dynamic parameter passing and conditional logic enables the creation of modular pipelines.
 
 In addition to on-demand execution, workflows can be scheduled for automated, repeated execution using cron triggers.

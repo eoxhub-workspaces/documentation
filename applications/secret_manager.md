@@ -1,8 +1,13 @@
-# Secret Manager
+# Secrets Manager
 
-Workspace secrets—such as API tokens, database credentials, or service keys—are securely managed using the **EOxHub Secrets Manager**. This tool ensures sensitive information is not hardcoded in notebooks, workflows, or shared files.
+Workspace secrets—such as API tokens, database credentials, or service keys—are securely managed using the **EOxHub Secrets Manager**. This tool ensures sensitive information is not hard-coded in notebooks, workflows, or shared files.
 
 ![secrets_manager](assets/secrets_manager.png)
+
+---
+
+```{note} Like any other application the Secrets Manager might not be available in your EOxHub Workspace. Contact your workspace admin to change this.
+```
 
 ## Key Features
 

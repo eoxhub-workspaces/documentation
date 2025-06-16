@@ -15,6 +15,7 @@ sections:
       - file: applications/jupyterlab
       - file: applications/conda_store
       - file: applications/data_editor
+      - file: applications/publishing_dashboard.md
       - file: applications/narrative_editor
       - file: applications/argo
       - file: applications/headless_execution
