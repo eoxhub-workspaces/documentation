@@ -1,6 +1,6 @@
 # Getting Started with EOxHub Workspaces
 
-Welcome! This guide will walk you through the basic steps to start using EOxHub Workspaces.
+Welcome! This guide will walk you through the basic steps to start using **EOxHub Workspaces**.
 
 ---
 
