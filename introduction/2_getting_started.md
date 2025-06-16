@@ -6,26 +6,23 @@ Welcome! This guide will walk you through the basic steps to start using EOxHub 
 
 ## Sign Up
 
-To use EOxHub Workspaces, all you need is a internet browser.
+To use EOxHub Workspaces, all you need is an Internet browser.
 
-1. Go to [hub.eox.at](https://hub.eox.at) or navigate to URL of your workspace
-2. Click **Register** button and follow the instructions
-3. Confirm your email address
-4. Wait for confirmation by your workspace manager 
-
-Alternatively, use GitHub directly for registration for connecting your account.
+1. Go to [hub.eox.at](https://hub.eox.at) or navigate to the URL of your workspace
+2. Either click the **Register** button and follow the instructions or use one of the alternative log in methods like GitHub
+3. Confirm your email address following the link sent to you via email
+4. Agree to the terms and conditions
+5. Wait for the confirmation by your workspace manager
 
 ## Log In
 
 After your account has been approved, you can log in anytime.
 
-1. Navigate to URL of your workspace
-2. Use GitHub or email address and password and click **Sign In**
-
+1. Navigate to the URL of your workspace
+2. Either use your email address and password and click **Sign In** or use one of the alternative log in methods like GitHub
 
 ## Navigating the user area
 
-After signing in, you should be able to see user area with tools available to your selected workspace. List of avaialble tools depends on workspace configuration and their respective documentations can be found in second chapter of this documentation. 
+After signing in, you'll see the user area with the tools available to your selected workspace. The list of actually available tools depends on the concrete workspace configuration. Their respective documentations can be found in the second chapter of this documentation.
 
 ![user area](assets/user_area.png)
-
