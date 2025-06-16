@@ -5,7 +5,7 @@ This use case focuses on creating new methods for processing geospatial data. Us
 This phase is particularly relevant for data scientists and researchers aiming to experiment with new techniques, machine learning models, or domain-specific indices. During this phase, the focus is not yet on scale or automation, but on designing something effective and accurate.
 
 🛠 **Workspace tools:**
-- **JupyterLab** offers a flexible development environment with rich visualization, code execution, and data inspection features.
-- **Conda Store** allows you to build custom Python environments with specialized geospatial, ML, or scientific libraries tailored to your project.
+- **[JupyterLab](../applications/jupyterlab.md)** offers a flexible development environment with rich visualization, code execution, and data inspection features.
+- **[Conda Store](../applications/conda_store.md)** allows you to build custom Python environments with specialized geospatial, ML, or scientific libraries tailored to your project.
 
 ---

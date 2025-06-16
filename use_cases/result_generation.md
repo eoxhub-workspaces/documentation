@@ -5,6 +5,6 @@ Once an algorithm has been designed and tested, it can be used to process large 
 Result generation involves configuring the algorithm to run over different input areas or time periods. It can also include tracking job runs, managing outputs, and ensuring reproducibility.
 
 🛠 **Workspace tools:**
-- **Argo Workflows** provide scalable, repeatable execution pipelines.
-- **Headless Execution** lets you run notebooks or workflows without direct user interaction, ideal for scheduled tasks.
-- **Secrets Manager** ensures access to protected resources like cloud buckets or Sentinel Hub is securely handled.
+- **[Argo Workflows](../applications/argo.md)** provide scalable, repeatable execution pipelines.
+- **[Headless Execution](../applications/headless_execution.md)** lets you run notebooks or workflows without direct user interaction, ideal for scheduled tasks.
+- **[Secrets Manager](../applications/secret_manager.md)** ensures access to protected resources like cloud buckets or Sentinel Hub is securely handled.
