@@ -18,10 +18,6 @@ The documentation is structured to guide users through a variety of resources
   Step-by-step guides to help new users get started and experienced users
   explore advanced features.
 
-- **Jupyter Notebook Examples**  
-  Ready-to-run examples showcasing the usage of tools and data within
-  EOxHub Workspaces.
-
 - **Argo Workflow Templates**  
   Templates and patterns to automate and orchestrate your geospatial processing
    pipelines using Argo Workflows.
@@ -31,6 +27,7 @@ The documentation is structured to guide users through a variety of resources
 The platform also provides access to a suite of integrated tools and services,
 such as:
 
+- **Jupyter Lab** – For data access and algorithm development.
 - **pygeoapi** – For serving geospatial data and processes through standardized OGC APIs.
 - **Credentials Manager** – To handle access to external and internal resources securely and efficiently.
 - **...and more** – Additional applications and services will be documented here as they become available or are integrated into the platform.

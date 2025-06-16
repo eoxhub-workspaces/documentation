@@ -26,6 +26,7 @@ sections:
     sections:
       - file: tutorials/wmts_tutorial
       - file: tutorials/geojson_tutorial
+      - file: tutorials/narrative_editor
       - file: tutorials/polaris
       - file: tutorials/polar_warp
 
