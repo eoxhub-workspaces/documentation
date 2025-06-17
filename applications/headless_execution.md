@@ -2,9 +2,14 @@
 
 # Headless Execution in EDC
 
-The **Headless Execution** feature in EOxHub workspaces enables automated execution of Jupyter notebooks and Argo Workflows directly from the eodash dashboard or programmatically via API endpoints. It is designed for streamlined, reproducible, and user-friendly processing of Earth Observation tasks and workflows.
+The **Headless Execution** feature in EOxHub Workspaces enables automated execution of Jupyter notebooks and Argo Workflows directly from the eodash dashboard or programmatically via API endpoints. It is designed for streamlined, reproducible, and user-friendly processing of Earth Observation tasks and workflows.
 
 ![headless_execution](assets/pygeoapi.png)
+
+---
+
+```{note} Like any other application the Headless Execution might not be available in your EOxHub Workspace. Contact your workspace admin to change this.
+```
 
 ---
 

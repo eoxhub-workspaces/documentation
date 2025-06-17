@@ -2,9 +2,12 @@
 
 The **Narrative Editor** is a collaborative, Git-based content editor for creating and publishing structured, markdown-driven narratives enriched with Earth Observation (EO) content. This documentation provides an overview of its architecture, key features, and user-facing functionality.
 
+```{note} Like any other application the Narrative Editor might not be available in your EOxHub Workspace. Contact your workspace admin to change this.
+```
+
 ## Overview
 
-Narrative Editor is based on [storytelling EOXElement](https://eox-a.github.io/EOxElements/?path=/story/elements-eox-storytelling--markdown-with-editor) and contains a preview renderer using markdown format with additional frontmatter definitions as a data source.
+The Narrative Editor is based on the [storytelling EOXElement](https://eox-a.github.io/EOxElements/?path=/story/elements-eox-storytelling--markdown-with-editor) and contains a preview renderer using markdown format with additional frontmatter definitions as a data source.
 
 It integrates:
 
@@ -12,8 +15,6 @@ It integrates:
 - Scrollytelling and paginated rendering of narratives
 - Live preview for story validation
 - Support for interactive map tours
-
-The editor is part of the EOxHub Workspaces and requires this feature to have enabled. 
 
 --- 
 ## Key Features
@@ -60,7 +61,7 @@ This guide explains:
 
 ## GIT based flow
 
-Narrative Editor application provides collaborative editting, review and approval system for narratives before being published in the corresponding repository. It is based on [git-clerk](https://github.com/EOX-A/git-clerk) - Open-Source Content Management System based on Git workflows with a friendly file-editing GUI.
+Narrative Editor application provides collaborative editing, review and approval system for narratives before being published in the corresponding repository. It is based on [git-clerk](https://github.com/EOX-A/git-clerk) - Open-Source Content Management System based on Git workflows with a friendly file-editing GUI.
 
 The Markdown file is organized into story blocks and, if needed, further divided into individual steps within each section. Rendered stories can be displayed in either a paginated format or a scrollytelling mode.
 
