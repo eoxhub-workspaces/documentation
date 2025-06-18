@@ -13,3 +13,7 @@ site:
   options:
     favicon: https://hub-brands.eox.at/eoxhub/favicon.ico
     logo: https://hub-brands.eox.at/eoxhub/eoxhub.svg
+    logo_text: Documentation
+  actions:
+    - title: EOxHub Workspaces
+      url: https://hub.eox.at
