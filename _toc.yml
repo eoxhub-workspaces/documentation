@@ -18,6 +18,8 @@ sections:
       - file: applications/publishing_dashboard.md
       - file: applications/narrative_editor
       - file: applications/argo
+        sections:
+          - file: applications/capability_integration
       - file: applications/headless_execution
       - file: applications/secret_manager
       - file: applications/eoapi
