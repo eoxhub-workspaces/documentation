@@ -1,10 +1,10 @@
 # Integration Requirements for Argo Workflows on EOxHub
 
-This document outlines the minimum requirements for integrating a new process into the Argo Workflow system on EOxHub. This includes input definitions, expected Docker image standards, and output formats.
+This document is intended as support material to describe how to best provide a capability implementation and its description in order to allow EOX to integrate it as a workflow inside of an EOxHub Workspace. This includes input definitions, expected Docker image standards, and output formats.
 
 ## Input Requirements
 
-If your service should be integrated into the eodash processing widget docker input fields must correspond to our supported options. Beside this we expect to get information regarding:
+To ensure compatibility with various interfaces (e.g. OGC Process API) to allow on demand execution of the capability some input requirements need to be considered. Furthermore information providing more context is needed regarding following points:
 
 - Description of expected input data - does the service expect data already present or data are downloaded as part of the dockerized algorithm?
 - Description of expected argument and parameters
@@ -15,18 +15,27 @@ If your service should be integrated into the eodash processing widget docker in
 
 eodash processing widget support multiple ways how to pass input. 
 - Area/location - process can take as input drawn point or polygon from the eodash user interface. For this integration, input field must accept eather coorinates directly or geoJSON as a string. File input is not accepted. 
-- Date - standard date formats are supported. eodash also supports start and end time to create range.
+    - Example GeoJSON Feature String '{"type":"Feature","geometry":{"type":"Polygon" "coordinates":[[[30,10],[40,40],[20,40],[10,20],[30,10]]]},"properties":{}}'
+- Date - standard HTML Format date formats are supported. eodash also supports start and end time to create range. 
+    - "YYYY-MM-DD" e.g. 2015-05-30 for date.
+    - "YYYY-MM-DDThh:mm" for datetime 2025-07-02T06:33 
 - Numeric fields - integer or float values
 - Text fields
 - Dropdowns with limited options
   
-  
+
 All fields can have default value
 
 
 ## Docker Image Requirements
 
-Your process must be encapsulated in a Docker image without the strict limitations. It is helpful if the image is "slim" - only with required dependencies installed.
+Your process must be encapsulated in a Docker image. There are no strict limitations of what can be done, but there are good practices that help integration:
+
+- image is "slim" - only with required dependencies installed
+- image is tagged with version based on [semantic versioning](https://semver.org/)
+- algorithm logs to standard out (stdout) helping debug potential issues
+- simpler if no sideloading/sidecars (docker in docker) and similar
+- no special volumes, network expectations, ...
 
 We expect to know resource usage estimation - RAM consumption and CPU estimates.
 
