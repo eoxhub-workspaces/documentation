@@ -1,7 +1,7 @@
 # Publishing Dashboard
 
 
-The Publishing Dashboard is based on **[eodash](https://eodash.org/)** and **[vitepress](https://vitepress.dev/)**, it is a web client instance connected to the information managed in the [Data Editor](data_editor.md) as well as the [Narrative Editor](narrative_editor.md).
+The Publishing Dashboard is based on **[eodash](https://eodash.org/)**, **[EOxElements](https://eox-a.github.io/EOxElements/)** and **[vitepress](https://vitepress.dev/)**, it is a web client instance connected to the information managed in the [Data Editor](data_editor.md) as well as the [Narrative Editor](narrative_editor.md).
 
 Usually the Publishing Dashboard is configured for public access, as it is intended to proliferate information to a larger audience.
 If the intent is to provide data access to a managed user circle it is also possible to instantiate the Publishing Dashboard within the EOxHub Workspace allowing only selected users access to the content. Multiple instances can be managed for different user groups within one workspace.
