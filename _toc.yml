@@ -19,7 +19,7 @@ sections:
       - file: applications/narrative_editor
       - file: applications/argo
         sections:
-          - file: applications/capability_integration
+          - file: applications/argo/capability_integration
       - file: applications/headless_execution
       - file: applications/secret_manager
       - file: applications/eoapi
@@ -41,7 +41,7 @@ sections:
       - file: use_cases/algorithm_as_a_service
       - file: use_cases/publish_insights
 
-  - file: Network of Resources/index
+  - file: network_of_resources/index
     title: Network of Resources
     sections:
-      - file: Network of Resources/nor
+      - file: network_of_resources/nor
