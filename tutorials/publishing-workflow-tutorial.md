@@ -34,8 +34,9 @@ Example URL structure:
 https://workspace-ui-public.<instance>.hub.eox.at/api/public/share/public/<filename>.tif
 ```
 The exact url as well as a short description is provided within the README.txt inside the public folder of your workspace.
+Presigned URLs generated from the File Browser are **temporary** and should not be used in the Dashboard configuration. Always use the permanent public URL.
 
-> ⚠️ Presigned URLs generated from the File Browser are **temporary** and should not be used in the Dashboard configuration. Always use the permanent public URL.
+> ⚠️ Upload through the browser to the workspace storage has some size limitations, files over ~100 MB should be uploaded differently.
 
 ---
 
