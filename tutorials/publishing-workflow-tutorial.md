@@ -23,10 +23,7 @@ The tutorial covers:
 ## 1. Uploading Data with the File Browser
 
 The [**File Browser**](file-browser) is the entry point for adding data to a workspace.  
-You can upload files (COG, GeoJSON, style files, preview images, etc.) directly in the browser.
-
-- Files in the **`public` folder** are openly accessible and can be integrated into the Dashboard.  
-- Each instance (where available) provides permanent **public URLs** for assets.
+You can upload files (Tiff (Cloud Optimized Geotiff - COG), GeoJSON, style files, preview images, etc.) directly in the browser.
 
 Example URL structure:
 
@@ -37,6 +34,26 @@ The exact url as well as a short description is provided within the README.txt i
 Presigned URLs generated from the File Browser are **temporary** and should not be used in the Dashboard configuration. Always use the permanent public URL.
 
 > ⚠️ Upload through the browser to the workspace storage has some size limitations, files over ~100 MB should be uploaded differently.
+
+### Raw Data formats
+
+* Raster Data:
+  - Use Cloud-Optimized GeoTIFF (COG)
+    - Ideally in EPSG:3857 projection for best support performance
+    - Other projections should also work but have a performance penalty when being visualized
+  - Can be a single file or a time series (multiple files).
+  - Ideally encode the date and time in the filename using ISO format: YYYY-MM-DDTHH:MM:SS.
+  - Bands:
+    - RGB bands (already prepared as final visualization), or
+    - Data bands in which case a style will be needed (see section 3.)
+* Vector Data:
+  - Use GeoJSON if the file size is under ~10 MB, or FlatGeobuf for larger datasets
+    - Even larger datasets should be handled differently, will need dedicated tile server
+  - Will need a style definition as described in section 3.
+
+- Files in the **`public` folder** are openly accessible and can be integrated into the Dashboard.  
+- Each instance (where available) provides permanent **public URLs** for assets.
+
 
 ---
 
