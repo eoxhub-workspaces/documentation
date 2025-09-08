@@ -54,6 +54,7 @@ Presigned URLs generated from the File Browser are **temporary** and should not 
 - Files in the **`public` folder** are openly accessible and can be integrated into the Dashboard.  
 - Each instance (where available) provides permanent **public URLs** for assets.
 
+Additional information on resource properties, such as raw data source can be found in the eodash_catalog wiki for [Resource](https://github.com/eodash/eodash_catalog/wiki/Resource).
 
 ---
 
@@ -200,6 +201,8 @@ You have two main options:
 - Combine them under one Indicator definition.  
 - Update the `catalog.json` to reference the new indicator.
 
+It is possible to use the "Browse Files" button in the Data Editor to find and modify most text based files. As alternative the changes can be made directly into the github repository if that is considered an easier alternative.
+
 Example indicator (simplified):
 
 ```json
@@ -209,12 +212,33 @@ Example indicator (simplified):
 }
 ```
 
-### Option B: Multiple Bands in One Asset
+### Option B: Multiple Assets for one Time Entry
 If both datasets share the same spatial/temporal extent:
-- Add them as separate bands in one asset.  
-- Access via `["band", 1]`, `["band", 2]` in your style.
+- Add multiple assets inside one time entry  
+- Access via `["band", 1]`, `["band", 2]` in your style
 
 This allows very interesting dynamic band arithmetic and filtering options combining datasets.
+
+Example json structure:
+```json
+"TimeEntries": [
+  {
+    "Time": "20250101",
+    "Assets": [
+      // equivalent to ["band", 1]
+      {
+        "Identifier": "temperature",
+        "File": "https://workspace-ui-public.gtif-austria.hub-otc.eox.at/api/public/temperature2025.tiff"
+      },
+      // equivalent to ["band", 2]
+      {
+        "Identifier": "humidity",
+        "File": "https://workspace-ui-public.gtif-austria.hub-otc.eox.at/api/public/humidity2025.tiff"
+      }
+    ]
+  }
+]
+```
 
 ---
 
@@ -250,6 +274,7 @@ Workflow:
 - **Wrong colors displayed** → Check style file URL, alpha values, and cache refresh.  
 - **Preview image not visible** → Ensure correct full URL, not a relative path.   
 - **Legend missing** → Make sure one of the 3 options described is used.  
+- **For any workspace external sources** → Externally hosted resources often cannot be directly integrated into another web client unless the server hosting the resource sets the proper cross-origin (CORS) headers in its responses. You can verify this using online tools such as https://cors-test.codehappy.dev/ (not affiliated with this service—use at your own discretion).
 
 ---
 
