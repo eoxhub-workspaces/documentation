@@ -14,6 +14,7 @@ sections:
     sections:
       - file: applications/jupyterlab
       - file: applications/conda_store
+      - file: applications/file_browser
       - file: applications/data_editor
       - file: applications/publishing_dashboard.md
       - file: applications/narrative_editor
@@ -27,6 +28,7 @@ sections:
   - file: tutorials/index
     title: Tutorials
     sections:
+      - file: tutorials/publishing-workflow-tutorial
       - file: tutorials/wmts_tutorial
       - file: tutorials/geojson_tutorial
       - file: tutorials/narrative_editor
