@@ -6,7 +6,7 @@ A: EOxHub Workspaces is a cloud-based environment for exploring, analyzing, and 
 
 ## Q: Who can use EOxHub Workspaces?
 
-A: Anyone with an internet connection! It's designed for scientists, developers, educators, and anyone interested in working with EO data.
+A: Everyone with an internet connection! It's designed for scientists, developers, educators, and anyone interested in working with EO data.
 
 ## Q: Do I need to install anything?
 
