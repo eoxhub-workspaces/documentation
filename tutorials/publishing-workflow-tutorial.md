@@ -8,34 +8,45 @@ For more information on the dedicated Applications, please further explore this 
 The Publishing of data in the Dashboard is only available for workspaces that have added the paid option **Dashboard as a Service (DaaS)**
 ```
 
-The tutorial covers:
+## Prerequisites
 
-- Uploading data with the File Browser  
-- Creating and configuring datasets in the Data Editor  
-- Using Cloud-Optimized GeoTIFF (COG) sources  
-- Defining styles (color scales, legends, no-data handling)  
-- Combining multiple datasets into one indicator  
-- Adding previews and legends   
-- Publishing datasets to the Dashboard  
+In order to submit a data publishing request for raw resource, i.e. a data format that can directly be visualized by the dashboard (Cloud optimized GeoTIFF (COG), GeoJSON, FlatgeoBuf) you need following things:
+
+1. **Have a geo file that is accessible through public URL**
+2. **Have a style definition file that is accessible through public URL**
+
+The tutorial covers how to achieve the prerequisites within an EOxHub Workspace environment and various other aspects of the Data Publishing submission:
+
+- Uploading data with the File Browser
+- Defining style (color scales, legends, no-data handling)
+- Creating and configuring datasets in the Data Editor
+  - Using Cloud-Optimized GeoTIFF (COG) sources
+  - Combining multiple datasets into one indicator
+  - Adding previews and legends
 
 ---
 
 ## 1. Uploading Data with the File Browser
 
-The [**File Browser**](file-browser) is the entry point for adding data to a workspace.  
+For the first prerequisite (publicly available geo-file) it is possible to use the File browser application. The [**File Browser**](file-browser) allows adding data to a workspace.
+
+A special public folder is available where you can upload the files which are expected to be published.
 You can upload files (Tiff (Cloud Optimized Geotiff - COG), GeoJSON, style files, preview images, etc.) directly in the browser.
 
-Example URL structure:
+Once a file is uploaded it can be accessed through a special URL, similar to following:
 
 ```text
 https://workspace-ui-public.<instance>.hub.eox.at/api/public/share/public/<filename>.tif
 ```
+
 The exact url as well as a short description is provided within the README.txt inside the public folder of your workspace.
 Presigned URLs generated from the File Browser are **temporary** and should not be used in the Dashboard configuration. Always use the permanent public URL.
 
 > ⚠️ Upload through the browser to the workspace storage has some size limitations, files over ~100 MB should be uploaded differently.
 
 ### Raw Data formats
+
+Here is more information on the supported formats:
 
 * Raster Data:
   - Use Cloud-Optimized GeoTIFF (COG)
@@ -58,44 +69,15 @@ Additional information on resource properties, such as raw data source can be fo
 
 ---
 
-## 2. Creating a Dataset in the Data Editor
+## 2. Style Definition
 
-Once your files are uploaded, you need to register them in the **Data Editor**.
+COGs with numeric values (e.g., temperature) as well as vector data (GeoJSON, FlatGeobuf) require a style definition so that it is clear how they should be visualized.
 
-The basic steps are:
+This section covers handling the second pre-requisite, creating and making the style available online.
 
-1. Go to **Data Editor → Create Session**.  
-2. Add a new **Collection**:
-   - Under **Resources**, select *Cloud Optimized Geotiff (COG) Source*.  
-   - Add an URL to a style definition (see next step for further information)
-   - Add at least one item to the  Time entries  
-   - Add an Asset to the item
-   - Set the public URL to your public file (e.g. uploaded file as described above)
+### Style creation
 
-Example entry for a COG resource:
-
-```json
-{
-  "time": "2019-06-27T00:00:00Z",
-  "assets": {
-    "file": "https://workspace-ui-public.example.hub.eox.at/api/public/share/public/example.tif"
-  }
-}
-```
-
-More detailed guides are available for multiple scenarios:
-
-* [Integrating GeoJSON dataset using Data Editor](geojson_tutorial)
-* [Integrating WMTS dataset using Data Editor](wmts_tutorial)
-
----
-
-## 3. Defining Styles
-
-COGs with numeric values (e.g., temperature) require a style definition.  
 The style is based on [OpenLayers expressions](https://openlayers.org/en/latest/apidoc/module-ol_expr_expression.html#~ExpressionValue) using [OpenLayers flat style](https://openlayers.org/en/latest/apidoc/module-ol_style_flat.html) definition.
-
-Currently the json file needs to be made available on a publicly accessible location, you can use the public folder of your workspace, or if you would like to use change tracking (style files can become intricate depending on the use case) you could use a service like github.com. If you do you github, make sure to use the **raw** link to the file (by clicking on the "Raw" button and copying the opened URL).
 
 Further information on styling in the eodash client can be found in the [eodash documentation](https://eodash.org/data.html).
 
@@ -127,6 +109,48 @@ Example: Temperature color scale with no-data handling:
 - `"interpolate"` = smooth gradient between values.  
 
 > ❌ JSON does not support comments (`// ...`). Make sure to not use them in the definition or parsing will fail.
+
+### Style online deployment
+
+There are multiple ways of making the style available online, within the workspace you can upload the created json file to the public folder using the File Browser.
+
+Style files can become intricate depending on the use case or done as collaboration activity so it might be beneficial to use some change tracking tools. For example a service like github.com could be used. When using github, make sure to use the **raw** link to the file (by clicking on the "Raw" button and copying the opened URL) if you want to use it as URL in the Data publishing form.
+
+## 3. Submitting a data publishing request
+
+Once your files are uploaded, you need to register them in the **Data Editor**.
+
+The basic steps are:
+
+1. Go to **Data Editor → Start New Session**.  
+2. Automation → Create Dataset Submission:
+  - Enter Data Title and click Submit
+3. Inside opened form:
+  - Make sure identifier has no special characters or white spaces
+  - Under **Resources**, click on the plus (+) sign
+  - Under item 1 select *Cloud Optimized Geotiff (COG) Source*.  
+  - Add to the Style field the URL to a style definition (prerequisite 2 - as described in section 2 previously)
+  - Draw a bounding box dashboard should zoom to when dataset selected (click → move mouse → click again to define rectangle)
+  - Click plus (+) TimeEntries
+  - Write a Time string in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format, e.g. YYYY-MM-DD or just year YYYY
+  - Click on the plus (+) sign of the Assets field
+  - Add an identifier string, e.g. data
+  - Paste the URL to your public file into the File field (prerequisite 1 - as described in section 1 previously)
+
+Example entry for a COG resource:
+
+```json
+{
+  "time": "2019-06-27T00:00:00Z",
+  "assets": {
+    "file": "https://workspace-ui-public.example.hub.eox.at/api/public/share/public/example.tif"
+  }
+}
+```
+
+This is intended as short summary, for more detailed guide with screenshots please look at [Integrating GeoJSON dataset using Data Editor](geojson_tutorial), where the shown steps are applicable to all raw resource submissions.
+
+---
 
 ### Adding a Legend
 
@@ -192,11 +216,11 @@ If the legend needs to be completely custom it is possible to use an image. The 
 
 ---
 
-## 4. Combining Multiple Datasets
+### Combining Multiple Datasets
 
-You have two main options:
+If multiple datasets should be shown together in the dashboard, there are mainly two options:
 
-### Option A: Collections under one Indicator
+#### Option A: Collections under one Indicator
 - Create two Collections (e.g., temperature, cooling degree days).  
 - Combine them under one Indicator definition.  
 - Update the `catalog.json` to reference the new indicator.
@@ -212,7 +236,7 @@ Example indicator (simplified):
 }
 ```
 
-### Option B: Multiple Assets for one Time Entry
+#### Option B: Multiple Assets for one Time Entry
 If both datasets share the same spatial/temporal extent:
 - Add multiple assets inside one time entry  
 - Access via `["band", 1]`, `["band", 2]` in your style
@@ -242,7 +266,7 @@ Example json structure:
 
 ---
 
-## 5. Adding a Preview Image
+### Adding a Preview Image
 
 You can add a preview image under **General → Image**. For hosting the image you can use for example the File Browser to upload it to the public folder.
 
