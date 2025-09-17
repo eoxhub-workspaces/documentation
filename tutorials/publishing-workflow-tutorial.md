@@ -112,9 +112,11 @@ Example: Temperature color scale with no-data handling:
 
 ### Style online deployment
 
-There are multiple ways of making the style available online, within the workspace you can upload the created json file to the public folder using the File Browser.
+Using the same logic as making the cloud optimized file available online, we can use the File Browser to upload or directly create the style json file to a location within the public folder.
+If you want to create the style and copy the style configuration content from the style editor, you can click on "New file" 📄, name it for example style.json, and in the opened editor paste your configuration. Make sure to click on save button 💾 once done.
+Then you can use the public endpoint as explained previously.
 
-Style files can become intricate depending on the use case or done as collaboration activity so it might be beneficial to use some change tracking tools. For example a service like github.com could be used. When using github, make sure to use the **raw** link to the file (by clicking on the "Raw" button and copying the opened URL) if you want to use it as URL in the Data publishing form.
+There are of course other ways of making a file public, many services exist especially for a json format. Style files can become intricate depending on the use case or done as collaboration activity so it might be beneficial to use a service that provides change tracking.
 
 ## 3. Submitting a data publishing request
 
