@@ -79,7 +79,7 @@ This section covers handling the second pre-requisite, creating and making the s
 
 The style is based on [OpenLayers expressions](https://openlayers.org/en/latest/apidoc/module-ol_expr_expression.html#~ExpressionValue) using [OpenLayers flat style](https://openlayers.org/en/latest/apidoc/module-ol_style_flat.html) definition.
 
-Further information on styling in the eodash client can be found in the [eodash documentation](https://eodash.org/data.html).
+Further information on styling in the eodash client can be found in the [eodash documentation](https://eodash.org/styling.html).
 
 An experimental client to help quicker iterate in the style definition is available under https://eodash.github.io/eodash-style-editor/. There you can set a URL for your dataset and work on the style definition live. Please take into account this is not a fully functioning experimental helper tool. A more streamlined integration is envisioned and the deployment of the current tool will probably change.
 
