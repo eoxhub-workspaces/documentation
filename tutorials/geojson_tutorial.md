@@ -126,7 +126,7 @@
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-09/3d50f4b2-dd98-4013-a65e-7108c0c2587e/ascreenshot.jpeg?tl_px=0,226&br_px=1301,953&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=322,277)
 
 \
-28\. Add the url of a json eodash (open layer flat style) style file, see also <https://openlayers.org/en/latest/apidoc/module-ol_style_flat.html> for more information.
+28\. Add the url of pre-created eodash JSON style file, see also <https://eodash.org/styling.html> for more information.
 
 (Dedicated tutorial on style definition being worked on)
 
