@@ -25,6 +25,6 @@ After your account has been approved, you can log in anytime.
 
 ## Navigating the user area
 
-After signing in, you'll see the user area with the tools available to your selected workspace. The list of actually available tools depends on the concrete workspace configuration. Their respective documentations can be found in the [second chapter of this documentation](https://documentation.hub.eox.at/jupyterlab/).
+After signing in, you'll see the user area with the tools available to your selected workspace. The list of actually available tools depends on the concrete workspace configuration. Their respective documentations can be found in the [second chapter of this documentation](../applications/jupyterlab.md).
 
 ![user area](assets/user_area.png)
