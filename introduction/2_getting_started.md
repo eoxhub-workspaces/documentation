@@ -14,6 +14,8 @@ To use EOxHub Workspaces, all you need is an Internet browser.
 4. Agree to the terms and conditions
 5. Wait for the confirmation by your workspace manager
 
+For more detailed instructions, including screenshots, see our tutorial [**How to create an account in EOxHub workspaces**](../tutorials/creating_account.md).
+
 ## Log In
 
 After your account has been approved, you can log in anytime.
@@ -23,6 +25,6 @@ After your account has been approved, you can log in anytime.
 
 ## Navigating the user area
 
-After signing in, you'll see the user area with the tools available to your selected workspace. The list of actually available tools depends on the concrete workspace configuration. Their respective documentations can be found in the second chapter of this documentation.
+After signing in, you'll see the user area with the tools available to your selected workspace. The list of actually available tools depends on the concrete workspace configuration. Their respective documentations can be found in the [second chapter of this documentation](../applications/jupyterlab.md).
 
 ![user area](assets/user_area.png)
