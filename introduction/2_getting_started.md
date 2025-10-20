@@ -14,7 +14,7 @@ To use EOxHub Workspaces, all you need is an Internet browser.
 4. Agree to the terms and conditions
 5. Wait for the confirmation by your workspace manager
 
-For more detailed instructions, including screenshots, see our tutorial[**How to create an account in EOxHub workspaces**](../tutorials/creating_account.md).
+For more detailed instructions, including screenshots, see our tutorial [**How to create an account in EOxHub workspaces**](../tutorials/creating_account.md).
 
 ## Log In
 
