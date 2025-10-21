@@ -28,7 +28,7 @@ Sample templates will become available in the tutorial section once possible
 
 ## Capability requirements for integration
 
-Docker image/capability requirements for integration are described on the [**separate page**](capability_integration.md)
+Docker image/capability requirements for integration are described on the [**separate page**](argo/capability_integration.md)
 
 ## Argo workflow steps
 
