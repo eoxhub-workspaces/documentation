@@ -2,8 +2,7 @@
 
 The **Narrative Editor** is a content editor for creating and publishing structured narratives combined with Earth Observation (EO) content. This documentation provides an overview of its architecture, key features and functionality.
 
-```{note} Like any other application the Narrative Editor might not be available in your EOxHub Workspace. Contact your workspace admin to change this.
-```
+```{note} Like any other application the Narrative Editor might not be available in your EOxHub Workspace. Contact your workspace admin to change this.```
 
 ## Overview
 
@@ -30,7 +29,7 @@ It integrates:
 - Supports both paginated and scroll-style rendering
 
 ### Map Integration
-- Supports all `eox-maps`
+- Supports all EOx maps
 - Polished experience through seamless transitions and animations between map tour steps
 
 ---
