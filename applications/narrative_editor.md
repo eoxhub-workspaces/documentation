@@ -31,6 +31,7 @@ It integrates:
 ### Map Integration
 - Supports `eox-map` [EOxElement blocks](https://eox-a.github.io/EOxElements/?path=/docs/elements-eox-map--docs)
 - Polished experience through seamless transitions and animations between map tour steps
+- Compatible with [EO Dashboard scrollytelling configuration](https://eodash.org/storytelling.html)
 
 ---
 
