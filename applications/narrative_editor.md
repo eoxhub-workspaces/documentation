@@ -29,7 +29,7 @@ It integrates:
 - Supports both paginated and scroll-style rendering
 
 ### Map Integration
-- Supports all EOx maps
+- Supports  [`eox-map` blocks](https://eox-a.github.io/EOxElements/?path=/docs/elements-eox-map--docs)
 - Polished experience through seamless transitions and animations between map tour steps
 
 ---
