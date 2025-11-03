@@ -63,7 +63,7 @@ A [demo story](https://eox-a.github.io/EOxElements/?path=/story/elements-eox-sto
 A notable feature is the built-in integration with the eox-map element (https://eox-a.github.io/EOxElements/?path=/docs/elements-eox-map--docs), which allows for interactive map tours that smoothly transition between different areas or layers as users scroll through the story.
 
 NEEDS NEW PICTURE
-![narrative_editor](assets/narrative_editor.png)
+![narrative_editor](assets/narrative_editor_screenshot.jpg)
 Narrative Editor interface
 
 ---
