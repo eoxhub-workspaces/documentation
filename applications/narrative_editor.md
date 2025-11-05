@@ -49,7 +49,7 @@ It integrates:
 ## Reference Tutorial
 
 For detailed, visual step-by-step user instructions, please refer to:
-➡️ [An introduciton to the Narrative Editor](https://scribehow.com/viewer/An_introduction_to_the_Narrative_Editor__dqQxKdApQ-uZv5YOkmgCYQ)
+➡️ [An introduction to the Narrative Editor](https://scribehow.com/viewer/An_introduction_to_the_Narrative_Editor__dqQxKdApQ-uZv5YOkmgCYQ)
 
 ---
 
