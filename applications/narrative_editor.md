@@ -6,13 +6,12 @@ The **Narrative Editor** is a content editor for creating and publishing structu
 ```
 
 ## Overview
-
-The Narrative Editor is based on the [storytelling EOXElement](https://eox-a.github.io/EOxElements/?path=/story/elements-eox-storytelling--markdown-with-editor) and includes a preview renderer that uses Markdown format with additional frontmatter definitions as a data source.
+The Narrative Editor is based on the [storytelling EOXElement](https://eox-a.github.io/EOxElements/?path=/story/elements-eox-storytelling--markdown-with-editor) and includes a preview renderer that uses Markdown text along with additional metadata (frontmatter) to define story settings and structure.
 
 It integrates:
 
-* A Git-based workflow using [git-clerk](https://github.com/EOX-A/git-clerk) for content versioning and collaboration
-* Scrollytelling and paginated rendering of narratives
+* A Git-based workflow using git-clerk for content versioning and collaboration
+* Scrollytelling and paginated rendering of narratives — where content can be presented either as a continuous scrolling story or divided into discrete pages or sections for a step-by-step reading experience
 * Live preview for story validation
 * Support for interactive map tours
 
