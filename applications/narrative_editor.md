@@ -4,6 +4,7 @@ The **Narrative Editor** is a content editor for creating and publishing structu
 
 ```{note}
 Like any other application, the Narrative Editor might not be available in your EOxHub Workspace. Contact your workspace administrator to enable it.
+
 ```
 
 ## Overview
