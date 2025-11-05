@@ -12,7 +12,7 @@ The Narrative Editor is based on the [storytelling EOXElement](https://eox-a.git
 
 It integrates:
 
-* A Git-based workflow using [git-clerk](https://github.com/eoxgit/git-clerk) for content versioning and collaboration
+* A Git-based workflow using [git-clerk](https://github.com/EOX-A/git-clerk) for content versioning and collaboration
 * Scrollytelling and paginated rendering of narratives
 * Live preview for story validation
 * Support for interactive map tours
