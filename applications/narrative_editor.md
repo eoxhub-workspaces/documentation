@@ -22,7 +22,7 @@ It integrates:
 
 ### Git-Based Editing
 - Users connect their EOxHub account to GitHub
-- Editing an existing narrative, creats forks/branches
+- Editing an existing narrative, creates forks/branches
 - Users can request their work to be reviewed through pull requests in GitHub
 
 ### Story Rendering
@@ -49,7 +49,7 @@ It integrates:
 ## Reference Tutorial
 
 For detailed, visual step-by-step user instructions, please refer to:
-➡️ [Creating a Narrative in the EOxHub Workspace (Scribe Tutorial)](https://scribehow.com/shared/Creating_a_Narrative_in_the_EOxHub_Workspace__OdlaaI1XRteoURL6uyIIqg)
+➡️ [An introduciton to the Narrative Editor](https://scribehow.com/viewer/An_introduction_to_the_Narrative_Editor__dqQxKdApQ-uZv5YOkmgCYQ)
 
 ---
 
