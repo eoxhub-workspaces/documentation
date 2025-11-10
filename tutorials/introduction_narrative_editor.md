@@ -2,7 +2,7 @@
 
 
 
-1\. Navigate to your EOxHub workspace, for example <https://gtif-austria.info/> and log into your account. If you need help doing so, or do not yet own an account, follow the link to find the tutorial covering how to create one: 'link needed'
+1\. Navigate to your EOxHub workspace, for example <https://gtif-austria.info/> and log into your account. If you need help doing so, or do not yet own an account, follow the link to find the tutorial covering how to create one: [How to create an account in EOxHub workspaces](../tutorials/creating_account.md)
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-28/00a01129-0c30-47b0-8ae1-a62f32920c01/user_cropped_screenshot.webp?tl_px=0,1&br_px=2087,1282&force_format=jpeg&q=100&width=1120.0)
 
