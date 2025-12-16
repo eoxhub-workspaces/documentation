@@ -1,6 +1,6 @@
 # Data Editor
 
-The Data Editor lets users review and approve dataset configurations in a clear, traceable way before the data is published to a STAC catalog. This STAC catalog is then used by the [Publishing Dashboard](publishing_dashboard.md), which is built on [eodash](https://eodash.org).
+The Data Editor lets users review and approve collection configurations in a clear, traceable way before the data is published to a STAC catalog. This STAC catalog is then used by the [Publishing Dashboard](publishing_dashboard.md), which is built on [eodash](https://eodash.org).
 
 The Data Editor is built on [git-clerk](https://github.com/EOX-A/git-clerk), an open-source content management system that uses Git workflows and provides an easy-to-use file-editing interface.
 
@@ -70,7 +70,7 @@ All required fields are marked in the Data Editor. More information about each o
 ## Overview of the process
 
 To add a supported Earth Observation (EO) dataset to an eodash deployment within EOxHub, the process typically follows these steps:
-* Create a new editing session in the Data Editor and add a new dataset definition file.
+* Create a new editing session in the Data Editor and create a new collection configuration file.
 * Complete the metadata fields, which are organized into thematic sections. In particular, the [Resource](https://github.com/eodash/eodash_catalog/wiki/Resource) section is essential, as it defines how the data is visualized on the web map.
 * For raw data or client-side rendering (such as GeoJSON, FlatGeobuf, or GeoTIFF accessed directly), eodash supports styling using [OpenLayers flat styles](https://openlayers.org/en/latest/apidoc/module-ol_style_flat.html). More details on styling options can be found in the documentation.
 * The eodash project provides the [eodash Style Editor](https://github.com/eodash/eodash-style-editor), which allows you to edit flat style definitions and see visualization updates in real time.
