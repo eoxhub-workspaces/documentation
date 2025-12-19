@@ -63,10 +63,17 @@ Markdown files are organized into story blocks and, when needed, further divided
 
 A [demo story](https://eox-a.github.io/EOxElements/?path=/story/elements-eox-storytelling--markdown-with-editor) demonstrates most of the current functionality.
 
-A notable feature is the built-in integration with the [eox-map element](https://eox-a.github.io/EOxElements/?path=/docs/elements-eox-map--docs), which enables interactive map tours that smoothly transition between areas or layers as users scroll through the story.
+A notable feature is the built-in integration with the [eox-map element](https://eox-a.github.io/EOxElements/?path=/docs/elements-eox-map--docs), which enables interactive map tours that smoothly transition between areas or layers as users scroll through the story. 
 
-![narrative\_editor](assets/narrative_editor_screenshot.png)
-*The Narrative Editor interface*
+[eox-chart-element](https://eox-a.github.io/EOxElements/?path=/docs/elements-eox-chart--docs) can be included in the stories as well.
+
+
+```{figure} assets/narrative_editor_screenshot.png
+---
+name: narrative-editor-interface
+---
+The Narrative Editor interface
+```
 
 ---
 
@@ -74,7 +81,7 @@ A notable feature is the built-in integration with the [eox-map element](https:/
 
 * [Storytelling Reference and Supported Features](https://eodash.org/storytelling.html)
 * [Narrative Examples Repository](https://github.com/gtif-cerulean/cif-stories)
-* [git-clerk GitHub Repository](https://github.com/eoxgit/git-clerk)
+* [git-clerk GitHub Repository](https://github.com/EOX-A/git-clerk)
 
 ---
 
