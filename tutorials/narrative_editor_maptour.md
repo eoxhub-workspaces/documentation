@@ -1,4 +1,4 @@
-# Narrative Editor: Simple Map and Map Tour
+# Narrative Editor: Simple Map, Map Tour and a Chart
 
 
 1\. Open your desired narrative.
@@ -92,3 +92,15 @@
 19\. Do not forget to click the "Show Preview" button at the top of the editor to view your changes.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-12/5d604a4d-2668-4a61-b18e-b55055f0416b/ascreenshot.jpeg?tl_px=480,0&br_px=2880,1341&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=632,104)
+
+
+20\. For datasets where processing results are visualized as a chart, you can export it as eox-chart block.
+
+Click on "copy as chart".
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-12-19/dc8ff368-d028-4737-9347-96e978570f43/screenshot.webp?tl_px=0,0&br_px=502,461&force_format=jpeg&q=100&width=826)
+
+
+21\. Paste it in the Narrative Editor. You can modify the height as fits your usecase.
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-12-19/a56bf838-667f-4115-91ea-ac0470084343/screenshot.webp?tl_px=0,0&br_px=1565,1095&force_format=jpeg&q=100&width=1120.0)
