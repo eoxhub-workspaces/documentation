@@ -30,21 +30,21 @@ Credentials manager
 
 ### Readonly / Key-only credentials
 - Individual credentials can be set to **readonly** or **key-only** (has to be done by an administrator).
-- **Readonly** & **key-only** credentials can only be viewed, but not edited or deleted.
-```{figure} assets/readonly-credential.png
----
-name: read-only
----
-Read-only credentials
-```
+- **Readonly** & **key-only** credentials can only be viewed, but not edited or deleted.  
+  ```{figure} assets/readonly-credential.png
+  ---
+  name: read-only
+  ---
+  Read-only credentials
+  ```
 
-- **Key-only** credentials only display the key, while the value is disguised. 
-```{figure} assets/key-only-credential.png
----
-name: key-only
----
-Key-only credentials
-```
+- **Key-only** credentials only display the key, while the value is disguised.  
+  ```{figure} assets/key-only-credential.png
+  ---
+  name: key-only
+  ---
+  Key-only credentials
+  ```
 
 ## Example Use Cases
 
