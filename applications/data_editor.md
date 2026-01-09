@@ -37,6 +37,7 @@ flowchart LR
 style K fill:#bbf,stroke:#333,stroke-width:2px
 ```
 Data Editor schema validation for a new collection
+
 ![data_editor](assets/data_editor.png)
 
 ## Supported data types
