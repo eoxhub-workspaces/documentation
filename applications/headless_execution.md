@@ -42,7 +42,6 @@ Each job has:
 - A list of accepted parameters (e.g. AOI, date, dataset)
 - Execution logs and outputs available via API or the EOxHub UI
 
-\
 ![headless_execution](assets/pygeoapi2.png)
 
 ---
@@ -62,6 +61,5 @@ Once triggered, jobs can be tracked in the **Headless Execution** section of the
 - Inspect input parameters and output previews
 - Re-run or cancel jobs if needed
 
-\
 ![headless_execution](assets/pygeoapi3.png)
 
