@@ -8,6 +8,7 @@ Within each user workspace where JupyterLab is provisioned also a dedicated [Con
 Conda Store enables users to define and manage reproducible Python environments. This ensures consistent execution across sessions and allows developers to control the underlying libraries and dependencies for their workflows.
 
 ![conda_store2](assets/conda_store2.png)
+
 Conda store User interface
 
 Dedicated environments can be produced based on the user rights either for a user themselves or for a whole workspace and shared with colleagues or other people.
