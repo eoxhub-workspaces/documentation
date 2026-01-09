@@ -2,7 +2,6 @@
 
 Workspace secrets—such as API tokens, database credentials, or service keys—are securely managed using the **EOxHub Credentials Manager**. This tool ensures sensitive information is not hard-coded in notebooks, workflows, or shared files.
 
-![secrets_manager](assets/secrets_manager.png)
 ```{figure} assets/secrets_manager.png
 ---
 name: secrets_manager.png
