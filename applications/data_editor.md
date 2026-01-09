@@ -20,6 +20,10 @@ flowchart LR
   F -- No --> C
   F -- Yes --> G[Submit]
 style A fill:#f9f,stroke:#333,stroke-width:2px
+---
+name: collaborative_publishing
+---
+Data Editor collaborative publishing diagram
 ```
 
 Data Editor collaborative publishing diagram 2
@@ -35,9 +39,18 @@ flowchart LR
   M --> G
 
 style K fill:#bbf,stroke:#333,stroke-width:2px
+---
+name: collaborative_publishing_2
+---
+Data Editor collaborative publishing diagram 2
 ```
+
+```{figure} assets/data_editor.png
+---
+name: data_editor
+---
 Data Editor schema validation for a new collection
-![data_editor](assets/data_editor.png)
+```
 
 ## Supported data types
 Currently supported data (resource) types are: 
