@@ -6,8 +6,12 @@ This enables scalable and repeatable execution of applications, supporting both 
 
 A web-based workflow editor is included, offering operators an intuitive interface to design, manage, and visualize workflows.
 
-![argo_editor](assets/argo_editor.png)
+```{figure} assets/argo_editor.png
+---
+name: argo_editor
+---
 Argo Workflow Templates input mapping in web editor
+```
 
 ```{note} Like any other application Conda Store might not be available in your EOxHub Workspace. Contact your workspace admin to change this.
 ```
@@ -16,13 +20,21 @@ Applications are published in the platform as Docker images, which can be versio
 
 In addition to on-demand execution, workflows can be scheduled for automated, repeated execution using cron triggers.
 
-![argo_workflows](assets/argo_workflows.png)
+```{figure} assets/argo_workflows.png
+---
+name: argo_workflows
+---
 Argo Workflow server
+```
 
 Argo Workflows also provides detailed logs for all executions, enabling workspace administrator to monitor behavior, trace failures, and debug issues.
 
-![argo_workflow_single_job](assets/argo_workflow_single_job.png)
+```{figure} assets/argo_workflow_single_job.png
+---
+name: argo_workflow_single_job
+---
 Argo Workflows details of a finished workflow with details of a step
+```
 
 Sample templates will become available in the tutorial section once possible
 
@@ -52,5 +64,9 @@ Result management of the workflow may include:
 
 ## Metrics
 
-![argo_past_runs_statistics](assets/argo_past_runs_statistics.png)
+```{figure} assets/argo_past_runs_statistics.png
+---
+name: argo_past_runs_statistics
+---
 Argo Workflow Server built in resource usage metrics
+```
