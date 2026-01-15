@@ -28,7 +28,7 @@ The tutorial covers how to achieve the prerequisites within an EOxHub Workspace 
 
 ## 1. Uploading Data with the File Browser
 
-For the first prerequisite (publicly available geo-file) it is possible to use the File browser application. The [**File Browser**](https://documentation.hub.eox.at/file-browser/) allows adding data to a workspace.
+For the first prerequisite (publicly available geo-file) it is possible to use the File browser application. The [**File Browser**](../applications/file-browser.md) allows adding data to a workspace.
 
 A special public folder is available where you can upload the files which are expected to be published.
 You can upload files (Tiff (Cloud Optimized Geotiff - COG), GeoJSON, style files, preview images, etc.) directly in the browser.
