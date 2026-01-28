@@ -32,6 +32,7 @@ sections:
       - file: tutorials/publishing-workflow-tutorial
       - file: tutorials/wmts_tutorial
       - file: tutorials/geojson_tutorial
+      - file: tutorials/indicator_tutorial
       - file: tutorials/introduction_narrative_editor
       - file: tutorials/narrative_editor
       - file: tutorials/narrative_editor_maptour
