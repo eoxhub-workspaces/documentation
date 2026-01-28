@@ -1,9 +1,9 @@
 # Integrating GeoJSON dataset using Data Editor
 
-## Integrating a dataset from small GeoJSON file into the eodashboard.org service
+## Integrating a dataset from small GeoJSON file into the gtif-austria.info service
 
 
-1\. Navigate to [https://gtif-austria.info](https://scribehow.com/workspace#dashboard)
+1\. Navigate to [https://gtif-austria.info](https://gtif-austria.info)
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-09/a0b23a6c-45c5-4df5-b055-42450d71cfcb/ascreenshot.jpeg?tl_px=82,111&br_px=1458,881&force_format=jpeg&q=100&width=1120.0)
 
