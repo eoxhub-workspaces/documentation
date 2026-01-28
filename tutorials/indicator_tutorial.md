@@ -1,7 +1,7 @@
-# Add a new Indicator file to merge multiple datasets into one final display
+# Add a new Indicator in Data Editor to show multiple datasets as layers in one visualisation
 
 This guide provides a step-by-step process for merging multiple datasets into a single display collection using the EOxHub Data Editor.
-It documents the task of adding a new Indicator file based on existing Collection files created beforehand. It also documents usage of additional Indicator specific properties Disable and 
+It documents the task of adding a new Indicator file based on existing Collection files created beforehand. It also documents usage of additional Indicator specific properties Disable and Hidden.
 
 1\. This tutorial expects already existing **Collection** files in the session, which are supposed to be grouped together in an **Indicator** file. Each collection will be shown as a layer in the final visualisation.
 
