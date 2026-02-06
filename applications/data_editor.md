@@ -6,9 +6,6 @@ It is based on [git-clerk](https://github.com/EOX-A/git-clerk) - Open-Source Con
 
 It enables workspace owners to describe their datasets using simple forms, validate them against JSON schema definitions, and commit them via Git-based sessions.
 
-```{note} Like any other application the Data Editor might not be available in your EOxHub Workspace. Contact your workspace admin to change this.
-```
-
 Data Editor collaborative publishing diagram 1
 ```{mermaid}
 flowchart LR

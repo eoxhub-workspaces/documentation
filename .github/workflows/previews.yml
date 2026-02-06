@@ -1,13 +1,21 @@
-name: Deploy Jupyter Book
+# .github/workflows/preview.yml
+# This is a basic workflow takes care of building and deploying
+# client when creating merge request
+
+name: Deploy PR previews
 
 on:
-  push:
+  pull_request_target:
     branches:
       - main
-env:
-  # `BASE_URL` determines the website is served from, including CSS & JS assets
-  # You may need to change this to `BASE_URL: ''`
-  BASE_URL: /${{ github.event.repository.name }}
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+# do not allow running multiple of pipelines for this PR in parallel
+concurrency: preview-${{ github.ref }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -40,10 +48,9 @@ jobs:
           find external_notebooks -type f \( -iname "myst.yaml" -o -iname "myst.yml" \) -exec rm -v {} +
           npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
         with:
-          folder: _build/html/
-          branch: gh-pages
-          clean-exclude: pr-preview
-          force: false
+          source-dir: _build/html/
+
+      
