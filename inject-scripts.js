@@ -154,7 +154,7 @@ const DYNAMIC_SCRIPT = `
         } else {
             // RED WARNING (Hard Fail)
             aside = createAdmonition('danger', 'Application Unavailable', 
-                'This application is not available in your current workspace configuration.');
+                'This application does not seem to be available in your current workspace configuration. If you think this is an error please contact your workspace administrator.');
         }
         
         aside.id = 'app-unavailable-warning';
