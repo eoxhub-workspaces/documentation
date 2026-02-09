@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - main
-env:
-  # `BASE_URL` determines the website is served from, including CSS & JS assets
-  # You may need to change this to `BASE_URL: ''`
-  BASE_URL: /${{ github.event.repository.name }}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,6 +12,10 @@ jobs:
       contents: write
       pages: write
       pull-requests: write
+    env:
+      # `BASE_URL` determines the website is served from, including CSS & JS assets
+      # You may need to change this to `BASE_URL: ''`
+      BASE_URL: /${{ github.event.repository.name }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
