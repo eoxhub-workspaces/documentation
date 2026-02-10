@@ -15,7 +15,7 @@ jobs:
     env:
       # `BASE_URL` determines the website is served from, including CSS & JS assets
       # You may need to change this to `BASE_URL: ''`
-      BASE_URL: /${{ github.event.repository.name }}
+      BASE_URL: https://documentation.hub.eox.at/
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
