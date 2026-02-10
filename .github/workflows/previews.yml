@@ -23,7 +23,6 @@ jobs:
       contents: write
       pages: write
       pull-requests: write
-    needs: vars
     env:
       # `BASE_URL` determines the website is served from, including CSS & JS assets
       # You may need to change this to `BASE_URL: ''`
