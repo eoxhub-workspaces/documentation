@@ -17,17 +17,8 @@ on:
 concurrency: preview-${{ github.ref }}
 
 jobs:
-  vars:
-    runs-on: ubuntu-latest
-    outputs:
-      pr_number: ${{ steps.pr-number.outputs.pr_number }}
-    steps:
-      - name: Get PR number
-        id: pr-number
-        uses: kkak10/pr-number-action@v1.3
   build:
     runs-on: ubuntu-latest
-    
     permissions:
       contents: write
       pages: write
@@ -36,13 +27,15 @@ jobs:
     env:
       # `BASE_URL` determines the website is served from, including CSS & JS assets
       # You may need to change this to `BASE_URL: ''`
-      BASE_URL: /pr-preview/pr-${{ needs.vars.outputs.pr_number }}
+      BASE_URL: /pr-preview/pr-${{ github.event.number }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
           submodules: 'true'
-
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+      
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -55,7 +48,8 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Build Jupyter Book
+      - if: github.event.action != 'closed'
+        name: Build Jupyter Book
         run: |
           npm run build
 
