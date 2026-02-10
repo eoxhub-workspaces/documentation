@@ -199,7 +199,7 @@ const DYNAMIC_SCRIPT = `
     function handleContext(context) {
         log("Context Handshake Received!", context);
         
-        const gateway = context.userArea?.gatewayUrl;
+        const gateway = context.workspaceConfig?.userArea?.gatewayUrl;
         const wsId = context.workspaceConfig?.id;
         
         if (gateway && wsId) {
