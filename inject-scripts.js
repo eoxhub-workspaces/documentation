@@ -21,8 +21,6 @@ const SERVICE_MAPPING = {
     "Headless Execution": "pygeoapi-eoxhub-pygeoapi-eoxhub",
     "Credentials Manager": "credentials-manager",
     "eoAPI": "eoapi-rw-stac",
-    "eoAPI": "eoapi-rw-raster",
-    "eoAPI": "eoapi-rw-vector",
     "Dask Dashboard": "dask-gateway-dashboard"
 };
 
@@ -54,7 +52,7 @@ const DYNAMIC_SCRIPT = `
 
 <script>
   (function() {
-    // --- INJECT VARIABLES FROM NODE TO BROWSER ---
+    // --- INJECT VARIABLES ---
     const LINK_TO_KEY_MAP = ${JSON.stringify(SERVICE_MAPPING)};
     const OPTIONAL_APPS_LIST = ${JSON.stringify(OPTIONAL_APPS)}; 
     const MOCK_SERVICES = ${JSON.stringify(MOCK_AVAILABLE_SERVICES)};
@@ -66,6 +64,9 @@ const DYNAMIC_SCRIPT = `
     };
 
     function log(msg, data) { console.log(\`🛠️ [Context] \${msg}\`, data || ""); }
+    function error(msg, err) { console.error(\`🛠️ [Context Error] \${msg}\`, err || ""); }
+
+    log("Script Started. Waiting for Window Load...");
 
     // --- HELPER: ROBUST NAME EXTRACTION ---
     function getCleanLinkName(el) {
@@ -80,7 +81,6 @@ const DYNAMIC_SCRIPT = `
         if (!state.ready) return;
         const allowedKeys = state.services;
 
-        // A. Links
         const allLinks = document.querySelectorAll('nav a, main a, article a');
         allLinks.forEach(link => {
             const name = getCleanLinkName(link);
@@ -88,30 +88,22 @@ const DYNAMIC_SCRIPT = `
             if (LINK_TO_KEY_MAP.hasOwnProperty(name)) {
                 const requiredKey = LINK_TO_KEY_MAP[name];
                 
-                // If the service is MISSING from the allowed list
                 if (!allowedKeys.includes(requiredKey)) {
-                    
-                    // Check if it is an "Optional" app
                     const isOptional = OPTIONAL_APPS_LIST.includes(name);
-
                     if (!isOptional) {
-                        // Critical App -> Grey it out
                         if (!link.classList.contains('service-unavailable-link')) {
                             link.classList.add('service-unavailable-link');
                             link.title = "Not available in this workspace";
                         }
                     } else {
-                        // Optional App -> Do NOT grey out (Keep it normal)
                         link.classList.remove('service-unavailable-link');
                     }
                 } else {
-                    // Service is present -> Ensure it looks normal
                     link.classList.remove('service-unavailable-link');
                 }
             }
         });
 
-        // B. Page Warnings
         ensurePageWarning(allowedKeys);
     }
 
@@ -121,7 +113,6 @@ const DYNAMIC_SCRIPT = `
         const h1 = document.querySelector('h1');
         if (!h1) return;
         
-        // Remove Standalone warning if connected
         if (state.isConnected) {
             const w = document.getElementById('standalone-warning');
             if (w) w.remove();
@@ -131,37 +122,30 @@ const DYNAMIC_SCRIPT = `
         let currentKey = null;
         if (LINK_TO_KEY_MAP.hasOwnProperty(title)) currentKey = LINK_TO_KEY_MAP[title];
         
-        // Not an app page -> Exit
         if (!currentKey) return; 
 
-        // App is available -> Exit (and remove any stale warning)
         if (allowedKeys.includes(currentKey)) {
             const existing = document.getElementById('app-unavailable-warning');
             if (existing) existing.remove();
             return;
         }
 
-        // --- APP IS MISSING ---
         if (document.getElementById('app-unavailable-warning')) return;
 
         const isOptional = OPTIONAL_APPS_LIST.includes(title);
 
         let aside;
         if (isOptional) {
-            // YELLOW WARNING (Soft Fail)
             aside = createAdmonition('warning', 'Application Availability', 
                 'This application might not be enabled in your current workspace configuration.');
         } else {
-            // RED WARNING (Hard Fail)
             aside = createAdmonition('danger', 'Application Unavailable', 
                 'This application does not seem to be available in your current workspace configuration. If you think this is an error please contact your workspace administrator.');
         }
-        
         aside.id = 'app-unavailable-warning';
         injectBanner(aside, h1);
     }
 
-    // B. YELLOW WARNING: Not Connected (Standalone Mode)
     function ensureStandaloneWarning() {
         if (state.isConnected) return;
         
@@ -173,6 +157,7 @@ const DYNAMIC_SCRIPT = `
 
         if (document.getElementById('standalone-warning')) return;
 
+        log("Showing Standalone Warning (No Context Detected)");
         const aside = createAdmonition('warning', 'Context Warning', 
             'You are viewing this documentation outside of a Workspace context. Applications shown here might not be available in your specific environment.');
         aside.id = 'standalone-warning';
@@ -180,7 +165,6 @@ const DYNAMIC_SCRIPT = `
         injectBanner(aside, h1);
     }
 
-    // --- HELPER: DOM CREATION ---
     function createAdmonition(type, title, text) {
         const colors = type === 'danger' 
             ? { border: 'border-red-500', text: 'text-red-600', bg: 'bg-red-50', icon: 'M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z' }
@@ -211,10 +195,45 @@ const DYNAMIC_SCRIPT = `
         else h1.parentNode.insertBefore(element, h1.nextSibling);
     }
 
-    // --- 3. INIT ---
+    // --- 3. INIT LOGIC (LUIGI CONNECTION) ---
+    function handleContext(context) {
+        log("Context Handshake Received!", context);
+        
+        const gateway = context.userArea?.gatewayUrl;
+        const wsId = context.workspaceConfig?.id;
+        
+        if (gateway && wsId) {
+            log(\`Fetching config from: \${gateway}\`);
+            fetch(\`\${gateway.replace(/\\/$/, "")}/\${wsId}/whoami\`, { credentials: 'include' })
+                .then(r => {
+                    if(!r.ok) throw new Error(\`HTTP \${r.status}\`);
+                    return r.json();
+                })
+                .then(data => {
+                    log("Services Loaded:", data.services);
+                    state.ready = true;
+                    state.isConnected = true;
+                    state.services = (data.services || []).map(s => s.key);
+                    const w = document.getElementById('standalone-warning');
+                    if(w) w.remove();
+                    applyVisuals();
+                })
+                .catch(e => error("API Fetch Failed", e));
+        } else {
+            error("Context missing gatewayUrl or workspaceConfig.id");
+        }
+    }
+
     window.addEventListener('load', () => {
+        log("Window Loaded. Injecting Luigi Client...");
+
+        // Check if we are actually in an iframe
+        if (window.parent === window) {
+            log("⚠️ Not running in an iframe (Top Frame Detected). Luigi handshake will likely fail.");
+        }
+
         if (MOCK_SERVICES) {
-            console.log("⚠️ Using Mock Data:", MOCK_SERVICES);
+            log("⚠️ Using Mock Data:", MOCK_SERVICES);
             state.ready = true;
             state.services = MOCK_SERVICES;
             state.isConnected = true; 
@@ -222,42 +241,55 @@ const DYNAMIC_SCRIPT = `
 
         const script = document.createElement('script');
         script.src = 'https://unpkg.com/@luigi-project/client/luigi-client.js';
+        
         script.onload = () => {
+            log("Luigi Client Script Loaded.");
+            
             if (window.LuigiClient) {
+                log("LuigiClient Object found.");
+                
+                // 1. Init Listener (Standard)
                 window.LuigiClient.addInitListener((context) => {
-                    const gateway = context.userArea?.gatewayUrl;
-                    const wsId = context.workspaceConfig?.id;
-                    if (gateway && wsId) {
-                        fetch(\`\${gateway.replace(/\\/$/, "")}/\${wsId}/whoami\`, { credentials: 'include' })
-                            .then(r => r.json())
-                            .then(data => {
-                                state.ready = true;
-                                state.isConnected = true;
-                                state.services = (data.services || []).map(s => s.key);
-                                const w = document.getElementById('standalone-warning');
-                                if(w) w.remove();
-                            })
-                            .catch(e => console.warn("API Error", e));
-                    }
+                    log("Event: InitListener Triggered");
+                    handleContext(context);
                 });
+
+                // 2. Context Update Listener (Backup)
+                // Sometimes context is pushed as an update, not init
+                window.LuigiClient.addContextUpdateListener((context) => {
+                    log("Event: ContextUpdateListener Triggered");
+                    handleContext(context);
+                });
+
+                // 3. Fallback check (If context was already there)
+                const existingData = window.LuigiClient.getEventData();
+                if (existingData && existingData.context) {
+                    log("Found existing event data", existingData);
+                    handleContext(existingData.context);
+                } else {
+                    log("No existing event data found.");
+                }
+
+            } else {
+                error("LuigiClient object not found on window!");
             }
 
+            // TIMEOUT: If no handshake after 2 seconds, show warning
             setTimeout(() => {
                 if (!state.isConnected) {
+                    log("Timeout: Connection not established. Enabling Standalone Mode.");
                     ensureStandaloneWarning();
                 }
-            }, 1000);
+            }, 2000);
         };
+
+        script.onerror = (e) => error("Failed to load Luigi Client script", e);
         document.head.appendChild(script);
 
         // PERSISTENCE LOOP
         setInterval(() => {
-            if (state.ready) {
-                applyVisuals();
-            }
-            if (!state.isConnected) {
-                ensureStandaloneWarning();
-            }
+            if (state.ready) applyVisuals();
+            if (!state.isConnected) ensureStandaloneWarning();
         }, 500);
         
         document.body.addEventListener('click', () => {
@@ -294,7 +326,7 @@ function injectScripts(dir) {
   });
 }
 
-console.log('🚀 Starting Injection...');
+console.log('🚀 Starting Injection (Debug Mode)...');
 let found = false;
 POTENTIAL_DIRS.forEach(dir => {
     if (fs.existsSync(dir)) {
