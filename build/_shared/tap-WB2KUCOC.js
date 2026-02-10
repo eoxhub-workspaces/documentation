@@ -1,1 +1,1 @@
-import{a}from"/documentation/build/_shared/chunk-D2MV22QF.js";import"/documentation/build/_shared/chunk-FPFMZRV6.js";import"/documentation/build/_shared/chunk-OZE3FFNP.js";export default a();
+import{a}from"https://documentation.hub.eox.at//build/_shared/chunk-D2MV22QF.js";import"https://documentation.hub.eox.at//build/_shared/chunk-FPFMZRV6.js";import"https://documentation.hub.eox.at//build/_shared/chunk-OZE3FFNP.js";export default a();

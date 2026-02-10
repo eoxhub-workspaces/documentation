@@ -1,1 +1,1 @@
-import{b as a}from"/documentation/build/_shared/chunk-7SAO57PG.js";import"/documentation/build/_shared/chunk-O4VQNZ62.js";import"/documentation/build/_shared/chunk-OZE3FFNP.js";export{a as unified};
+import{b as a}from"https://documentation.hub.eox.at//build/_shared/chunk-7SAO57PG.js";import"https://documentation.hub.eox.at//build/_shared/chunk-O4VQNZ62.js";import"https://documentation.hub.eox.at//build/_shared/chunk-OZE3FFNP.js";export{a as unified};
