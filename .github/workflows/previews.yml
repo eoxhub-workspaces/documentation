@@ -57,8 +57,6 @@ jobs:
 
       - name: Build Jupyter Book
         run: |
-          # Clear potential other myst configurations in external_notebooks
-          find external_notebooks -type f \( -iname "myst.yaml" -o -iname "myst.yml" \) -exec rm -v {} +
           npm run build
 
       - name: Deploy preview
