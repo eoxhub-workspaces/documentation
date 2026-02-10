@@ -6,11 +6,6 @@
 
 ---
 
-```{note} Like any other application JupyterLab might not be available in your EOxHub Workspace. Contact your workspace admin to change this.
-```
-
----
-
 ## What is JupyterLab?
 
 [JupyterLab](https://jupyter.org/) is a next-generation web-based user interface for Project Jupyter. It enables users to:

@@ -11,10 +11,6 @@ If the intent is to provide data access to a managed user circle it is also poss
 
 ---
 
-```{note} Like any other application the Publishing Dashboard might not be available in your EOxHub Workspace. Contact your workspace admin to change this. This application has special pricing (Dashboard as a Service) which can be explored at [EOxHub pricing page](https://hub.eox.at/pricing). 
-```
-
-
 Inside the Dashboard section you can see the data configured in the Data Editor, as in the following Figure.
 
 ```{figure} assets/eodash_instance.png

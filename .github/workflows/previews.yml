@@ -1,0 +1,69 @@
+# .github/workflows/preview.yml
+# This is a basic workflow takes care of building and deploying
+# client when creating merge request
+
+name: Deploy PR previews
+
+on:
+  pull_request_target:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+# do not allow running multiple of pipelines for this PR in parallel
+concurrency: preview-${{ github.ref }}
+
+jobs:
+  vars:
+    runs-on: ubuntu-latest
+    outputs:
+      pr_number: ${{ steps.pr-number.outputs.pr_number }}
+    steps:
+      - name: Get PR number
+        id: pr-number
+        uses: kkak10/pr-number-action@v1.3
+  build:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      pages: write
+      pull-requests: write
+    needs: vars
+    env:
+      # `BASE_URL` determines the website is served from, including CSS & JS assets
+      # You may need to change this to `BASE_URL: ''`
+      BASE_URL: /${{ github.event.repository.name }}/pr-preview/pr-${{ needs.vars.outputs.pr_number }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          submodules: 'true'
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Build Jupyter Book
+        run: |
+          # Clear potential other myst configurations in external_notebooks
+          find external_notebooks -type f \( -iname "myst.yaml" -o -iname "myst.yml" \) -exec rm -v {} +
+          npm run build
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: _build/html/
+
+      

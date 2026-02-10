@@ -1,2 +1,5 @@
 # MyST build outputs
-_build
+_build/cache
+_build/html
+_build/site
+_build/templates/site/myst/book-theme/node_modules

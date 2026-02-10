@@ -1,0 +1,16 @@
+{
+  "name": "eoxhub-documentation",
+  "version": "0.0.1",
+  "description": "MyST project for EOxHub documentation",
+  "scripts": {
+    "start": "myst start",
+    "build": "myst build --html && node inject-scripts.js && touch _build/html/.nojekyll",
+    "clean": "myst clean"
+  },
+  "devDependencies": {
+    "mystmd": "latest"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

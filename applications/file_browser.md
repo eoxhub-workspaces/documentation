@@ -4,11 +4,6 @@ The **File Browser** is a web-based file management application integrated into 
 
 ---
 
-```{note} Like any other application the File Browser might not be available in your EOxHub Workspace. Users within a workspace might have different permissions to use the available features. Contact your workspace admin to change this.
-```
-
----
-
 ## Key Features
 
 - **User-Friendly Interface**: Provides a clean, intuitive interface for navigating and managing files.

@@ -2,8 +2,7 @@
 
 Within each user workspace where JupyterLab is provisioned also a dedicated [Conda Store](https://conda.store/) is available.
 
-```{note} Like any other application Conda Store might not be available in your EOxHub Workspace. Contact your workspace admin to change this.
-```
+
 
 Conda Store enables users to define and manage reproducible Python environments. This ensures consistent execution across sessions and allows developers to control the underlying libraries and dependencies for their workflows.
 

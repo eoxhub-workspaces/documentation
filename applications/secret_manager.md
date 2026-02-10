@@ -11,9 +11,6 @@ Credentials manager
 
 ---
 
-```{note} Like any other application the Credentials Manager might not be available in your EOxHub Workspace. Contact your workspace admin to change this.
-```
-
 ## Key Features
 
 - **Centralized and secure storage** of credentials for all workspace users  

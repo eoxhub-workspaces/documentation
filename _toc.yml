@@ -2,15 +2,13 @@ format: jb-book
 root: README
 
 sections:
-  - file: introduction/index
-    title: Introduction
+  - title: Introduction
     sections:
       - file: introduction/1_intro
       - file: introduction/2_getting_started
       - file: introduction/3_faq
 
-  - file: applications/index
-    title: Applications
+  - title: Applications
     sections:
       - file: applications/jupyterlab
       - file: applications/conda_store
@@ -20,14 +18,13 @@ sections:
       - file: applications/narrative_editor
       - file: applications/argo
         sections:
-          - file: applications/argo/capability_integration
+          - file: applications/argo/capability_integration 
       - file: applications/headless_execution
       - file: applications/secret_manager
       - file: applications/eoapi
 
-  - file: tutorials/index
-    title: Tutorials
-    sections:
+  - title: Tutorials
+    sections:   
       - file: tutorials/creating_account
       - file: tutorials/publishing-workflow-tutorial
       - file: tutorials/wmts_tutorial
@@ -39,15 +36,13 @@ sections:
       - file: tutorials/polaris
       - file: tutorials/polar_warp
 
-  - file: use_cases/index
-    title: Use Cases
+  - title: Use Cases
     sections:
       - file: use_cases/algorithm_development
       - file: use_cases/result_generation
       - file: use_cases/algorithm_as_a_service
       - file: use_cases/publish_insights
 
-  - file: network_of_resources/index
-    title: Network of Resources
+  - title: Network of Resources
     sections:
       - file: network_of_resources/nor

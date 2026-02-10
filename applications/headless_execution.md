@@ -8,11 +8,6 @@ The **Headless Execution** feature in EOxHub Workspaces enables automated execut
 
 ---
 
-```{note} Like any other application the Headless Execution might not be available in your EOxHub Workspace. Contact your workspace admin to change this.
-```
-
----
-
 ## What is Headless Execution?
 
 Headless execution allows you to:

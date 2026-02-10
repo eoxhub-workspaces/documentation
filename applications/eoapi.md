@@ -6,9 +6,6 @@ It exposes a [FastAPI](https://fastapi.tiangolo.com/) based interface, supportin
 
 Future tutorials for eoAPI will become available in the tutorial section once possible.
 
-```{note} Like any other application eoAPI might not be available in your EOxHub Workspace. Contact your workspace admin to change this.
-```
-
 ## Functionality
 
 ### Catalog Your Data
