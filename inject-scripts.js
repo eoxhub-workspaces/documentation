@@ -220,9 +220,14 @@ const DYNAMIC_SCRIPT = `
                     state.ready = true;
                     state.isConnected = true;
                     state.services = (data.services || []).map(s => s.key);
+                    
                     const w = document.getElementById('standalone-warning');
                     if(w) w.remove();
-                    applyVisuals();
+
+                    setTimeout(() => {
+                        log("Applying visuals (Delayed for Safety)...");
+                        applyVisuals();
+                    }, 500);
                 })
                 .catch(e => error("API Fetch Failed", e));
         }
@@ -243,43 +248,37 @@ const DYNAMIC_SCRIPT = `
             log("Luigi Client Script Loaded.");
             
             if (window.LuigiClient) {
-                log("LuigiClient Object found.");
-                
-                window.LuigiClient.addInitListener((context) => {
-                    log("Event: InitListener Triggered");
-                    handleContext(context);
-                });
-
-                window.LuigiClient.addContextUpdateListener((context) => {
-                    log("Event: ContextUpdateListener Triggered");
-                    handleContext(context);
-                });
-
-                // 3. Fallback check (If context was already there)
+                window.LuigiClient.addInitListener(handleContext);
+                window.LuigiClient.addContextUpdateListener(handleContext);
                 const existingData = window.LuigiClient.getEventData();
                 if (existingData && existingData.context) handleContext(existingData.context);
             }
-
+            
+            // Fallback for standalone mode
             setTimeout(() => {
-                if (!state.isConnected) ensureStandaloneWarning();
-            }, 2000);
+                if (!state.isConnected) {
+                    log("Timeout: Standalone Mode Active.");
+                    ensureStandaloneWarning();
+                }
+            }, 500);
         };
 
-        script.onerror = (e) => error("Failed to load Luigi Client script", e);
         document.head.appendChild(script);
 
+        /* 
         // PERSISTENCE LOOP
         setInterval(() => {
             if (state.ready) applyVisuals();
             if (!state.isConnected) ensureStandaloneWarning();
-        }, 500);
+        }, 1000); // Relaxed interval
         
         document.body.addEventListener('click', () => {
             setTimeout(() => { 
                 if (state.ready) applyVisuals();
                 if (!state.isConnected) ensureStandaloneWarning();
-            }, 50);
+            }, 100);
         });
+        */
     });
 
   })();
@@ -298,17 +297,21 @@ function injectScripts(dir) {
       injectScripts(filePath); 
     } else if (file.endsWith('.html')) {
       let content = fs.readFileSync(filePath, 'utf8');
+      
       if (content.includes('CONTEXT-AWARE INJECTION START')) return;
 
-      if (/<\/body>/i.test(content)) {
-        const newContent = content.replace(/<\/body>/i, `${DYNAMIC_SCRIPT}</body>`);
+      if (/<\/head>/i.test(content)) {
+        const newContent = content.replace(/<\/head>/i, () => `
+            ${DYNAMIC_SCRIPT}
+            </head>
+        `);
         fs.writeFileSync(filePath, newContent, 'utf8');
       } 
     }
   });
 }
 
-console.log('🚀 Starting Injection (React-Prop-Safe Mode)...');
+console.log('🚀 Starting Injection (Delayed execution mode)...');
 let found = false;
 POTENTIAL_DIRS.forEach(dir => {
     if (fs.existsSync(dir)) {
