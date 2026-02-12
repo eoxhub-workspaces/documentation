@@ -10,25 +10,22 @@ const MOCK_AVAILABLE_SERVICES = null;
 // const MOCK_AVAILABLE_SERVICES = ['workspace-ui']; 
 
 const SERVICE_MAPPING = {
-    "JupyterLab": "hub",
-    "JupyterHub": "hub",
-    "Conda Store": "conda-store-server",
-    "File Browser": "workspace-ui",
-    "Data Editor": "catalog-git-clerk", 
-    "Publishing Dashboard": "publishing",
-    "Narrative Editor": "narratives-git-clerk",
-    "Argo": "argo-workflows-server",
-    "Headless Execution": "pygeoapi-eoxhub-pygeoapi-eoxhub",
-    "Credentials Manager": "credentials-manager",
-    "eoAPI": "eoapi-rw-stac",
-    "Dask Dashboard": "dask-gateway-dashboard"
+    "JupyterLab": ["hub"],
+    "JupyterHub": ["hub"],
+    "Conda Store": ["conda-store-server"],
+    "File Browser": ["workspace-ui"],
+    "Data Editor": ["catalog-git-clerk"], 
+    "Publishing Dashboard": ["publishing"],
+    "Narrative Editor": ["narratives-git-clerk", "git-clerk"],
+    "Argo": ["argo-workflows-server"],
+    "Headless Execution": ["pygeoapi-eoxhub-pygeoapi-eoxhub"],
+    "Credentials Manager": ["credentials-manager"],
+    "eoAPI": ["eoapi-rw-stac", "eoapi-rw-raster", "eoapi-rw-vector", ],
+    "Dask Dashboard": ["dask-gateway-dashboard"]
 };
 
 // APPS THAT SHOULD NOT BE GREYED OUT, JUST WARNED
-const OPTIONAL_APPS = [
-    "Narrative Editor",
-    "Publishing Dashboard"
-];
+const OPTIONAL_APPS = [];
 
 const DYNAMIC_SCRIPT = `
 <style>
@@ -76,19 +73,25 @@ const DYNAMIC_SCRIPT = `
         return clone.innerText.replace(/[\\n\\r]+/g, ' ').replace(/\\s+/g, ' ').trim();
     }
 
+    // --- HELPER: CHECK SERVICE AVAILABILITY ---
+    function isServiceAvailable(requiredKeys, allowedKeys) {
+        if (!Array.isArray(requiredKeys)) return allowedKeys.includes(requiredKeys);
+        return requiredKeys.some(key => allowedKeys.includes(key));
+    }
+
     // --- 1. APPLY VISUALS ---
     function applyVisuals() {
         if (!state.ready) return;
         const allowedKeys = state.services;
 
         const allLinks = document.querySelectorAll('nav a, main a, article a');
-        allLinks.forEach(link => {
+        allLinks.forEach(link => { 
             const name = getCleanLinkName(link);
             
             if (LINK_TO_KEY_MAP.hasOwnProperty(name)) {
-                const requiredKey = LINK_TO_KEY_MAP[name];
+                const requiredKeys = LINK_TO_KEY_MAP[name];
                 
-                if (!allowedKeys.includes(requiredKey)) {
+                if (!isServiceAvailable(requiredKeys, allowedKeys)) {
                     const isOptional = OPTIONAL_APPS_LIST.includes(name);
                     if (!isOptional) {
                         if (!link.classList.contains('service-unavailable-link')) {
@@ -119,12 +122,12 @@ const DYNAMIC_SCRIPT = `
         }
 
         const title = h1.innerText.trim();
-        let currentKey = null;
-        if (LINK_TO_KEY_MAP.hasOwnProperty(title)) currentKey = LINK_TO_KEY_MAP[title];
+        let currentKeys = null;
+        if (LINK_TO_KEY_MAP.hasOwnProperty(title)) currentKeys = LINK_TO_KEY_MAP[title];
         
-        if (!currentKey) return; 
+        if (!currentKeys) return; 
 
-        if (allowedKeys.includes(currentKey)) {
+        if (isServiceAvailable(currentKeys, allowedKeys)) {
             const existing = document.getElementById('app-unavailable-warning');
             if (existing) existing.remove();
             return;
