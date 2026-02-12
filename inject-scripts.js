@@ -21,7 +21,8 @@ const SERVICE_MAPPING = {
     "Headless Execution": ["pygeoapi-eoxhub-pygeoapi-eoxhub"],
     "Credentials Manager": ["credentials-manager"],
     "eoAPI": ["eoapi-rw-stac", "eoapi-rw-raster", "eoapi-rw-vector", ],
-    "Dask Dashboard": ["dask-gateway-dashboard"]
+    "Dask Dashboard": ["dask-gateway-dashboard"],
+    "Publishing Dashboard": ["eodash"]
 };
 
 // APPS THAT SHOULD NOT BE GREYED OUT, JUST WARNED
