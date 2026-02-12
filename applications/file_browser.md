@@ -19,6 +19,6 @@ EOxHub Workspace employs a public access system to facilitate sharing and access
 
 - **Public Folder**: Files placed in the `public` directory are accessible via permanent public URLs, allowing for easy sharing and integration into other applications e.g. [Data Editor](data_editor).
 - **Shareable Links**: Users can generate shareable links for specific files or folders, providing controlled access to external collaborators.
-- **Access Control**: All areas within the File Browser are restricted to be accessed only by users of the workspace. Data in the `public` folder is openly accessible, but only if someone knows the path and name of the file, it is not possible to list the content. By using the creation of shareable links other files can be made accessible to external people.
+- **Access Control**: All areas within the File Browser are restricted to be accessed only by users of the workspace. Data in the `public` folder is openly accessible. By using the creation of shareable links other files can be made accessible to external people.
 
 
