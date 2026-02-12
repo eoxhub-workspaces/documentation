@@ -5,7 +5,6 @@ const path = require('path');
 const POTENTIAL_DIRS = ['./_build/html', './_build/site'];
 
 // --- TEST CONFIGURATION ---
-// Set to NULL for production (wait for Luigi).
 const MOCK_AVAILABLE_SERVICES = null; 
 // const MOCK_AVAILABLE_SERVICES = ['filebrowser']; 
 
@@ -33,18 +32,19 @@ const OPTIONAL_APPS = [
 const DYNAMIC_SCRIPT = `
 <style>
   /* VISUALS FOR UNAVAILABLE APPS */
-  .service-unavailable-link {
+  /* We target the data attribute to avoid React className conflicts */
+  a[data-service-status="unavailable"] {
     opacity: 0.4 !important;
-    color: #999 !important;
+    color: #5c5c5cff !important;
     transition: opacity 0.2s;
   }
-  .service-unavailable-link:hover {
+  a[data-service-status="unavailable"]:hover {
     opacity: 0.7 !important;
   }
   
   /* Icon for inline content links */
-  main a.service-unavailable-link::after, 
-  article a.service-unavailable-link::after {
+  main a[data-service-status="unavailable"]::after, 
+  article a[data-service-status="unavailable"]::after {
     content: " 🚫";
     font-size: 0.8em;
   }
@@ -78,7 +78,7 @@ const DYNAMIC_SCRIPT = `
 
     // --- 1. APPLY VISUALS ---
     function applyVisuals() {
-        // Wrap in RequestAnimationFrame to avoid conflicting with React Render Cycle
+        // Run inside requestAnimationFrame to minimize UI blocking
         requestAnimationFrame(() => {
             if (!state.ready) return;
             const allowedKeys = state.services;
@@ -93,15 +93,14 @@ const DYNAMIC_SCRIPT = `
                     if (!allowedKeys.includes(requiredKey)) {
                         const isOptional = OPTIONAL_APPS_LIST.includes(name);
                         if (!isOptional) {
-                            if (!link.classList.contains('service-unavailable-link')) {
-                                link.classList.add('service-unavailable-link');
-                                link.title = "Not available in this workspace";
+                            if (link.getAttribute('data-service-status') !== 'unavailable') {
+                                link.setAttribute('data-service-status', 'unavailable');
                             }
                         } else {
-                            link.classList.remove('service-unavailable-link');
+                            link.removeAttribute('data-service-status');
                         }
                     } else {
-                        link.classList.remove('service-unavailable-link');
+                        link.removeAttribute('data-service-status');
                     }
                 }
             });
@@ -196,18 +195,12 @@ const DYNAMIC_SCRIPT = `
         return aside;
     }
 
-    // --- SAFER INJECTION LOGIC ---
     function injectBanner(element) {
-        // Instead of trying to insert between specific header elements (which crashes React),
-        // we prepend it to the main content container.
         const container = document.querySelector('main') || document.querySelector('article') || document.querySelector('.bd-article');
         
         if (container) {
-            // Check if we already have it to be super safe
             const existing = container.querySelector(\`#\${element.id}\`);
             if (existing) existing.remove();
-            
-            // Prepend: Adds it as the very first child of the main container
             container.prepend(element);
         }
     }
@@ -220,12 +213,8 @@ const DYNAMIC_SCRIPT = `
         const wsId = context.workspaceConfig?.id;
         
         if (gateway && wsId) {
-            log(\`Fetching config from: \${gateway}\`);
             fetch(\`\${gateway.replace(/\\/$/, "")}/\${wsId}/whoami\`, { credentials: 'include' })
-                .then(r => {
-                    if(!r.ok) throw new Error(\`HTTP \${r.status}\`);
-                    return r.json();
-                })
+                .then(r => r.json())
                 .then(data => {
                     log("Services Loaded:", data.services);
                     state.ready = true;
@@ -236,20 +225,12 @@ const DYNAMIC_SCRIPT = `
                     applyVisuals();
                 })
                 .catch(e => error("API Fetch Failed", e));
-        } else {
-            error("Context missing gatewayUrl or workspaceConfig.id");
         }
     }
 
     window.addEventListener('load', () => {
-        log("Window Loaded. Injecting Luigi Client...");
-
-        if (window.parent === window) {
-            log("⚠️ Top Frame Detected. Luigi handshake will likely fail.");
-        }
-
         if (MOCK_SERVICES) {
-            log("⚠️ Using Mock Data:", MOCK_SERVICES);
+            log("Using Mock Data:", MOCK_SERVICES);
             state.ready = true;
             state.services = MOCK_SERVICES;
             state.isConnected = true; 
@@ -276,19 +257,11 @@ const DYNAMIC_SCRIPT = `
 
                 // 3. Fallback check (If context was already there)
                 const existingData = window.LuigiClient.getEventData();
-                if (existingData && existingData.context) {
-                    handleContext(existingData.context);
-                }
-
-            } else {
-                error("LuigiClient object not found on window!");
+                if (existingData && existingData.context) handleContext(existingData.context);
             }
 
             setTimeout(() => {
-                if (!state.isConnected) {
-                    log("Timeout: Standalone Mode.");
-                    ensureStandaloneWarning();
-                }
+                if (!state.isConnected) ensureStandaloneWarning();
             }, 2000);
         };
 
@@ -335,7 +308,7 @@ function injectScripts(dir) {
   });
 }
 
-console.log('🚀 Starting Injection...');
+console.log('🚀 Starting Injection (React-Prop-Safe Mode)...');
 let found = false;
 POTENTIAL_DIRS.forEach(dir => {
     if (fs.existsSync(dir)) {
