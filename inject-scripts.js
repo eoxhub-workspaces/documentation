@@ -20,7 +20,7 @@ const SERVICE_MAPPING = {
     "Argo": "argo-workflows-server",
     "Headless Execution": "pygeoapi-eoxhub-pygeoapi-eoxhub",
     "Credentials Manager": "credentials-manager",
-    "eoAPI": "eoapi-rw-stac",
+    "eoAPI": "eoapi-rw-stac", 
     "Dask Dashboard": "dask-gateway-dashboard"
 };
 
@@ -78,33 +78,36 @@ const DYNAMIC_SCRIPT = `
 
     // --- 1. APPLY VISUALS ---
     function applyVisuals() {
-        if (!state.ready) return;
-        const allowedKeys = state.services;
+        // Wrap in RequestAnimationFrame to avoid conflicting with React Render Cycle
+        requestAnimationFrame(() => {
+            if (!state.ready) return;
+            const allowedKeys = state.services;
 
-        const allLinks = document.querySelectorAll('nav a, main a, article a');
-        allLinks.forEach(link => {
-            const name = getCleanLinkName(link);
-            
-            if (LINK_TO_KEY_MAP.hasOwnProperty(name)) {
-                const requiredKey = LINK_TO_KEY_MAP[name];
+            const allLinks = document.querySelectorAll('nav a, main a, article a');
+            allLinks.forEach(link => {
+                const name = getCleanLinkName(link);
                 
-                if (!allowedKeys.includes(requiredKey)) {
-                    const isOptional = OPTIONAL_APPS_LIST.includes(name);
-                    if (!isOptional) {
-                        if (!link.classList.contains('service-unavailable-link')) {
-                            link.classList.add('service-unavailable-link');
-                            link.title = "Not available in this workspace";
+                if (LINK_TO_KEY_MAP.hasOwnProperty(name)) {
+                    const requiredKey = LINK_TO_KEY_MAP[name];
+                    
+                    if (!allowedKeys.includes(requiredKey)) {
+                        const isOptional = OPTIONAL_APPS_LIST.includes(name);
+                        if (!isOptional) {
+                            if (!link.classList.contains('service-unavailable-link')) {
+                                link.classList.add('service-unavailable-link');
+                                link.title = "Not available in this workspace";
+                            }
+                        } else {
+                            link.classList.remove('service-unavailable-link');
                         }
                     } else {
                         link.classList.remove('service-unavailable-link');
                     }
-                } else {
-                    link.classList.remove('service-unavailable-link');
                 }
-            }
-        });
+            });
 
-        ensurePageWarning(allowedKeys);
+            ensurePageWarning(allowedKeys);
+        });
     }
 
     // --- 2. WARNING BANNERS ---
@@ -143,7 +146,7 @@ const DYNAMIC_SCRIPT = `
                 'This application does not seem to be available in your current workspace configuration. If you think this is an error please contact your workspace administrator.');
         }
         aside.id = 'app-unavailable-warning';
-        injectBanner(aside, h1);
+        injectBanner(aside);
     }
 
     function ensureStandaloneWarning() {
@@ -162,7 +165,7 @@ const DYNAMIC_SCRIPT = `
             'You are viewing this documentation outside of a Workspace context. Applications shown here might not be available in your specific environment.');
         aside.id = 'standalone-warning';
         
-        injectBanner(aside, h1);
+        injectBanner(aside);
     }
 
     function createAdmonition(type, title, text) {
@@ -171,8 +174,12 @@ const DYNAMIC_SCRIPT = `
             : { border: 'border-amber-500', text: 'text-amber-600', bg: 'bg-amber-50', icon: 'M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z' };
 
         const aside = document.createElement('aside');
-        aside.className = \`myst-admonition myst-admonition-\${type} my-5 shadow-md \${colors.bg}/10 dark:bg-stone-800 overflow-hidden myst-admonition-default rounded border-l-4 \${colors.border}\`;
         
+        // --- SPACING ADJUSTMENTS ---
+        aside.className = \`myst-admonition myst-admonition-\${type} mt-6 mb-4 shadow-md \${colors.bg}/10 dark:bg-stone-800 overflow-hidden myst-admonition-default rounded border-l-4 \${colors.border}\`;     
+        aside.style.setProperty('margin-top', '24px', 'important');
+        aside.style.marginBottom = '-45px';
+
         aside.innerHTML = \`
             <div class="myst-admonition-header m-0 font-medium py-1 flex min-w-0 text-lg \${colors.text} \${colors.bg} dark:bg-slate-900">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="2rem" height="2rem" class="myst-admonition-header-icon inline-block pl-2 mr-2 self-center flex-none \${colors.text}">
@@ -189,10 +196,20 @@ const DYNAMIC_SCRIPT = `
         return aside;
     }
 
-    function injectBanner(element, h1) {
-        const block = h1.closest('#skip-to-frontmatter');
-        if (block) block.parentNode.insertBefore(element, block.nextSibling);
-        else h1.parentNode.insertBefore(element, h1.nextSibling);
+    // --- SAFER INJECTION LOGIC ---
+    function injectBanner(element) {
+        // Instead of trying to insert between specific header elements (which crashes React),
+        // we prepend it to the main content container.
+        const container = document.querySelector('main') || document.querySelector('article') || document.querySelector('.bd-article');
+        
+        if (container) {
+            // Check if we already have it to be super safe
+            const existing = container.querySelector(\`#\${element.id}\`);
+            if (existing) existing.remove();
+            
+            // Prepend: Adds it as the very first child of the main container
+            container.prepend(element);
+        }
     }
 
     // --- 3. INIT LOGIC (LUIGI CONNECTION) ---
@@ -227,9 +244,8 @@ const DYNAMIC_SCRIPT = `
     window.addEventListener('load', () => {
         log("Window Loaded. Injecting Luigi Client...");
 
-        // Check if we are actually in an iframe
         if (window.parent === window) {
-            log("⚠️ Not running in an iframe (Top Frame Detected). Luigi handshake will likely fail.");
+            log("⚠️ Top Frame Detected. Luigi handshake will likely fail.");
         }
 
         if (MOCK_SERVICES) {
@@ -248,14 +264,11 @@ const DYNAMIC_SCRIPT = `
             if (window.LuigiClient) {
                 log("LuigiClient Object found.");
                 
-                // 1. Init Listener (Standard)
                 window.LuigiClient.addInitListener((context) => {
                     log("Event: InitListener Triggered");
                     handleContext(context);
                 });
 
-                // 2. Context Update Listener (Backup)
-                // Sometimes context is pushed as an update, not init
                 window.LuigiClient.addContextUpdateListener((context) => {
                     log("Event: ContextUpdateListener Triggered");
                     handleContext(context);
@@ -264,20 +277,16 @@ const DYNAMIC_SCRIPT = `
                 // 3. Fallback check (If context was already there)
                 const existingData = window.LuigiClient.getEventData();
                 if (existingData && existingData.context) {
-                    log("Found existing event data", existingData);
                     handleContext(existingData.context);
-                } else {
-                    log("No existing event data found.");
                 }
 
             } else {
                 error("LuigiClient object not found on window!");
             }
 
-            // TIMEOUT: If no handshake after 2 seconds, show warning
             setTimeout(() => {
                 if (!state.isConnected) {
-                    log("Timeout: Connection not established. Enabling Standalone Mode.");
+                    log("Timeout: Standalone Mode.");
                     ensureStandaloneWarning();
                 }
             }, 2000);
@@ -326,7 +335,7 @@ function injectScripts(dir) {
   });
 }
 
-console.log('🚀 Starting Injection (Debug Mode)...');
+console.log('🚀 Starting Injection...');
 let found = false;
 POTENTIAL_DIRS.forEach(dir => {
     if (fs.existsSync(dir)) {
