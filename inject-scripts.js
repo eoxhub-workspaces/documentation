@@ -5,8 +5,9 @@ const path = require('path');
 const POTENTIAL_DIRS = ['./_build/html', './_build/site'];
 
 // --- TEST CONFIGURATION ---
+// Set to NULL for production (wait for Luigi).
 const MOCK_AVAILABLE_SERVICES = null; 
-// const MOCK_AVAILABLE_SERVICES = ['filebrowser']; 
+// const MOCK_AVAILABLE_SERVICES = ['workspace-ui']; 
 
 const SERVICE_MAPPING = {
     "JupyterLab": "hub",
@@ -19,7 +20,7 @@ const SERVICE_MAPPING = {
     "Argo": "argo-workflows-server",
     "Headless Execution": "pygeoapi-eoxhub-pygeoapi-eoxhub",
     "Credentials Manager": "credentials-manager",
-    "eoAPI": "eoapi-rw-stac", 
+    "eoAPI": "eoapi-rw-stac",
     "Dask Dashboard": "dask-gateway-dashboard"
 };
 
@@ -32,19 +33,18 @@ const OPTIONAL_APPS = [
 const DYNAMIC_SCRIPT = `
 <style>
   /* VISUALS FOR UNAVAILABLE APPS */
-  /* We target the data attribute to avoid React className conflicts */
-  a[data-service-status="unavailable"] {
+  .service-unavailable-link {
     opacity: 0.4 !important;
-    color: #5c5c5cff !important;
+    color: #5a5a5aff !important;
     transition: opacity 0.2s;
   }
-  a[data-service-status="unavailable"]:hover {
+  .service-unavailable-link:hover {
     opacity: 0.7 !important;
   }
   
   /* Icon for inline content links */
-  main a[data-service-status="unavailable"]::after, 
-  article a[data-service-status="unavailable"]::after {
+  main a.service-unavailable-link::after, 
+  article a.service-unavailable-link::after {
     content: " 🚫";
     font-size: 0.8em;
   }
@@ -78,35 +78,33 @@ const DYNAMIC_SCRIPT = `
 
     // --- 1. APPLY VISUALS ---
     function applyVisuals() {
-        // Run inside requestAnimationFrame to minimize UI blocking
-        requestAnimationFrame(() => {
-            if (!state.ready) return;
-            const allowedKeys = state.services;
+        if (!state.ready) return;
+        const allowedKeys = state.services;
 
-            const allLinks = document.querySelectorAll('nav a, main a, article a');
-            allLinks.forEach(link => {
-                const name = getCleanLinkName(link);
+        const allLinks = document.querySelectorAll('nav a, main a, article a');
+        allLinks.forEach(link => {
+            const name = getCleanLinkName(link);
+            
+            if (LINK_TO_KEY_MAP.hasOwnProperty(name)) {
+                const requiredKey = LINK_TO_KEY_MAP[name];
                 
-                if (LINK_TO_KEY_MAP.hasOwnProperty(name)) {
-                    const requiredKey = LINK_TO_KEY_MAP[name];
-                    
-                    if (!allowedKeys.includes(requiredKey)) {
-                        const isOptional = OPTIONAL_APPS_LIST.includes(name);
-                        if (!isOptional) {
-                            if (link.getAttribute('data-service-status') !== 'unavailable') {
-                                link.setAttribute('data-service-status', 'unavailable');
-                            }
-                        } else {
-                            link.removeAttribute('data-service-status');
+                if (!allowedKeys.includes(requiredKey)) {
+                    const isOptional = OPTIONAL_APPS_LIST.includes(name);
+                    if (!isOptional) {
+                        if (!link.classList.contains('service-unavailable-link')) {
+                            link.classList.add('service-unavailable-link');
+                            link.title = "Not available in this workspace";
                         }
                     } else {
-                        link.removeAttribute('data-service-status');
+                        link.classList.remove('service-unavailable-link');
                     }
+                } else {
+                    link.classList.remove('service-unavailable-link');
                 }
-            });
-
-            ensurePageWarning(allowedKeys);
+            }
         });
+
+        ensurePageWarning(allowedKeys);
     }
 
     // --- 2. WARNING BANNERS ---
@@ -145,7 +143,7 @@ const DYNAMIC_SCRIPT = `
                 'This application does not seem to be available in your current workspace configuration. If you think this is an error please contact your workspace administrator.');
         }
         aside.id = 'app-unavailable-warning';
-        injectBanner(aside);
+        injectBanner(aside, h1);
     }
 
     function ensureStandaloneWarning() {
@@ -164,7 +162,7 @@ const DYNAMIC_SCRIPT = `
             'You are viewing this documentation outside of a Workspace context. Applications shown here might not be available in your specific environment.');
         aside.id = 'standalone-warning';
         
-        injectBanner(aside);
+        injectBanner(aside, h1);
     }
 
     function createAdmonition(type, title, text) {
@@ -173,12 +171,8 @@ const DYNAMIC_SCRIPT = `
             : { border: 'border-amber-500', text: 'text-amber-600', bg: 'bg-amber-50', icon: 'M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z' };
 
         const aside = document.createElement('aside');
+        aside.className = \`myst-admonition myst-admonition-\${type} my-5 shadow-md \${colors.bg}/10 dark:bg-stone-800 overflow-hidden myst-admonition-default rounded border-l-4 \${colors.border}\`;
         
-        // --- SPACING ADJUSTMENTS ---
-        aside.className = \`myst-admonition myst-admonition-\${type} mt-6 mb-4 shadow-md \${colors.bg}/10 dark:bg-stone-800 overflow-hidden myst-admonition-default rounded border-l-4 \${colors.border}\`;     
-        aside.style.setProperty('margin-top', '24px', 'important');
-        aside.style.marginBottom = '-45px';
-
         aside.innerHTML = \`
             <div class="myst-admonition-header m-0 font-medium py-1 flex min-w-0 text-lg \${colors.text} \${colors.bg} dark:bg-slate-900">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="2rem" height="2rem" class="myst-admonition-header-icon inline-block pl-2 mr-2 self-center flex-none \${colors.text}">
@@ -189,20 +183,16 @@ const DYNAMIC_SCRIPT = `
                 </div>
             </div>
             <div class="myst-admonition-body px-4 py-1">
-                <p>\${text}</p>
+                <p style="margin-top: 0px; margin-bottom: 0px;">\${text}</p>
             </div>
         \`;
         return aside;
     }
 
-    function injectBanner(element) {
-        const container = document.querySelector('main') || document.querySelector('article') || document.querySelector('.bd-article');
-        
-        if (container) {
-            const existing = container.querySelector(\`#\${element.id}\`);
-            if (existing) existing.remove();
-            container.prepend(element);
-        }
+    function injectBanner(element, h1) {
+        const block = h1.closest('#skip-to-frontmatter');
+        if (block) block.parentNode.insertBefore(element, block.nextSibling);
+        else h1.parentNode.insertBefore(element, h1.nextSibling);
     }
 
     // --- 3. INIT LOGIC (LUIGI CONNECTION) ---
@@ -213,29 +203,37 @@ const DYNAMIC_SCRIPT = `
         const wsId = context.workspaceConfig?.id;
         
         if (gateway && wsId) {
+            log(\`Fetching config from: \${gateway}\`);
             fetch(\`\${gateway.replace(/\\/$/, "")}/\${wsId}/whoami\`, { credentials: 'include' })
-                .then(r => r.json())
+                .then(r => {
+                    if(!r.ok) throw new Error(\`HTTP \${r.status}\`);
+                    return r.json();
+                })
                 .then(data => {
                     log("Services Loaded:", data.services);
                     state.ready = true;
                     state.isConnected = true;
                     state.services = (data.services || []).map(s => s.key);
-                    
                     const w = document.getElementById('standalone-warning');
                     if(w) w.remove();
-
-                    setTimeout(() => {
-                        log("Applying visuals (Delayed for Safety)...");
-                        applyVisuals();
-                    }, 500);
+                    applyVisuals();
                 })
                 .catch(e => error("API Fetch Failed", e));
+        } else {
+            error("Context missing gatewayUrl or workspaceConfig.id");
         }
     }
 
     window.addEventListener('load', () => {
+        log("Window Loaded. Injecting Luigi Client...");
+
+        // Check if we are actually in an iframe
+        if (window.parent === window) {
+            log("⚠️ Not running in an iframe (Top Frame Detected). Luigi handshake will likely fail.");
+        }
+
         if (MOCK_SERVICES) {
-            log("Using Mock Data:", MOCK_SERVICES);
+            log("⚠️ Using Mock Data:", MOCK_SERVICES);
             state.ready = true;
             state.services = MOCK_SERVICES;
             state.isConnected = true; 
@@ -248,37 +246,58 @@ const DYNAMIC_SCRIPT = `
             log("Luigi Client Script Loaded.");
             
             if (window.LuigiClient) {
-                window.LuigiClient.addInitListener(handleContext);
-                window.LuigiClient.addContextUpdateListener(handleContext);
+                log("LuigiClient Object found.");
+                
+                // 1. Init Listener (Standard)
+                window.LuigiClient.addInitListener((context) => {
+                    log("Event: InitListener Triggered");
+                    handleContext(context);
+                });
+
+                // 2. Context Update Listener (Backup)
+                // Sometimes context is pushed as an update, not init
+                window.LuigiClient.addContextUpdateListener((context) => {
+                    log("Event: ContextUpdateListener Triggered");
+                    handleContext(context);
+                });
+
+                // 3. Fallback check (If context was already there)
                 const existingData = window.LuigiClient.getEventData();
-                if (existingData && existingData.context) handleContext(existingData.context);
+                if (existingData && existingData.context) {
+                    log("Found existing event data", existingData);
+                    handleContext(existingData.context);
+                } else {
+                    log("No existing event data found.");
+                }
+
+            } else {
+                error("LuigiClient object not found on window!");
             }
-            
-            // Fallback for standalone mode
+
+            // TIMEOUT: If no handshake after 2 seconds, show warning
             setTimeout(() => {
                 if (!state.isConnected) {
-                    log("Timeout: Standalone Mode Active.");
+                    log("Timeout: Connection not established. Enabling Standalone Mode.");
                     ensureStandaloneWarning();
                 }
-            }, 500);
+            }, 2000);
         };
 
+        script.onerror = (e) => error("Failed to load Luigi Client script", e);
         document.head.appendChild(script);
 
-        /* 
         // PERSISTENCE LOOP
         setInterval(() => {
             if (state.ready) applyVisuals();
             if (!state.isConnected) ensureStandaloneWarning();
-        }, 1000); // Relaxed interval
+        }, 500);
         
         document.body.addEventListener('click', () => {
             setTimeout(() => { 
                 if (state.ready) applyVisuals();
                 if (!state.isConnected) ensureStandaloneWarning();
-            }, 100);
+            }, 50);
         });
-        */
     });
 
   })();
@@ -297,21 +316,17 @@ function injectScripts(dir) {
       injectScripts(filePath); 
     } else if (file.endsWith('.html')) {
       let content = fs.readFileSync(filePath, 'utf8');
-      
       if (content.includes('CONTEXT-AWARE INJECTION START')) return;
 
-      if (/<\/head>/i.test(content)) {
-        const newContent = content.replace(/<\/head>/i, () => `
-            ${DYNAMIC_SCRIPT}
-            </head>
-        `);
+      if (/<\/body>/i.test(content)) {
+        const newContent = content.replace(/<\/body>/i, `${DYNAMIC_SCRIPT}</body>`);
         fs.writeFileSync(filePath, newContent, 'utf8');
       } 
     }
   });
 }
 
-console.log('🚀 Starting Injection (Delayed execution mode)...');
+console.log('🚀 Starting Injection (Debug Mode)...');
 let found = false;
 POTENTIAL_DIRS.forEach(dir => {
     if (fs.existsSync(dir)) {
