@@ -25,11 +25,13 @@ Credentials manager
 
 - Opaque (default)
   - (one or more) key-value pair(s)
-- kubernetes.io/dockerconfigjson
+- dockerconfigjson
   - used to store authentication credentials for container image registries
   - referenced in pods as imagePullSecrets
-- kubernetes.io/ssh-auth
+- ssh-auth
   - used to store a private authentication key
+ 
+> More detailed information about these secret types can be found in the official documentation: https://kubernetes.io/docs/concepts/configuration/secret/#secret-types
 
 ####  Creation
 | Type                                                                                                               | Example                                                |
