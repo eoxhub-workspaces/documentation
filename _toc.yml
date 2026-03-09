@@ -22,6 +22,7 @@ sections:
       - file: applications/headless_execution
       - file: applications/secret_manager
       - file: applications/eoapi
+      - file: applications/container_registry
 
   - title: Tutorials
     sections:   
