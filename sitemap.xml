@@ -47,6 +47,9 @@
     <loc>http://localhost:3000/eoapi</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/container-registry</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/creating-account</loc>
   </url>
   <url>
