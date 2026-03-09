@@ -4,18 +4,11 @@
 
 The credentials can be found in the secret **registry-login** in the [credentials manager](./secret_manager.md) or your workspace.
 
-```{figure} assets/credentials-manager/registry-credentials.png
----
-name: registry-credentials
----
-Credentials 'registry-login' contains the login information for the container registry.
-```
-
 ```{figure} assets/credentials-manager/registry-credentials-detail.png
 ---
 name: registry-credentials-detail
 ---
-Registry server FQDN (URL), Username & Password
+Credential 'registry-login' contains the login information for the container registry: registry server FQDN (URL), username & password
 ```
 
 ## Upload images to registry
