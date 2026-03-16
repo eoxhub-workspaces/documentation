@@ -22,7 +22,8 @@ const SERVICE_MAPPING = {
     "Credentials Manager": ["credentials-manager"],
     "eoAPI": ["eoapi-rw-stac", "eoapi-rw-raster", "eoapi-rw-vector", ],
     "Dask Dashboard": ["dask-gateway-dashboard"],
-    "Publishing Dashboard": ["eodash"]
+    "Publishing Dashboard": ["eodash"],
+    "Container Registry": ["zot"]
 };
 
 // APPS THAT SHOULD NOT BE GREYED OUT, JUST WARNED
