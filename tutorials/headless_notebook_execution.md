@@ -25,32 +25,32 @@ Inside this folder, the structure can be arbitrary - separated into many other f
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/7e7e36ee-1f58-4be7-b63e-900099ee3eb3/ascreenshot_4c45ec3f55ac4c2f9eebe262536297ce_text_export.jpeg)
 
 \
-5\. Open notebook and write your code into the cells
+5\. Open a notebook and write your code into the cells
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/b4543b30-5b46-4167-85da-21f635059c6f/user_cropped_screenshot_850a27cea8434ccdbc6924c317815f56_text_export.jpeg)
 
 \
-6\. The cell which should take input parameters from the headless call needs to be adjusted and explicitly the parameters (variables) with the default values need to be assigned.**
+6\. The cell that should take input parameters from the headless call needs to be adjusted, and the parameters (variables) with default values need to be explicitly assigned.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/dcbbb451-19fc-425e-b51c-1cf0f74b7ccb/user_cropped_screenshot_481057b49a0346ffbaec084617874580_text_export.jpeg)
 
 \
-7\. Additionally to explicitly setting default parameters, the cells with them needs to be tagged "parameters". Save notebook once you are done.
+7\. In addition to explicitly setting default parameters, the cells containing them need to be tagged "parameters". Save the notebook once you are done.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/15692823-162d-4e28-b29f-d4ff7254775c/user_cropped_screenshot_9dbcc1cbd33f4274862c3948a67292bb_text_export.jpeg)
 
 \
-8\. To trigger the **headless execution**, you need send a request to a specific endpoint. \
+8\. To trigger the **headless execution**, you need to send a request to a specific endpoint. \
 Inside the call you can specify:\
-- a specific **kernel** (if not specified, it will automatically use the same kernel which was saved with notebook), the input should be the **full kernel name**\
-- **parameters** to be overwritten by execution\
+- a specific **kernel** (if not specified, it will automatically use the same kernel which was saved with the notebook), the input should be the **full kernel name**\
+- **parameters** to be overwritten by the execution\
 - **full path** to the notebook \
 \
-Optionally it is possible to include resource limits, like CPU or RAM.\
+Optionally, it is possible to include resource limits, like CPU or RAM.\
 \
-This request can be send via any application user prefers, not only direct curl call.\
+This request can be sent via any application the user prefers, not just a direct curl call.\
 \
-Here is **example** call in curl:\
+Here is an **example** call using curl:\
 \
 curl --include \\ \
 --request POST 'https://pygeoapi-eoxhub.{your-workspace-url}/processes/execute-notebook/jobs' \
@@ -67,18 +67,18 @@ curl --include \\ \
 }'
 
 \
-9\. Executed notebooks and their results can be found in the sub-folder **job-output** in the same location as the originating notebooks.\
-All the cells will be executed so opening the notebook can be used for debugging purposes.
+9\. Executed notebooks and their results can be found in the sub-folder **job-output**, in the same location as the originating notebooks.\
+All cells will be executed, so opening the notebook can be used for debugging purposes.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-06/bd0f26c1-d89c-45a1-b2f1-44e46334741d/user_cropped_screenshot_f3238939be0b4ae9818e3443336cfcaa_text_export.jpeg)
 
 \
-10\. In the "**Headless Notebook**" application you can track the progress of the running jobs and also explore details like parameters used and running time.
+10\. In the "**Headless Notebook**" application, you can track the progress of the running jobs and explore details like the parameters used and running time.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/77e8cbca-d19b-4134-a2be-4ea3d05172d6/ascreenshot_8e2e07d2a69e41658e5f09cc4d2586e3_text_export.jpeg)
 
 \
-11\. Upon clicking "Browse jobs" you can browse all the headless jobs in the workspace
+11\. By clicking "Browse jobs," you can browse all the headless jobs in the workspace.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/36b8e364-4459-4bbb-8b1f-53cc6e29d3ed/ascreenshot_008dab95d6a642ac9a6e4579eb175c90_text_export.jpeg)
 
@@ -88,11 +88,11 @@ All the cells will be executed so opening the notebook can be used for debugging
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/7fdab7f3-f3a0-4922-b0bc-57205f504fee/ascreenshot_f209e1d7c5984090af07fdfa26d1db48_text_export.jpeg)
 
 \
-13\. Clicking on the Job-ID you can access details
+13\. By clicking on the Job-ID, you can access the details.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/72412cfb-283c-4f6c-9243-3b334decfcc1/ascreenshot_242051d26cd3469b8aada3f0ad0ec592_text_export.jpeg)
 
 \
-14\. Opening the desired job details will show passed parameters of the call including **kernel** or exact values of the **parameters**. This helps reproducibility and traceability of the executed algorithms.
+14\. Opening the desired job details will show the passed parameters of the call, including the **kernel** and the exact values of the **parameters**. This helps with the reproducibility and traceability of the executed algorithms.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-06/0503d88d-bc5b-4148-a6df-8297b58301a7/user_cropped_screenshot_09e442957be14e2988504041a0fd0b2f_text_export.jpeg)
