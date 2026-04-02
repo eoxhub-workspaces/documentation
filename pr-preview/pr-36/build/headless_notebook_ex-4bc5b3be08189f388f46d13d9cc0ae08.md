@@ -2,7 +2,7 @@
 
 Learn how to leverage headless notebooks to run your Jupyter notebooks with dynamic parameters. This guide walks you through starting a server, executing a notebook, and managing job outputs for automated analysis.
 
-1\. Navigate to your workspace  -  this tutorial is shown on specific workspace but can be reproduced anywhere where this application is enabled
+1\. Navigate to your workspace - this tutorial is shown on a specific workspace but can be reproduced anywhere where this application is enabled
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/0418d570-967e-49e9-978b-3acbac48f27a/ascreenshot_96322cbebd8e4479808e7c8a9c6a833a_text_export.jpeg)
 
@@ -12,15 +12,15 @@ Learn how to leverage headless notebooks to run your Jupyter notebooks with dyna
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/aacfe709-2d5a-4e86-8852-19ae46a44b24/ascreenshot_22667693b4e64aed93e8cc4cf1695f84_text_export.jpeg)
 
 \
-3\. Now lets start Jupyter Hub to prepare your notebook
+3\. Now let's start Jupyter Hub to prepare your notebook
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/097a37f2-79e2-4039-a061-ec66b70808e2/ascreenshot_94c38724c4bb4f02b437103d6c6dddf4_text_export.jpeg)
 
 \
-4\. For pygeoapi worker to find the correct notebook, it needs to be created in specific structure of a shared folder. Inside of **shared** **folder** there is an another **folder** **named** **the** **same** **as** **the workspace** - this is the correct location.\
-Shared folder is shared among all users in the workspace and also with the pygeoapi. \
+4\. For the pygeoapi worker to find the correct notebook, it needs to be created in a specific structure within a shared folder. Inside the **shared** **folder**, there is another **folder** **named** **the** **same** **as** **the workspace** - this is the correct location.\
+The shared folder is shared among all users in the workspace and also with pygeoapi. \
 \
-Inside this folder the structure can be arbitrary - separated into many other folders or just a single notebooks.
+Inside this folder, the structure can be arbitrary - separated into many other folders or just single notebooks.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/7e7e36ee-1f58-4be7-b63e-900099ee3eb3/ascreenshot_4c45ec3f55ac4c2f9eebe262536297ce_text_export.jpeg)
 
