@@ -34,6 +34,7 @@ sections:
       - file: tutorials/introduction_narrative_editor
       - file: tutorials/narrative_editor
       - file: tutorials/narrative_editor_maptour
+      - file: tutorials/editors_linking_stories_collections
       - file: tutorials/qgis_tutorial
       - file: tutorials/headless_notebook_execution
       - file: tutorials/polaris
