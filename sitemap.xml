@@ -74,6 +74,9 @@
     <loc>http://localhost:3000/narrative-editor-maptour</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/editors-linking-stories-collections</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/qgis-tutorial</loc>
   </url>
   <url>
