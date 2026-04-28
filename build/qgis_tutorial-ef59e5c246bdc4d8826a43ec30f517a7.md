@@ -28,6 +28,11 @@ This guide demonstrates the process of accessing a QGIS desktop environment dire
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-04-01/3ba66f42-cb05-4451-a28f-fe5f9795c262/ascreenshot_2b53360372554876989171cc7dff6683_text_export.jpeg)
 
 \
+5.5 \. It can happen that QGIS do not start on a first start - if that happens, click on jupyter icon in the upper left corner. This will refresh the session and fix the issue.
+
+![](https://colony-recorder.s3.amazonaws.com/files/2026-04-28/f4a3234e-9de1-4d76-8cdc-de52689d52bc/screenshot_9cea884925a54ffaac9331266a109004_text_export.jpeg)
+
+\
 6\. QGIS then opens inside the JupyterHub app window
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-04-01/466f517a-8234-4043-a8de-2edec4eb248d/ascreenshot_bfd9aa459eb5463da5b5468ed3ed65f1_text_export.jpeg)
