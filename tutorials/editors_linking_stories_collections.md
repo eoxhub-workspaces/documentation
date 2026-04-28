@@ -65,7 +65,7 @@ In this tutorial **hunga_tonga_aerosol_plumes**
 
 9\. Click **"Save"** to complete the edits in this session.
 
-Take note on the value of the **EodashIdentifier** value in the **General tab** - we will need it later on.
+Take note on the value of the **Name** (or **EodashIdentifier** if you are editing RACE or EOdashboard catalog) in the **General tab** - we will need it later on.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-04-20/c3bcd4e3-1e7b-473b-a112-42cd2885b3ab/ascreenshot_64a241ec3c6548918322c7077b8dd950_text_export.jpeg)
 
