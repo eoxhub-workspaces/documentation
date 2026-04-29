@@ -72,7 +72,9 @@ Take note on the value of the **Name** (or **EodashIdentifier** if you are editi
 
 10\. Now it's time to add the link also to the narrative.
 
-Switch to the **Narrative Editor**, select a working session, open the **narrative** which needs a new reference to a **collection** and update the top frontmatter information, adding a field **collections** with a list of comma-separated EodashIdentifiers of all relevant collections for this narrative.
+Switch to the **Narrative Editor**, select a working session, open the **narrative** which needs a new reference to a **collection** and update the top frontmatter information, adding a field **collections** with a list of comma-separated **Names** (or **EodashIdentifiers**) of all relevant collections for this narrative.
+
+You can also get the collection name from dashboard url in the indicator= part eg. https://gtif-austria.info/explore?x=13.4280&y=47.8056&z=7.9771&template=light&indicator=brownfield_recovery_potential&datetime=2024-01-01 - in this case collection **Name** is brownfield_recovery_potential
 
 In this tutorial set as **collections: S5P-L3GRD-VOLCSO2-DAY**
 
