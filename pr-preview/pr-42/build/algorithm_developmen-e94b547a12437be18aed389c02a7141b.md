@@ -12,3 +12,7 @@ This phase is particularly relevant for data scientists and researchers aiming t
 - **[Credentials Manager](../applications/secret_manager.md)** securely provides credentials for protected data sources, APIs, cloud storage, and other external services.
 - **[Container Registry](../applications/container_registry.md)** stores versioned container images when an algorithm is ready to be packaged for reproducible execution.
 ---
+
+## Related tutorials
+
+- [Launch QGIS from JupyterLab](../tutorials/processing_analysis/qgis_tutorial.md)

@@ -11,3 +11,9 @@ This approach allows your logic to be reused consistently, integrated into dashb
 - **[eoAPI](../applications/eoapi.md)** exposes data through standardized STAC interface so they can be discovered and executed by other applications.
 - **[Headless Execution](../applications/headless_execution.md)** provides an interface for triggering processing jobs and inspecting their status, parameters, and outputs.
 - **[Publishing Dashboard](../applications/publishing_dashboard.md)** allows users to provide parameters, trigger an algorithm, and explore its generated results through a web interface.
+
+
+## Related tutorials
+
+- [Run a Parameterized Notebook with Headless Execution](../tutorials/processing_analysis/headless_notebook_execution.md)
+- [Run the Polar Warp Capability](../tutorials/exploring_capabilities/polar_warp.md)
