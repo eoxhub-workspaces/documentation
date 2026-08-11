@@ -24,7 +24,8 @@ sections:
       - file: applications/eoapi
       - file: applications/container_registry
 
-  - title: Tutorials
+  - file: tutorials/tutorials
+    title: Tutorials
     sections:
       - title: Getting Started
         sections:
