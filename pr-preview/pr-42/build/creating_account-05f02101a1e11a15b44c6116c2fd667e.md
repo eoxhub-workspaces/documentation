@@ -1,6 +1,8 @@
-# How to create an account in EOxHub workspaces
+# Create an EOxHub workspaces account
 
-
+**What you’ll accomplish:** Sign in to an EOxHub Workspace using your GitHub account.  
+**Estimated time:** 5 minutes  
+**Before you start:** You need a GitHub account and the URL of the EOxHub Workspace you want to access. Some Workspaces require administrator approval before access is granted.
 
 
 1\. Navigate to your EOxHub workspace. For example <https://gtif-austria.info/> .

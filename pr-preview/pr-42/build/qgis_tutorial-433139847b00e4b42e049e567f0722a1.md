@@ -1,4 +1,10 @@
-# How To Launch A QGIS Desktop In JupyterHub
+# Launch QGIS from JupyterLab
+
+**What you’ll accomplish:** Launch QGIS in your browser and access data stored in your EOxHub Workspace.  
+**Applications used:** [JupyterLab](../../applications/jupyterlab.md)  
+**Estimated time:** 5–10 minutes  
+**Before you start:** You need access to a Workspace where the QGIS environment is enabled.  
+
 
 This guide demonstrates the process of accessing a QGIS desktop environment directly within your browser using JupyterHub inside the EOxHub Workspace. It provides simple instructions to configure your server resources and successfully launch a specialized session for your data.
 

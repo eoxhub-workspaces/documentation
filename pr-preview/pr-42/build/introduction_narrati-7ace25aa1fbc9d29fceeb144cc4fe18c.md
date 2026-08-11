@@ -1,5 +1,9 @@
-# An introduction to the Narrative Editor
+# Get Started with the Narrative Editor
 
+**What you’ll accomplish:** Set up the Narrative Editor, create your first narrative, preview it, and submit it for review.  
+**Applications used:** [Narrative Editor](../../applications/narrative-editor.md)  
+**Estimated time:** 20–30 minutes  
+**Before you start:** You need an EOxHub account, a GitHub account, and access to a Workspace with the Narrative Editor enabled.  
 
 
 1\. Navigate to your EOxHub workspace, for example <https://gtif-austria.info/> and log into your account. If you need help doing so, or do not yet own an account, follow the link to find the tutorial covering how to create one: [How to create an account in EOxHub workspaces](../tutorials/creating_account.md)
