@@ -67,3 +67,8 @@ name: argo_past_runs_statistics
 ---
 Argo Workflow Server built in resource usage metrics
 ```
+
+## Related use cases
+
+- [Generate Results](../use_cases/result_generation.md)
+- [Provide an Algorithm as a Service](../use_cases/algorithm_as_a_service.md)

@@ -35,17 +35,17 @@ Credentials manager
 
 ####  Creation
 | Type                                                                                                               | Example                                                |
-|--------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
 | **Opaque (key-value)**  <br><br> You can add **one or more** key-value pairs.                                      | ![](./assets/credentials-manager/opaque.png)           |
 | **dockerconfigjson** <br><br> The provided credentials are **converted to a valid json** and stored in the secret. | ![](./assets/credentials-manager/dockerconfigjson.png) |
 | **ssh-auth** <br><br> You can either **upload** the key file **or paste the key** in the text area.                | ![](./assets/credentials-manager/ssh-auth.png)         |
 
 #### Modification / Deletion
-| Type                                                                                                                                                                        | Example |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
-| **Opaque (key-value)**  <br><br> <li>add / remove key-value pairs</li><li>change individual keys / values</li>                                                              | ![opaque_edit.png](assets/credentials-manager/opaque_edit.png)        |
-| **dockerconfigjson** <br><br> The credentials can be changed, the current state of the currently stored json is shown in the (readonly) textarea below.                     | ![dockerconfigjson-view.png](assets/credentials-manager/dockerconfigjson-view.png)        |
-| **ssh-auth** <br><br> The ssh-privatekey is masked and immutable once it's stored. If you need to change the key, you need to delete the secret first and then recreate it. | ![ssh-auth-view.png](assets/credentials-manager/ssh-auth-view.png)        |
+| Type                                                                                                                                                                        | Example                                                                            |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **Opaque (key-value)**  <br><br> <li>add / remove key-value pairs</li><li>change individual keys / values</li>                                                              | ![opaque_edit.png](assets/credentials-manager/opaque_edit.png)                     |
+| **dockerconfigjson** <br><br> The credentials can be changed, the current state of the currently stored json is shown in the (readonly) textarea below.                     | ![dockerconfigjson-view.png](assets/credentials-manager/dockerconfigjson-view.png) |
+| **ssh-auth** <br><br> The ssh-privatekey is masked and immutable once it's stored. If you need to change the key, you need to delete the secret first and then recreate it. | ![ssh-auth-view.png](assets/credentials-manager/ssh-auth-view.png)                 |
 
 
 #### Special modes
@@ -60,10 +60,10 @@ name: opaque-view-only
 Credential can only be viewed, not edited or deleted.
 ```
 
-| Mode     | Example                                                        |
-|----------|----------------------------------------------------------------|
+| Mode         | Example                                                                |
+| ------------ | ---------------------------------------------------------------------- |
 | **readonly** | ![opaque-readonly.png](assets/credentials-manager/opaque-readonly.png) |
-| **key-only** | ![opaque-keyonly.png](assets/credentials-manager/opaque-keyonly.png) |
+| **key-only** | ![opaque-keyonly.png](assets/credentials-manager/opaque-keyonly.png)   |
 
 
 #### Inject as environment variables into Jupyterlab
@@ -73,8 +73,15 @@ Credential can only be viewed, not edited or deleted.
 > If you enable/disable this button you need to restart the Jupyterlab session to see its effect.
 
 
-| Inject as env into Jupyterlab                | Example                                                                                                          |
-|----------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| **disabled**                                 | ![opaque-inject-env-disabled.png](assets/credentials-manager/opaque-inject-env-disabled.png)                     |
-| **enabled**                                  | ![opaque-inject-env-enabled.png](assets/credentials-manager/opaque-inject-env-enabled.png)                       |
-| How to access env it in Jupyterlab Notebook: | ![access-env-var.png](assets/credentials-manager/access-env-var.png)                                             |
+| Inject as env into Jupyterlab                | Example                                                                                      |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **disabled**                                 | ![opaque-inject-env-disabled.png](assets/credentials-manager/opaque-inject-env-disabled.png) |
+| **enabled**                                  | ![opaque-inject-env-enabled.png](assets/credentials-manager/opaque-inject-env-enabled.png)   |
+| How to access env it in Jupyterlab Notebook: | ![access-env-var.png](assets/credentials-manager/access-env-var.png)                         |
+
+
+## Related use cases
+
+- [Develop an Algorithm](../use_cases/algorithm_development.md)
+- [Generate Results](../use_cases/result_generation.md)
+- [Provide an Algorithm as a Service](../use_cases/algorithm_as_a_service.md)
