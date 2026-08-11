@@ -26,19 +26,29 @@ sections:
 
   - title: Tutorials
     sections:
-      - file: tutorials/creating_account
-      - file: tutorials/publishing-workflow-tutorial
-      - file: tutorials/wmts_tutorial
-      - file: tutorials/geojson_tutorial
-      - file: tutorials/indicator_tutorial
-      - file: tutorials/introduction_narrative_editor
-      - file: tutorials/narrative_editor
-      - file: tutorials/narrative_editor_maptour
-      - file: tutorials/editors_linking_stories_collections
-      - file: tutorials/qgis_tutorial
-      - file: tutorials/headless_notebook_execution
-      - file: tutorials/polaris
-      - file: tutorials/polar_warp
+      - title: Getting Started
+        sections:
+          - file: tutorials/getting_started/creating_account
+      - title: Publishing Data
+        sections:
+          - file: tutorials/publishing_data/publishing-workflow-tutorial
+          - file: tutorials/publishing_data/wmts_tutorial
+          - file: tutorials/publishing_data/geojson_tutorial
+          - file: tutorials/publishing_data/indicator_tutorial
+          - file: tutorials/publishing_data/editors_linking_stories_collections
+      - title: Creating Narratives
+        sections:
+          - file: tutorials/creating_narratives/introduction_narrative_editor
+          - file: tutorials/creating_narratives/narrative_editor
+          - file: tutorials/creating_narratives/narrative_editor_maptour
+      - title: Processing and Analysis
+        sections:
+          - file: tutorials/processing_analysis/qgis_tutorial
+          - file: tutorials/processing_analysis/headless_notebook_execution
+      - title: Exploring Capabilities
+        sections:
+          - file: tutorials/exploring_capabilities/polaris
+          - file: tutorials/exploring_capabilities/polar_warp
 
   - title: Use Cases
     sections:
