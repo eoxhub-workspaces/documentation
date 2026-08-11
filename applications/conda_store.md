@@ -24,5 +24,7 @@ name: conda-store
 Conda store environment creation
 ```
 
+## Related use cases
 
+- [Develop an Algorithm](../use_cases/algorithm_development.md)
 

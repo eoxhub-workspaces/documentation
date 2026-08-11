@@ -41,3 +41,9 @@ Update your Argo Workflow templates to point to the Zot registry URL in your `co
 ---
 
 > Official documentation: https://zotregistry.dev
+
+
+## Related use cases
+
+- [Develop an Algorithm](../use_cases/algorithm_development.md)
+- [Provide an Algorithm as a Service](../use_cases/algorithm_as_a_service.md)
