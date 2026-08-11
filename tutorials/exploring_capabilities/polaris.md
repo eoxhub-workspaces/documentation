@@ -1,4 +1,9 @@
-# How to explore POLARIS results in eodash
+# Explore POLARIS Results in eodash
+
+**What you’ll accomplish:** Explore POLARIS results and compare visualizations by ship class, ice type, and date.  
+**Applications used:** [Publishing Dashboard](../../applications/publishing_dashboard.md)  
+**Estimated time:** 5 minutes  
+**Before you start:** No Workspace account is required; the example is available through the DESIDE dashboard.  
 
 
 1\. Navigate to [https://deside.eox.at/](https://deside.eox.at/)

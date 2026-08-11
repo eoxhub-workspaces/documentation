@@ -1,4 +1,10 @@
-# Narrative Editor: Simple Map, Map Tour and a Chart
+# Add Maps, Map Tours, and Charts to a Narrative
+
+**What you’ll accomplish:** Add a simple map, a multi-step map tour, and a chart to an existing narrative.  
+**Applications used:** [Narrative Editor](../../applications/narrative-editor.md), [Publishing Dashboard](../../applications/publishing_dashboard.md)  
+**Estimated time:** 20 minutes  
+**Before you start:** You need an existing narrative and access to a dashboard containing the data you want to include.  
+
 
 
 1\. Open your desired narrative.

@@ -1,5 +1,12 @@
 # Linking Stories and Collections in Data and Narrative Editors
 
+
+**What you’ll accomplish:** Add two-way links between an existing narrative and dataset collection.
+**Applications used:** [**Data Editor**](../applications/data_editor.md), [**Narrative Editor**](../applications/narrative_editor.md)
+**Estimated time:** 10 minutes
+**Before you start:** You need an existing dataset submission and narrative submission. Both may still be works in progress.
+
+
 Learn how to update narrative (story) metadata and collection identifiers within the Data and Narrative Editors.
 
 This guide walks you through the steps to link relevant files and save configuration changes to ensure your data and narratives are correctly cross-linked.
