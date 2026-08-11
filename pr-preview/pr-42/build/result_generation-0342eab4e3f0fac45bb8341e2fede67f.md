@@ -8,3 +8,9 @@ Result generation involves configuring the algorithm to run over different input
 - **[Argo Workflows](../applications/argo.md)** provide scalable, repeatable execution pipelines.
 - **[Headless Execution](../applications/headless_execution.md)** lets you run notebooks or workflows without direct user interaction, ideal for scheduled tasks.
 - **[Credentials Manager](../applications/secret_manager.md)** ensures access to protected resources like cloud buckets or Sentinel Hub is securely handled.
+
+
+## Related tutorials
+
+- [Run a Parameterized Notebook with Headless Execution](../tutorials/processing_analysis/headless_notebook_execution.md)
+- [Run the Polar Warp Capability](../tutorials/exploring_capabilities/polar_warp.md)
