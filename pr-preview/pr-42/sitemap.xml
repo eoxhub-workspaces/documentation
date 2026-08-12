@@ -47,6 +47,9 @@
     <loc>http://localhost:3000/jupyterlab</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/example-notebooks</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/narrative-editor</loc>
   </url>
   <url>
