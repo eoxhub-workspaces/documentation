@@ -17,43 +17,43 @@
     <loc>http://localhost:3000/applications</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/jupyterlab</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/example-notebooks</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/conda-store</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/file-browser</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/data-editor</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/publishing-dashboard</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/narrative-editor</loc>
-  </url>
-  <url>
     <loc>http://localhost:3000/argo</loc>
   </url>
   <url>
     <loc>http://localhost:3000/capability-integration</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/headless-execution</loc>
+    <loc>http://localhost:3000/conda-store</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/container-registry</loc>
   </url>
   <url>
     <loc>http://localhost:3000/secret-manager</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/data-editor</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/eoapi</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/container-registry</loc>
+    <loc>http://localhost:3000/file-browser</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/headless-execution</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/jupyterlab</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/example-notebooks</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/narrative-editor</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/publishing-dashboard</loc>
   </url>
   <url>
     <loc>http://localhost:3000/tutorials</loc>
