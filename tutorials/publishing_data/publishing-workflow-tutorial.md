@@ -1,9 +1,9 @@
 # Publish a Dataset in an EOxHub Workspace
 
-**What you’ll accomplish:** Upload, configure, preview, and submit a geospatial dataset for publication in an EOxHub dashboard.
-**Applications used:** [**File Browser**](../applications/file_browser.md), [**Data Editor**](../applications/data_editor.md), [**Publishing Dashboard**](../applications/publishing_dashboard.md)
-**Estimated time:** 30–45 minutes, excluding review and approval
-**Before you start:** You need access to an EOxHub Workspace with Dashboard as a Service and a your geospatial dataset.
+**What you’ll accomplish:** Upload, configure, preview, and submit a geospatial dataset for publication in an EOxHub dashboard.     
+**Applications used:** [**File Browser**](../applications/file_browser.md), [**Data Editor**](../applications/data_editor.md), [**Publishing Dashboard**](../applications/publishing_dashboard.md)    
+**Estimated time:** 30–45 minutes, excluding review and approval    
+**Before you start:** You need access to an EOxHub Workspace with Dashboard as a Service and a your geospatial dataset.   
 
 
 This tutorial explains the complete workflow for preparing, uploading, styling, and publishing datasets in an EOXHub Workspace which includes multiple of the available Applications within EOxHub. It is intended as overview and does not go too deep into the options within the various steps, but provides follow on resources if more information is needed. The same steps apply across all workspace instances (e.g., GTIF Austria, Cerulean, and other environments). 

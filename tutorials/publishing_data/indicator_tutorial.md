@@ -1,9 +1,9 @@
 # Group Multiple Datasets in One Indicator
 
-**What you’ll accomplish:** Create an indicator that displays several existing collections as layers in one dashboard view.
-**Applications used:**  [**Data Editor**](../applications/data_editor.md), [**Publishing Dashboard**](../applications/publishing_dashboard.md)
-**Estimated time:** 15 minutes
-**Before you start:** You need collection file you want to group. For more information how to create collections see other tutorials: [**add geojson dataset**](../tutorials/publishing_data/geojson_tutorial.md) and [**add WMTS dataset**](../tutorials/publishing_data/wtms_tutorial.md)
+**What you’ll accomplish:** Create an indicator that displays several existing collections as layers in one dashboard view.    
+**Applications used:**  [**Data Editor**](../applications/data_editor.md), [**Publishing Dashboard**](../applications/publishing_dashboard.md)    
+**Estimated time:** 15 minutes    
+**Before you start:** You need collection file you want to group. For more information how to create collections see other tutorials: [**add geojson dataset**](../tutorials/publishing_data/geojson_tutorial.md) and [**add WMTS dataset**](../tutorials/publishing_data/wtms_tutorial.md)    
 
 
 This guide provides a step-by-step process for merging multiple datasets into a single display collection using the EOxHub Data Editor.
