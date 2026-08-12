@@ -6,6 +6,9 @@ The notebooks are available to all EOxHub Workspace users with access to Jupyter
 
 [Explore the Example Notebook Collection](https://eoxhub-workspaces.github.io/eoxhub-notebooks/)
 
+![Example explorer](assets/example_explorer.png)
+
+
 ## What You Can Explore
 
 The collection currently includes examples covering:
