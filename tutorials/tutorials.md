@@ -40,8 +40,9 @@ Explore examples of algorithms, processing services, and interactive results run
 - [Explore POLARIS Results](exploring_capabilities/polaris.md)
 - [Run the Polar Warp Capability](exploring_capabilities/polar_warp.md)
 
+
 ## Example Notebooks
 
-Looking for executable examples? Explore the [EOxHub example notebook collection](https://eoxhub-workspaces.github.io/eoxhub-notebooks/) for notebooks demonstrating data access, analysis, visualization, and processing.
+Prefer to learn from executable code? The [EOxHub example notebook collection](../applications/example_notebooks.md) provides ready-to-run examples for data access, analysis, experiment tracking, and scalable processing.
 
-The collection is still growing, and additional examples will be added over time.
+The notebooks can be opened in JupyterLab by all EOxHub Workspace users, including users of a free trial.

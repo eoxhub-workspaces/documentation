@@ -12,6 +12,8 @@ sections:
     title: Applications
     sections:
       - file: applications/jupyterlab
+        sections:
+          - file: applications/example_notebooks
       - file: applications/conda_store
       - file: applications/file_browser
       - file: applications/data_editor
