@@ -33,6 +33,10 @@ sections:
       - title: Getting Started
         sections:
           - file: tutorials/getting_started/creating_account
+      - title: Processing and Analysis
+        sections:
+          - file: tutorials/processing_analysis/qgis_tutorial
+          - file: tutorials/processing_analysis/headless_notebook_execution
       - title: Publishing Data
         sections:
           - file: tutorials/publishing_data/publishing-workflow-tutorial
@@ -45,10 +49,6 @@ sections:
           - file: tutorials/creating_narratives/introduction_narrative_editor
           - file: tutorials/creating_narratives/narrative_editor
           - file: tutorials/creating_narratives/narrative_editor_maptour
-      - title: Processing and Analysis
-        sections:
-          - file: tutorials/processing_analysis/qgis_tutorial
-          - file: tutorials/processing_analysis/headless_notebook_execution
       - title: Exploring Capabilities
         sections:
           - file: tutorials/exploring_capabilities/polaris
