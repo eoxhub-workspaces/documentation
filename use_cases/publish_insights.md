@@ -1,5 +1,7 @@
 # Publish Insights
 
+**Focus:** Visualizing data, building stories, and sharing Earth Observation results with your audience.
+
 After data is processed and analyzed, the final step is to communicate the results in an accessible way. This use case focuses on turning technical outputs into engaging narratives or interactive dashboards that help stakeholders understand key findings and make informed decisions.
 
 Insights might be shared with policymakers, researchers, or the public through dashboards, map-based stories, or small reports. The goal is to present complex data in a visual and context-rich format.
