@@ -8,7 +8,8 @@ sections:
       - file: introduction/2_getting_started
       - file: introduction/3_faq
 
-  - title: Applications
+  - file: applications/applications
+    title: Applications
     sections:
       - file: applications/jupyterlab
       - file: applications/conda_store
