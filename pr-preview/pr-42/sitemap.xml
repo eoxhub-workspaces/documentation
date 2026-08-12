@@ -62,6 +62,12 @@
     <loc>http://localhost:3000/creating-account</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/qgis-tutorial</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/headless-notebook-execution</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/publishing-workflow-tutorial</loc>
   </url>
   <url>
@@ -84,12 +90,6 @@
   </url>
   <url>
     <loc>http://localhost:3000/narrative-editor-maptour</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/qgis-tutorial</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/headless-notebook-execution</loc>
   </url>
   <url>
     <loc>http://localhost:3000/polaris</loc>
