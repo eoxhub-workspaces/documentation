@@ -18,7 +18,7 @@ Learn how to leverage headless notebooks to run your Jupyter notebooks with dyna
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/aacfe709-2d5a-4e86-8852-19ae46a44b24/ascreenshot_22667693b4e64aed93e8cc4cf1695f84_text_export.jpeg)
 
 \
-3\. Now let's start Jupyter Hub to prepare your notebook
+3\. Now let's start JupyterLab to prepare your notebook
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/097a37f2-79e2-4039-a061-ec66b70808e2/ascreenshot_94c38724c4bb4f02b437103d6c6dddf4_text_export.jpeg)
 
