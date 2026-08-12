@@ -54,7 +54,7 @@ To get started quickly, navigate to the **Examples Explorer** section of the EOx
 - Notebook tutorials on data access and visualization
 - Sample Workflows covering EO analysis
 
-These notebooks are an excellent entry point to understand EOxHub Workspaces, JupyterLab options, accessing Earth Observation data, and more. Learn more about what you can explore and how to run them in your workspace in [Example Notebooks](../applications/example_notebooks.md)
+These notebooks are an excellent entry point to understand EOxHub Workspaces, JupyterLab options, accessing Earth Observation data, and more. Learn more about what you can explore and how to run them in your workspace in [Example Notebooks](../applications/jupyterlab/example_notebooks.md)
 
 
 ## Related tutorials
