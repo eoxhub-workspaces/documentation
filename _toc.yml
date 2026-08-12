@@ -24,13 +24,8 @@ sections:
       - file: applications/jupyterlab
         sections:
           - file: applications/example_notebooks
-      - file: applications/narrative_editor      
+      - file: applications/narrative_editor
       - file: applications/publishing_dashboard
-      
-      
-      
-      
-      
 
   - file: tutorials/tutorials
     title: Tutorials
