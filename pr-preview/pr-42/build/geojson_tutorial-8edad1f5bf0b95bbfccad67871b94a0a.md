@@ -1,9 +1,9 @@
 # Integrating GeoJSON dataset using Data Editor
 
-**What you’ll accomplish:** Configure a GeoJSON dataset and verify its styling and location in the dashboard preview.
-**Applications used:**  [**Data Editor**](../applications/data_editor.md), [**Publishing Dashboard**](../applications/publishing_dashboard.md). Optionally [**File Browser**](../applications/file_browser.md) for geojson storage
-**Estimated time:** 20–30 minutes
-**Before you start:** You need a publicly accessible GeoJSON file or our File Browser, a compatible style-definition URL, and publishing access to an EOxHub Workspace with Data Editor
+**What you’ll accomplish:** Configure a GeoJSON dataset and verify its styling and location in the dashboard preview.    
+**Applications used:**  [**Data Editor**](../applications/data_editor.md), [**Publishing Dashboard**](../applications/publishing_dashboard.md). Optionally [**File Browser**](../applications/file_browser.md) for geojson storage    
+**Estimated time:** 20–30 minutes     
+**Before you start:** You need a publicly accessible GeoJSON file or our File Browser, a compatible style-definition URL, and publishing access to an EOxHub Workspace with Data Editor    
 
 ## Integrating a dataset from small GeoJSON file into the gtif-austria.info service
 
