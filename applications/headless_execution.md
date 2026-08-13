@@ -1,6 +1,5 @@
 # Headless Execution
 
-# Headless Execution in EDC
 
 The **Headless Execution** feature in EOxHub Workspaces enables automated execution of Jupyter notebooks and Argo Workflows directly from the eodash dashboard or programmatically via API endpoints. It is designed for streamlined, reproducible, and user-friendly processing of Earth Observation tasks and workflows.
 
@@ -43,7 +42,29 @@ Each job has:
 
 ## Triggering Notebook Jobs
 
-In addition to workflows, parameterized **Jupyter notebooks** can also be exposed for headless execution. This allows notebooks to be reused as backend processors while preserving reproducibility and transparency.
+Parameterized **Jupyter notebooks** can also be exposed for headless execution. This provides a direct path from interactive algorithm development in JupyterLab to repeatable, automated processing.
+
+Input variables are defined in a notebook cell tagged `parameters`. Values supplied with an execution request replace the defaults before the complete notebook is run.
+
+This makes it possible to reuse the same notebook with different:
+
+- areas of interest
+- dates or time ranges
+- input datasets
+- algorithm settings
+- output configurations
+- or any other parameters
+
+The executed notebook is retained as part of the result, including the supplied parameters, generated outputs, and any errors. This supports reproducibility, traceability, and debugging.
+
+For a practical walkthrough, see [Run a Parameterized Notebook with Headless Execution tutorial](../tutorials/processing_analysis/headless_notebook_execution.md).
+
+### Notebooks or Argo Workflows?
+
+Parameterized notebooks are a convenient starting point when an algorithm is already being developed in JupyterLab and can run within a single notebook environment.
+
+Argo Workflows are more suitable when processing consists of multiple steps, uses custom container images, requires explicit orchestration, or is intended for recurring operational execution.
+
 
 
 ---
@@ -54,6 +75,8 @@ Once triggered, jobs can be tracked in the **Headless Execution** section of the
 
 - View job queue and running/completed status
 - Inspect input parameters and output previews
+- Access generated outputs or executed notebooks
+- Inspect errors when processing fails
 - Re-run or cancel jobs if needed
 
 ![headless_execution](assets/pygeoapi3.png)
@@ -67,3 +90,7 @@ Once triggered, jobs can be tracked in the **Headless Execution** section of the
 
 - [Generate Results](../use_cases/result_generation.md)
 - [Provide an Algorithm as a Service](../use_cases/algorithm_as_a_service.md)
+
+## Integration Guidance
+
+- [Integration Requirements for Argo Workflows](argo/capability_integration.md)
