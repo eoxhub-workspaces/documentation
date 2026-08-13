@@ -95,7 +95,7 @@ Applications available in an EOxHub Workspace depend on its configuration. The c
 
 ## Additional Resources
 
-- [Network of Resources](network_of_resources/networkofresources.md)
+- [Network of Resources](network_of_resources/nor.md)
 - [EOxHub Workspaces website](https://hub.eox.at/)
 - [Launch a Workspace](https://hub.eox.at/)
 

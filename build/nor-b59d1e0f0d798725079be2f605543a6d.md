@@ -8,13 +8,15 @@ You can access some of EOxHub Workspaces, API services, and data resources via E
 
 The most straightforward process is via the Network of resources Discovery Portal. You can check yourself which Euro Data Cube/EOxHub resources are currently available for sponsoring at https://nor-discover.org/.
 
-\
+
+
 ![nor - Portfolio](assets/eoxhub_nor.png)
 
 \
 Follow the step by step process via the corresponding Pricing Wizard. When done, export the proposal in PDF, sign it and email it to ESA.
 
-\
+
+
 ![Pricing wizard](assets/wizard.png)
 
 \
