@@ -50,6 +50,14 @@ Communicate results through interactive dashboards, maps, charts, and structured
 
 ::::
 
+## New to EOxHub Workspaces?
+
+Start with an introduction to the platform and learn how to access your Workspace.
+
+- [What is EOxHub?](introduction/1_intro.md)
+- [Get Started with EOxHub Workspaces](introduction/2_getting_started.md)
+- [Frequently Asked Questions](introduction/3_faq.md)
+
 ## Start Exploring EOxHub
 
 ::::{grid} 1 1 2 3
@@ -80,13 +88,7 @@ Open ready-to-run examples for data access, analysis, experiment tracking, and s
 
 ::::
 
-## New to EOxHub Workspaces?
 
-Start with an introduction to the platform and learn how to access your Workspace.
-
-- [What is EOxHub?](introduction/1_intro.md)
-- [Get Started with EOxHub Workspaces](introduction/2_getting_started.md)
-- [Frequently Asked Questions](introduction/3_faq.md)
 
 :::{note}
 Applications available in an EOxHub Workspace depend on its configuration. The core JupyterLab environment and example notebooks are also available to free-trial users.
