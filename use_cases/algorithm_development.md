@@ -9,6 +9,7 @@ This phase is particularly relevant for data scientists and researchers aiming t
 🛠️ **Workspace tools:**
 
 - **[JupyterLab](../applications/jupyterlab.md)** provides an interactive environment for exploring data, developing algorithms, and testing processing steps in notebooks.
+- **[QGIS](../applications/qgis.md)** provides an interactive graphical environment for exploring geospatial datasets, testing processing operations, and visually inspecting algorithm inputs and outputs.
 - **[Conda Store](../applications/conda_store.md)** creates reproducible software environments and helps ensure that an algorithm uses consistent dependency versions.
 - **[File Browser](../applications/file_browser.md)** provides access to input data, notebooks, scripts, and generated files stored within the Workspace.
 - **[Credentials Manager](../applications/secret_manager.md)** securely provides credentials for protected data sources, APIs, cloud storage, and other external services.

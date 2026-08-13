@@ -44,6 +44,15 @@ JupyterLab in EOxHub supports multiple **custom kernels** depending on your anal
 
 ---
 
+
+## QGIS
+
+Supported EOxHub Workspaces provide [QGIS](qgis.md) as a dedicated JupyterLab profile. This allows users to explore, visualize, edit, and process geospatial data through a browser-based desktop interface.
+
+QGIS can access the same Workspace storage as JupyterLab, making it possible to process data in a notebook and inspect or visualize the results interactively without downloading them locally.
+
+---
+
 ## Example Notebooks
 
 ![Examples explorer](assets/notebooks.png)
