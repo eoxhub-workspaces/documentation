@@ -78,7 +78,17 @@ Generally for including a supported type of EO collection into an eodash deploym
 - After finishing the updates confirmed by the layer live preview panel and approving of the corresponding Data editing session (GitHub Pull Request), the changes can be merged to production catalog.
 
 
-For a more hands-on tutorial on how to publish insights by exposing data see our tutorials [**Integrating GeoJSON file**](../tutorials/geojson_tutorial.md) and [**Integrating WMTS service**](../tutorials/wmts_tutorial.md)
-
-
 For learning how to include your data in Narrative publication, read the section [**Narrative Editor**](../applications/narrative_editor.md) and follow the tutorial [**Creating Narrative**](../tutorials/narrative_tutorial.md)
+
+
+## Related tutorials
+
+- [Publish a Dataset in an EOxHub Workspace](../tutorials/publishing_data/publishing-workflow-tutorial.md)
+- [Add a WMTS Dataset](../tutorials/publishing_data/wmts_tutorial.md)
+- [Publish a GeoJSON Dataset](../tutorials/publishing_data/geojson_tutorial.md)
+- [Group Multiple Datasets in One Indicator](../tutorials/publishing_data/indicator_tutorial.md)
+- [Link a Narrative to a Dataset](../tutorials/publishing_data/editors_linking_stories_collections.md)
+
+## Related use cases
+
+- [Publish Insights](../use_cases/publish_insights.md)

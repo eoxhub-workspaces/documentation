@@ -44,7 +44,7 @@ JupyterLab in EOxHub supports multiple **custom kernels** depending on your anal
 
 ---
 
-## Exploring Example Notebooks
+## Example Notebooks
 
 ![Examples explorer](assets/notebooks.png)
 
@@ -54,4 +54,15 @@ To get started quickly, navigate to the **Examples Explorer** section of the EOx
 - Notebook tutorials on data access and visualization
 - Sample Workflows covering EO analysis
 
-These notebooks are an excellent entry point to understand EOxHub Workspaces, JupyterLab options, and data.
+These notebooks are an excellent entry point to understand EOxHub Workspaces, JupyterLab options, accessing Earth Observation data, and more. Learn more about what you can explore and how to run them in your workspace in [Example Notebooks](../applications/example_notebooks.md)
+
+
+## Related tutorials
+
+- [Launch QGIS from JupyterLab](../tutorials/processing_analysis/qgis_tutorial.md)
+- [Run a Parameterized Notebook with Headless Execution](../tutorials/processing_analysis/headless_notebook_execution.md)
+
+## Related use cases
+
+- [Develop an Algorithm](../use_cases/algorithm_development.md)
+- [Generate Results](../use_cases/result_generation.md)

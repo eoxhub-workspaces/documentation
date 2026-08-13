@@ -1,5 +1,9 @@
-# Creating a Narrative (Story) in the EOxHub Workspace
+# Create and Publish a Narrative
 
+**What you’ll accomplish:** Create, edit, preview, and submit a narrative in an EOxHub Workspace.  
+**Applications used:** [Narrative Editor](../../applications/narrative-editor.md)  
+**Estimated time:** 20–30 minutes  
+**Before you start:** You need a GitHub account and access to a Workspace with the Narrative Editor enabled.  
 
 1\. Navigate to your workspace where Narrative Editor is available
 

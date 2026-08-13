@@ -8,37 +8,51 @@ sections:
       - file: introduction/2_getting_started
       - file: introduction/3_faq
 
-  - title: Applications
+  - file: applications/applications
+    title: Applications
     sections:
-      - file: applications/jupyterlab
-      - file: applications/conda_store
-      - file: applications/file_browser
-      - file: applications/data_editor
-      - file: applications/publishing_dashboard.md
-      - file: applications/narrative_editor
       - file: applications/argo
         sections:
           - file: applications/argo/capability_integration
-      - file: applications/headless_execution
-      - file: applications/secret_manager
-      - file: applications/eoapi
+      - file: applications/conda_store
       - file: applications/container_registry
+      - file: applications/secret_manager
+      - file: applications/data_editor
+      - file: applications/eoapi
+      - file: applications/file_browser
+      - file: applications/headless_execution
+      - file: applications/jupyterlab
+        sections:
+          - file: applications/example_notebooks
+      - file: applications/narrative_editor
+      - file: applications/publishing_dashboard
 
-  - title: Tutorials
+  - file: tutorials/tutorials
+    title: Tutorials
     sections:
-      - file: tutorials/creating_account
-      - file: tutorials/publishing-workflow-tutorial
-      - file: tutorials/wmts_tutorial
-      - file: tutorials/geojson_tutorial
-      - file: tutorials/indicator_tutorial
-      - file: tutorials/introduction_narrative_editor
-      - file: tutorials/narrative_editor
-      - file: tutorials/narrative_editor_maptour
-      - file: tutorials/editors_linking_stories_collections
-      - file: tutorials/qgis_tutorial
-      - file: tutorials/headless_notebook_execution
-      - file: tutorials/polaris
-      - file: tutorials/polar_warp
+      - title: Getting Started
+        sections:
+          - file: tutorials/getting_started/creating_account
+      - title: Processing and Analysis
+        sections:
+          - file: tutorials/processing_analysis/qgis_tutorial
+          - file: tutorials/processing_analysis/headless_notebook_execution
+      - title: Publishing Data
+        sections:
+          - file: tutorials/publishing_data/publishing-workflow-tutorial
+          - file: tutorials/publishing_data/wmts_tutorial
+          - file: tutorials/publishing_data/geojson_tutorial
+          - file: tutorials/publishing_data/indicator_tutorial
+          - file: tutorials/publishing_data/editors_linking_stories_collections
+      - title: Creating Narratives
+        sections:
+          - file: tutorials/creating_narratives/introduction_narrative_editor
+          - file: tutorials/creating_narratives/narrative_editor
+          - file: tutorials/creating_narratives/narrative_editor_maptour
+      - title: Exploring Capabilities
+        sections:
+          - file: tutorials/exploring_capabilities/polaris
+          - file: tutorials/exploring_capabilities/polar_warp
 
   - title: Use Cases
     sections:

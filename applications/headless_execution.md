@@ -58,3 +58,12 @@ Once triggered, jobs can be tracked in the **Headless Execution** section of the
 
 ![headless_execution](assets/pygeoapi3.png)
 
+## Related tutorials
+
+- [Run a Parameterized Notebook with Headless Execution](../tutorials/processing_analysis/headless_notebook_execution.md)
+- [Run the Polar Warp Capability](../tutorials/exploring_capabilities/polar_warp.md)
+
+## Related use cases
+
+- [Generate Results](../use_cases/result_generation.md)
+- [Provide an Algorithm as a Service](../use_cases/algorithm_as_a_service.md)

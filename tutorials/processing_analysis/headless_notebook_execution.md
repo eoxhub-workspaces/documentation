@@ -1,4 +1,10 @@
-# How to Use Headless Notebooks for Parameterized Notebook Execution
+# Run a Parameterized Notebook with Headless Execution
+
+**What you’ll accomplish:** Prepare a parameterized notebook, execute it through an API request, and inspect the resulting job.  
+**Applications used:** [JupyterLab](../../applications/jupyterlab.md), [Headless Execution](../../applications/headless_execution.md)  
+**Estimated time:** 20–30 minutes  
+**Before you start:** You need a working notebook, access to the Workspace shared folder, and a Workspace where Headless Execution is enabled. Basic familiarity with API requests or `curl` is helpful.  
+
 
 Learn how to leverage headless notebooks to run your Jupyter notebooks with dynamic parameters. This guide walks you through starting a server, executing a notebook, and managing job outputs for automated analysis.
 
@@ -12,7 +18,7 @@ Learn how to leverage headless notebooks to run your Jupyter notebooks with dyna
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/aacfe709-2d5a-4e86-8852-19ae46a44b24/ascreenshot_22667693b4e64aed93e8cc4cf1695f84_text_export.jpeg)
 
 \
-3\. Now let's start Jupyter Hub to prepare your notebook
+3\. Now let's start JupyterLab to prepare your notebook
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/097a37f2-79e2-4039-a061-ec66b70808e2/ascreenshot_94c38724c4bb4f02b437103d6c6dddf4_text_export.jpeg)
 

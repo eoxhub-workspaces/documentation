@@ -1,14 +1,20 @@
-# How To Launch A QGIS Desktop In JupyterHub
+# Launch QGIS from JupyterLab
 
-This guide demonstrates the process of accessing a QGIS desktop environment directly within your browser using JupyterHub inside the EOxHub Workspace. It provides simple instructions to configure your server resources and successfully launch a specialized session for your data.
+**What you’ll accomplish:** Launch QGIS in your browser and access data stored in your EOxHub Workspace.  
+**Applications used:** [JupyterLab](../../applications/jupyterlab.md)  
+**Estimated time:** 5–10 minutes  
+**Before you start:** You need access to a Workspace where the QGIS environment is enabled.  
+
+
+This guide demonstrates the process of accessing a QGIS desktop environment directly within your browser using JupyterLab inside the EOxHub Workspace. It provides simple instructions to configure your server resources and successfully launch a specialized session for your data.
 
 \
-1\. Navigate to your EOxHub Workspace with JupyterHub and QGIS enabled
+1\. Navigate to your EOxHub Workspace with JupyterLab and QGIS enabled
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-04-01/0f29e330-7baa-406a-8480-219b9c6a1fa9/ascreenshot_c9e8d1f1e3fe418aa60ddb5be0ecd227_text_export.jpeg)
 
 \
-2\. Open "JupyterHub" application
+2\. Open "JupyterLab" application
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-04-01/635a9f8e-bf01-410b-9fee-8409ec795f48/ascreenshot_f8f7a16ca1e64dfe9a606fd3b0fc5bf7_text_export.jpeg)
 
@@ -33,7 +39,7 @@ This guide demonstrates the process of accessing a QGIS desktop environment dire
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-04-28/f4a3234e-9de1-4d76-8cdc-de52689d52bc/screenshot_9cea884925a54ffaac9331266a109004_text_export.jpeg)
 
 \
-6\. QGIS then opens inside the JupyterHub app window
+6\. QGIS then opens inside the JupyterLab app window
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-04-01/466f517a-8234-4043-a8de-2edec4eb248d/ascreenshot_bfd9aa459eb5463da5b5468ed3ed65f1_text_export.jpeg)
 
@@ -43,7 +49,7 @@ This guide demonstrates the process of accessing a QGIS desktop environment dire
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-04-01/ec081a89-c5a6-4f3a-bbea-7476b28ae4e3/ascreenshot_9e5cc7d8069544378ae78ada5b538091_text_export.jpeg)
 
 \
-8\. The Home folder, shared folder, and bucket are available in the same way they are in JupyterHub. Data can be easily viewed and interacted with without the need to download them and process locally.
+8\. The Home folder, shared folder, and bucket are available in the same way they are in JupyterLab. Data can be easily viewed and interacted with without the need to download them and process locally.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-04-01/3aef3803-ed3f-466a-981a-9e0944e97e77/ascreenshot_8cc50e81aad34a15bdb548d7d1d0a309_text_export.jpeg)
 

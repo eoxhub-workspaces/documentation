@@ -1,4 +1,9 @@
-# Integrating WMTS dataset using Data Editor
+# Integrating WMTS dataset with Data Editor
+
+**What you’ll accomplish:** Connect a WMTS layer and verify it in the dashboard preview.   
+**Applications used:**  [**Data Editor**](../applications/data_editor.md), [**Publishing Dashboard**](../applications/publishing_dashboard.md)   
+**Estimated time:** 20 minutes   
+**Before you start:** You need WMTS endpoint with its layer identifier. This example uses Copernicus Marine WMTS.   
 
 ## Integrating a dataset from the Copernicus Marine Data Store into the eodashboard.org service
 

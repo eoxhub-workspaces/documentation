@@ -1,5 +1,10 @@
 # Integrating GeoJSON dataset using Data Editor
 
+**What you’ll accomplish:** Configure a GeoJSON dataset and verify its styling and location in the dashboard preview.    
+**Applications used:**  [**Data Editor**](../applications/data_editor.md), [**Publishing Dashboard**](../applications/publishing_dashboard.md). Optionally [**File Browser**](../applications/file_browser.md) for geojson storage    
+**Estimated time:** 20–30 minutes     
+**Before you start:** You need a publicly accessible GeoJSON file or our File Browser, a compatible style-definition URL, and publishing access to an EOxHub Workspace with Data Editor    
+
 ## Integrating a dataset from small GeoJSON file into the gtif-austria.info service
 
 
@@ -148,7 +153,7 @@
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-09/aa6e89a3-a07f-44a8-b99e-ee4d98d82601/ascreenshot.jpeg?tl_px=0,265&br_px=1301,993&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=296,336)
 
 \
-32\. Type a time string in ISO 8691 (<https://de.wikipedia.org/wiki/ISO_8601>), e.g. "2025"
+32\. Type a time string in ISO 8601 (<https://de.wikipedia.org/wiki/ISO_8601>), e.g. "2025"
 
 \
 33\. Add an asset for that time, click on the plus button

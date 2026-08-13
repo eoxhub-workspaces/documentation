@@ -1,4 +1,10 @@
-# Exploring Polar Warp Capability in eodash
+# Run the Polar Warp Capability in eodash
+
+**What you’ll accomplish:** Select an area and parameters, execute the Polar Warp capability, and explore its predicted images.  
+**Applications used:** [Publishing Dashboard](../../applications/publishing_dashboard.md)   
+**Estimated time:** 10–15 minutes, including processing  
+**Before you start:** No Workspace account is required; the example is available through the DESIDE dashboard.  
+
 
 1\. Navigate to [https://deside.eox.at/](https://deside.eox.at/)
 
