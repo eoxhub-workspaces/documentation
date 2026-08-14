@@ -30,7 +30,9 @@ The collection is continuously growing as new EOxHub capabilities, data sources,
 
 Or navigate to your Workspace and examine the Example Explorer from there.
 
-> Some notebooks demonstrate capabilities that depend on additional applications, credentials, or Workspace configuration. Any specific requirements are described with the individual example.
+Some notebooks demonstrate capabilities that depend on additional applications, credentials, or Workspace configuration. Any specific requirements are described with the individual example.
+
+Some examples demonstrate scalable processing with [Dask](dask.md) and other tools from the Pangeo ecosystem.
 
 You are welcome to explore the full collection even if your current Workspace does not include every demonstrated capability.
 
