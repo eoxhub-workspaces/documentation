@@ -11,6 +11,7 @@ Result generation involves configuring the algorithm to run over different input
 - **[Headless Execution](../applications/headless_execution.md)** lets you run notebooks or workflows without direct user interaction, ideal for scheduled tasks.
 - **[Credentials Manager](../applications/secret_manager.md)** ensures access to protected resources like cloud buckets or Sentinel Hub is securely handled.
 - **[Dask](../applications/dask.md)** distributes large or parallel processing workloads across multiple workers.
+- **[MLflow](../applications/mlflow.md)** helps compare model runs and preserve the parameters, metrics, and artifacts behind generated results.
 
 
 ## Related tutorials
