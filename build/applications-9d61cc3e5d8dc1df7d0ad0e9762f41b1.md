@@ -12,6 +12,7 @@ The applications available in a particular Workspace depend on its configuration
 
 - **[JupyterLab](jupyterlab.md)** provides an interactive environment for exploring data, writing code, and developing algorithms in notebooks.
 - **[QGIS](qgis.md)** provides a browser-based desktop environment for interactively exploring, visualizing, editing, and processing geospatial data.
+- **[Dask](dask.md)** scales Python analysis across parallel or distributed computing resources.
 - **[Conda Store](conda_store.md)** creates reproducible software environments and manages the dependencies required by an algorithm.
 - **[File Browser](file_browser.md)** provides access to input data, notebooks, scripts, and generated files stored within the Workspace.
 - **[Credentials Manager](secret_manager.md)** securely provides credentials for protected data sources, APIs, and cloud storage.
@@ -22,6 +23,7 @@ The applications available in a particular Workspace depend on its configuration
 [Result Generation](../use_cases/result_generation.md) uses a developed or existing algorithm to process input data consistently, either on demand, on a schedule, or as part of a larger workflow.
 
 - **[JupyterLab](jupyterlab.md)** can be used to execute and validate processing interactively before moving to automated execution.
+- **[Dask](dask.md)** scales Python analysis across parallel or distributed computing resources.
 - **[Argo Workflows](argo.md)** provides scalable and repeatable execution pipelines for processing larger volumes of data.
 - **[Headless Execution](headless_execution.md)** runs parameterized notebooks or workflows without direct user interaction and records their jobs and outputs.
 - **[Credentials Manager](secret_manager.md)** securely provides processing jobs with access to protected data and external services.
