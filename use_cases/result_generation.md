@@ -10,6 +10,7 @@ Result generation involves configuring the algorithm to run over different input
 - **[Argo Workflows](../applications/argo.md)** provide scalable, repeatable execution pipelines.
 - **[Headless Execution](../applications/headless_execution.md)** lets you run notebooks or workflows without direct user interaction, ideal for scheduled tasks.
 - **[Credentials Manager](../applications/secret_manager.md)** ensures access to protected resources like cloud buckets or Sentinel Hub is securely handled.
+- **[Dask](../applications/dask.md)** distributes large or parallel processing workloads across multiple workers.
 
 
 ## Related tutorials
