@@ -24,6 +24,7 @@ sections:
       - file: applications/jupyterlab
         sections:
           - file: applications/example_notebooks
+          - file: applications/dask
       - file: applications/narrative_editor
       - file: applications/publishing_dashboard
 

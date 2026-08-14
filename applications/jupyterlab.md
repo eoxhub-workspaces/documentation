@@ -56,6 +56,13 @@ To get started quickly, navigate to the **Examples Explorer** section of the EOx
 
 These notebooks are an excellent entry point to understand EOxHub Workspaces, JupyterLab options, accessing Earth Observation data, and more. Learn more about what you can explore and how to run them in your workspace in [Example Notebooks](../applications/example_notebooks.md)
 
+---
+
+## Scalable processing with Dask
+
+[Dask](dask.md) enables notebooks to distribute larger or parallel processing workloads across multiple workers.
+
+---
 
 ## Related tutorials
 
