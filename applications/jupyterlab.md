@@ -73,6 +73,12 @@ These notebooks are an excellent entry point to understand EOxHub Workspaces, Ju
 
 ---
 
+## Tracking machine-learning experiments
+
+Notebooks can use [MLflow](mlflow.md) to record experiment parameters, metrics, models, and other outputs.
+
+---
+
 ## Related tutorials
 
 - [Launch QGIS from JupyterLab](../tutorials/processing_analysis/qgis_tutorial.md)

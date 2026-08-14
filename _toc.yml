@@ -25,6 +25,7 @@ sections:
         sections:
           - file: applications/example_notebooks
           - file: applications/dask
+      - file: applications/mlflow
       - file: applications/narrative_editor
       - file: applications/publishing_dashboard
       - file: applications/qgis
