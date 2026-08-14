@@ -21,6 +21,8 @@ Dask is not required for every analysis. Smaller datasets and exploratory tasks 
 
 Dask can be used from notebooks running in [JupyterLab](jupyterlab.md). A notebook connects to a Dask cluster and submits tasks to its workers while results remain available in the interactive notebook environment. Users can use the Dask Widget to monitor live status as well.
 
+![Dask in JupyterLab](https://raw.githubusercontent.com/EO-College/cubes-and-clouds/refs/heads/main/lectures/2.4_formats_and_performance/exercises/assets/dashboardlink.png)
+
 Depending on the workspace configuration, users can create or connect to a cluster and adjust the available workers to match their processing needs.
 
 The Dask dashboard provides insight into:
@@ -40,6 +42,7 @@ When working with Dask:
 - Choose data chunks that are large enough to avoid creating thousands of very small tasks.
 - Monitor memory consumption and task progress using the Dask dashboard.
 - Close clusters when processing is complete.
+
 
 ## Examples and learning resources
 
