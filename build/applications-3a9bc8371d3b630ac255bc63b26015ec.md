@@ -11,6 +11,7 @@ The applications available in a particular Workspace depend on its configuration
 [Algorithm Development](../use_cases/algorithm_development.md) focuses on exploring data, designing processing methods, testing algorithms, and creating reproducible development environments.
 
 - **[JupyterLab](jupyterlab.md)** provides an interactive environment for exploring data, writing code, and developing algorithms in notebooks.
+- **[QGIS](qgis.md)** provides a browser-based desktop environment for interactively exploring, visualizing, editing, and processing geospatial data.
 - **[Conda Store](conda_store.md)** creates reproducible software environments and manages the dependencies required by an algorithm.
 - **[File Browser](file_browser.md)** provides access to input data, notebooks, scripts, and generated files stored within the Workspace.
 - **[Credentials Manager](secret_manager.md)** securely provides credentials for protected data sources, APIs, and cloud storage.

@@ -59,6 +59,9 @@
     <loc>http://localhost:3000/publishing-dashboard</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/qgis</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/tutorials</loc>
   </url>
   <url>

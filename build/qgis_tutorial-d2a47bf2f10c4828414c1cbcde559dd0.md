@@ -1,7 +1,7 @@
 # Launch QGIS from JupyterLab
 
 **What you’ll accomplish:** Launch QGIS in your browser and access data stored in your EOxHub Workspace.  
-**Applications used:** [JupyterLab](../../applications/jupyterlab.md)  
+**Applications used:** [JupyterLab](../../applications/jupyterlab.md), [QGIS](../../applications/qgis.md) 
 **Estimated time:** 5–10 minutes  
 **Before you start:** You need access to a Workspace where the QGIS environment is enabled.  
 
