@@ -24,7 +24,7 @@ name: argo_workflows
 Argo Workflow server
 ```
 
-Argo Workflows also provides detailed logs for all executions, enabling workspace administrator to monitor behavior, trace failures, and debug issues.
+Argo Workflows also provides detailed logs for all executions, enabling workspace administrators to monitor behavior, trace failures, and debug issues.
 
 ```{figure} assets/argo_workflow_single_job.png
 ---
@@ -33,7 +33,7 @@ name: argo_workflow_single_job
 Argo Workflows details of a finished workflow with details of a step
 ```
 
-Sample templates will become available in the tutorial section once possible
+Sample templates will become available in the tutorial section when possible.
 
 ## Capability requirements for integration
 
