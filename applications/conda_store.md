@@ -1,6 +1,6 @@
 # Conda Store
 
-Within each user workspace where JupyterLab is provisioned also a dedicated [Conda Store](https://conda.store/) is available.
+Within each user workspace where JupyterLab is provisioned, a dedicated [Conda Store](https://conda.store/) is also available.
 
 
 
@@ -13,9 +13,9 @@ name: conda-store2
 Conda store User interface
 ```
 
-Dedicated environments can be produced based on the user rights either for a user themselves or for a whole workspace and shared with colleagues or other people.
+Dedicated environments can be created based on user permissions, either for an individual user or for an entire workspace, and shared with colleagues or other users.
 
-Conda Store supports GUI or yaml syntax for environment creation and examples and how to guides can be found in the official [documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+Conda Store supports a GUI or YAML syntax for environment creation. Examples and how-to guides can be found in the official [documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
 ```{figure} assets/conda_store.png
 ---
