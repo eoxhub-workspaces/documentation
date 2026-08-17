@@ -78,7 +78,7 @@ Generally, to include a supported type of EO collection in an eodash deployment 
 - After confirming the updates in the layer live preview panel and approving the corresponding Data Editor session (GitHub pull request), the changes can be merged into the production catalog.
 
 
-For learning how to include your data in Narrative publication, read the section [**Narrative Editor**](../applications/narrative_editor.md) and follow the tutorial [**Creating Narrative**](../tutorials/narrative_tutorial.md)
+For learning how to include your data in Narrative publication, read the section [**Narrative Editor**](../applications/narrative_editor.md) and follow the tutorial [**Get Started with the Narrative Editor**](../tutorials/creating_narratives/introduction_narrative_editor.md)
 
 
 ## Related tutorials
