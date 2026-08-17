@@ -15,7 +15,7 @@ To ensure compatibility with various interfaces (e.g. OGC Process API) and allow
 
 The eodash processing widget supports multiple ways of passing input. 
 - Area/location — the process can take a drawn point or polygon as input from the eodash user interface. For this integration, the input field must accept either coordinates directly or GeoJSON as a string. File input is not accepted.
-    - Example GeoJSON Feature String '{"type":"Feature","geometry":{"type":"Polygon" "coordinates":[[[30,10],[40,40],[20,40],[10,20],[30,10]]]},"properties":{}}'
+    - Example GeoJSON Feature String '{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[30,10],[40,40],[20,40],[10,20],[30,10]]]},"properties":{}}'
 - Date — standard HTML date formats are supported. eodash also supports start and end times to create a range. 
     - "YYYY-MM-DD" e.g. 2015-05-30 for date.
     - "YYYY-MM-DDThh:mm" for datetime 2025-07-02T06:33 
