@@ -8,7 +8,7 @@
 
 Learn how to leverage headless notebooks to run your Jupyter notebooks with dynamic parameters. This guide walks you through starting a server, executing a notebook, and managing job outputs for automated analysis.
 
-1\. Navigate to your Workspace — this tutorial is shown on a specific Workspace but can be reproduced anywhere this application is enabled.
+1\. Navigate to your EoxHub Workspace - this tutorial is shown on a specific Workspace but can be reproduced anywhere this application is enabled.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/0418d570-967e-49e9-978b-3acbac48f27a/ascreenshot_96322cbebd8e4479808e7c8a9c6a833a_text_export.jpeg)
 
