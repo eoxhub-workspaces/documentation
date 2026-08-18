@@ -34,7 +34,7 @@ Your process must be encapsulated in a Docker image. There are no strict limitat
 - The image is "slim" — only the required dependencies are installed.
 - The image is tagged with a version based on [semantic versioning](https://semver.org/).
 - The algorithm logs to standard output (stdout) helping to debug potential issues.
-- Avoid sidecars, Docker-in-Docker (DinD), and similar additional services where possible.
+- Avoid sideloading/sidecars (Docker in Docker) and similar additional services where possible to keep the structure simple
 - no special volumes, network expectations, ...
 
 We expect to know resource usage estimation - RAM consumption and CPU estimates.
