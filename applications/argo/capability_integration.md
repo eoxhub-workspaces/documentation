@@ -31,7 +31,7 @@ All fields can have a default value
 
 Your process must be encapsulated in a Docker image. There are no strict limitations of what can be done, but there are good practices that help integration:
 
-- The image is "slim" — only the required dependencies are installed.
+- The image is "slim" - only the required dependencies are installed.
 - The image is tagged with a version based on [semantic versioning](https://semver.org/).
 - The algorithm logs to standard output (stdout) helping to debug potential issues.
 - Avoid sideloading/sidecars (Docker in Docker) and similar additional services where possible to keep the structure simple
