@@ -14,7 +14,7 @@ To ensure compatibility with various interfaces (e.g. OGC Process API) and allow
 ### Arguments and parameters
 
 The eodash processing widget supports multiple ways of passing input. 
-- Area/location — the process can take a drawn point or polygon as input from the eodash user interface. For this integration, the input field must accept either coordinates directly or GeoJSON as a string. File input is not accepted.
+- Area/location - the process can take a drawn point or polygon as input from the eodash user interface. For this integration, the input field must accept either coordinates directly or GeoJSON as a string. File input is not accepted.
     - Example GeoJSON Feature String '{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[30,10],[40,40],[20,40],[10,20],[30,10]]]},"properties":{}}'
 - Date - standard HTML date formats are supported. eodash also supports start and end times to create a range. 
     - "YYYY-MM-DD" e.g. 2015-05-30 for date.
@@ -31,10 +31,10 @@ All fields can have a default value
 
 Your process must be encapsulated in a Docker image. There are no strict limitations of what can be done, but there are good practices that help integration:
 
-- The image is "slim" — only the required dependencies are installed.
+- The image is "slim" - only the required dependencies are installed.
 - The image is tagged with a version based on [semantic versioning](https://semver.org/).
 - The algorithm logs to standard output (stdout) helping to debug potential issues.
-- Avoid sidecars, Docker-in-Docker (DinD), and similar additional services where possible.
+- Avoid sideloading/sidecars (Docker in Docker) and similar additional services where possible to keep the structure simple
 - no special volumes, network expectations, ...
 
 We expect to know resource usage estimation - RAM consumption and CPU estimates.
