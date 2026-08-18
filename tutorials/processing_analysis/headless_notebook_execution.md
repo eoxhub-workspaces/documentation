@@ -23,7 +23,7 @@ Learn how to leverage headless notebooks to run your Jupyter notebooks with dyna
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-03-05/097a37f2-79e2-4039-a061-ec66b70808e2/ascreenshot_94c38724c4bb4f02b437103d6c6dddf4_text_export.jpeg)
 
 \
-4\. For the pygeoapi worker to find the correct notebook, it needs to be created in a specific structure within a shared folder. Inside the **shared** folder, there is another folder **named the same as the Workspace** — this is the correct location.\
+4\. For the pygeoapi worker to find the correct notebook, it needs to be created in a specific structure within a shared folder. Inside the **shared** folder, there is another folder **named the same as the Workspace** - this is the correct location.\
 The shared folder is shared among all users in the workspace and also with pygeoapi.\
 \
 Inside this folder, the structure can be arbitrary - separated into many other folders or just single notebooks.
