@@ -1,6 +1,6 @@
 # Data Editor
 
-The Data Editor application, provides a traceable review and approval path of collection configurations before data is published to the configured STAC catalog. This STAC catalog is used in the [Publishing Dashboard](publishing_dashboard.md) which is based on [eodash](https://eodash.org).
+The Data Editor application provides a traceable review and approval path for collection configurations before data is published to the configured STAC catalog. This STAC catalog is used in the [Publishing Dashboard](publishing_dashboard.md) which is based on [eodash](https://eodash.org).
 
 It is based on [git-clerk](https://github.com/EOX-A/git-clerk) - Open-Source Content Management System based on Git workflows with a friendly file-editing GUI.
 
@@ -58,7 +58,7 @@ Currently supported data (resource) types are:
 * Copernicus Marine Data Store WMTS
 
 
-List of all supported resources is kept up to date on [eodash wiki](https://github.com/eodash/eodash_catalog/wiki/Resource) so please visit this site as well. 
+A list of all supported resources is kept up to date on the [eodash wiki](https://github.com/eodash/eodash_catalog/wiki/Resource), so please visit this site as well.
 
 
 
@@ -68,17 +68,17 @@ All required fields are marked in the Data Editor. More information about each o
 
 ## Overview of the process
 
-Generally for including a supported type of EO collection into an eodash deployment within EOxHub, the steps are summarized as follows:
+Generally, to include a supported type of EO collection in an eodash deployment within EOxHub, the steps are as follows:
 
 - Start a new `session` in the Data Editor and create a new collection configuration file.
-- Fill metadata fields split into thematic groups. Mainly filling the [Resource](https://github.com/eodash/eodash_catalog/wiki/Resource) is important to visualize the data on the web map.
-- For raw data and client only rendering (GeoJSON, flatgeobuf or GeoTIFF as direct access), eodash supports an [OpenLayers flatstyle](https://openlayers.org/en/latest/apidoc/module-ol_style_flat.html). More information on styling can be [found here](https://eodash.org/styling.html#vector-styling).
-- eodash project offers [eodash-style-editor](https://github.com/eodash/eodash-style-editor) for editing the flatstyle definitions with updating the visualization in real time when definition is changed
+- Fill in the metadata fields, which are split into thematic groups. Filling in the [Resource](https://github.com/eodash/eodash_catalog/wiki/Resource) field is particularly important for visualizing the data on the web map.
+- For raw data and client-only rendering (GeoJSON, FlatGeobuf, or GeoTIFF as direct access), eodash supports an [OpenLayers flat style](https://openlayers.org/en/latest/apidoc/module-ol_style_flat.html). More information on styling can be [found here](https://eodash.org/styling.html#vector-styling).
+- The eodash project offers [eodash-style-editor](https://github.com/eodash/eodash-style-editor) for editing flat style definitions and updating the visualization in real time as the definition changes.
 - To define interactions for the user (e.g. modify the style within the eodash app), the style can be extended with variables, combined with [JSON Form definition](https://eox-a.github.io/EOxElements/?path=/docs/elements-eox-jsonform--docs).
-- After finishing the updates confirmed by the layer live preview panel and approving of the corresponding Data editing session (GitHub Pull Request), the changes can be merged to production catalog.
+- After confirming the updates in the layer live preview panel and approving the corresponding Data Editor session (GitHub pull request), the changes can be merged into the production catalog.
 
 
-For learning how to include your data in Narrative publication, read the section [**Narrative Editor**](../applications/narrative_editor.md) and follow the tutorial [**Creating Narrative**](../tutorials/narrative_tutorial.md)
+For learning how to include your data in Narrative publication, read the section [**Narrative Editor**](../applications/narrative_editor.md) and follow the tutorial [**Get Started with the Narrative Editor**](../tutorials/creating_narratives/introduction_narrative_editor.md)
 
 
 ## Related tutorials

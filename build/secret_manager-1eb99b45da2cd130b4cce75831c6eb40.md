@@ -37,21 +37,21 @@ Credentials manager
 | Type                                                                                                               | Example                                                |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
 | **Opaque (key-value)**  <br><br> You can add **one or more** key-value pairs.                                      | ![](./assets/credentials-manager/opaque.png)           |
-| **dockerconfigjson** <br><br> The provided credentials are **converted to a valid json** and stored in the secret. | ![](./assets/credentials-manager/dockerconfigjson.png) |
+| **dockerconfigjson** <br><br> The provided credentials are **converted to valid JSON** and stored in the secret.   | ![](./assets/credentials-manager/dockerconfigjson.png) |
 | **ssh-auth** <br><br> You can either **upload** the key file **or paste the key** in the text area.                | ![](./assets/credentials-manager/ssh-auth.png)         |
 
 #### Modification / Deletion
 | Type                                                                                                                                                                        | Example                                                                            |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | **Opaque (key-value)**  <br><br> <li>add / remove key-value pairs</li><li>change individual keys / values</li>                                                              | ![opaque_edit.png](assets/credentials-manager/opaque_edit.png)                     |
-| **dockerconfigjson** <br><br> The credentials can be changed, the current state of the currently stored json is shown in the (readonly) textarea below.                     | ![dockerconfigjson-view.png](assets/credentials-manager/dockerconfigjson-view.png) |
+| **dockerconfigjson** <br><br> The credentials can be changed; the current state of the stored JSON is shown in the (read-only) text area below.                             | ![dockerconfigjson-view.png](assets/credentials-manager/dockerconfigjson-view.png) |
 | **ssh-auth** <br><br> The ssh-privatekey is masked and immutable once it's stored. If you need to change the key, you need to delete the secret first and then recreate it. | ![ssh-auth-view.png](assets/credentials-manager/ssh-auth-view.png)                 |
 
 
 #### Special modes
 
 **Opaque (key-value)** can be set to **readonly** or **key-only** (has to be done by an administrator).
-**Readonly** & **key-only** credentials can only be viewed, but not edited or deleted.  
+**Read-only** and **key-only** credentials can only be viewed; they cannot be edited or deleted. 
 
 ```{figure} assets/credentials-manager/opaque-view-only.png
 ---
@@ -66,11 +66,11 @@ Credential can only be viewed, not edited or deleted.
 | **key-only** | ![opaque-keyonly.png](assets/credentials-manager/opaque-keyonly.png)   |
 
 
-#### Inject as environment variables into Jupyterlab
+#### Inject as environment variables into JupyterLab
 
-**Opaque (key-value)** secrets can injected as environment variables in Jupyterlab by enabling the `Inject as env var into jupyterlab` button below the credential.
+**Opaque (key-value)** secrets can be injected as environment variables in JupyterLab by enabling the `Inject as env var into JupyterLab` button below the credential.
 
-> If you enable/disable this button you need to restart the Jupyterlab session to see its effect.
+> If you enable or disable this button, you need to restart the JupyterLab session to see its effect.
 
 
 | Inject as env into Jupyterlab                | Example                                                                                      |

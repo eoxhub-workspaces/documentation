@@ -21,12 +21,12 @@
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-28/d683f7a4-6496-48e6-a9c1-e20a5759200f/ascreenshot.jpeg?tl_px=322,322&br_px=2042,1284&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,337)
 
 \
-4\. After doing so, make sure "All repositories" is selected and click "Install & Authorize". The Narrative Editor requires access to all repositories to be able to create new narratives. It will not however, edit any of your other repositories.
+4\. After doing so, make sure "All repositories" is selected and click "Install & Authorize". The Narrative Editor requires access to all repositories to create new narratives. However, it will not edit any of your other repositories.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-28/c2cbc571-1c60-419a-969c-6a32b2aca426/ascreenshot.jpeg?tl_px=467,71&br_px=2187,1033&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=366,500)
 
 \
-5\. In order to create a narrative, you will have to create a session first. Sessions allow you to edit multiple files in one place. You will create your narrative within. To create a session click "Start New Session" towards the top right of your screen.
+5\. To create a narrative, you first need to create a session. Sessions allow you to edit multiple files in one place, and you will create your narrative within the session. To create a session, click "Start New Session" in the top-right corner of your screen.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-28/28051729-f558-4b26-b704-c959bd071cba/ascreenshot.jpeg?tl_px=367,0&br_px=2087,961&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=977,31)
 
@@ -36,7 +36,7 @@
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-28/26660a28-2fa2-4707-8214-60b555e854d5/ascreenshot.jpeg?tl_px=340,322&br_px=2060,1284&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,304)
 
 \
-7\. Select "Create Narrative" to create a new narrative. The other two options let you edit existing narratives or upload your own. Both without actually making changes to the original Website yet.
+7\. Select "Create Narrative" to create a new narrative. The other two options let you edit existing narratives or upload your own. Neither option makes changes to the original website at this stage.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-28/cfd3f25a-9a07-4d07-a70a-056385131de7/ascreenshot.jpeg?tl_px=0,322&br_px=1719,1284&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=414,323)
 
@@ -51,7 +51,7 @@
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-28/5d48ddb6-1c02-48a0-a0c6-262af0e0b49e/user_cropped_screenshot.webp?tl_px=183,161&br_px=1903,1122&force_format=jpeg&q=100&width=1120.0)
 
 \
-10\. The title of your narrative, which is also shown on your hero image, is defined with a single hashtag "#", while each new section in your narrative uses "##". You can add a subheading to a section, by adding another hashtag: "###". In total you can add up to four subheadings, by adding hashtags.
+10\. The title of your narrative, which is also shown on your hero image, is defined with a single hashtag "#", while each new section in your narrative uses "##". You can add a subheading to a section by adding another hashtag: "###". In total, you can add up to four subheadings by adding hashtags.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-05/aeccff56-d541-45ba-a194-2a74185e15c2/user_cropped_screenshot.webp?tl_px=470,321&br_px=1616,962&force_format=jpeg&q=100&width=1120.0)
 

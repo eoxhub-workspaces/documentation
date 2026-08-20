@@ -6,22 +6,22 @@
 **Before you start:** No Workspace account is required; the example is available through the DESIDE dashboard.  
 
 
-1\. Navigate to [https://deside.eox.at/](https://deside.eox.at/)
+1\. Navigate to [https://deside.eox.at/](https://deside.eox.at/).
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-13/08f286bb-e234-46ad-849d-8e84e7e29684/ascreenshot.jpeg?tl_px=0,0&br_px=3399,2012&force_format=jpeg&q=100&width=1120.0)
 
 \
-2\. Click "Dashboard"
+2\. Click "Dashboard".
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-13/08f286bb-e234-46ad-849d-8e84e7e29684/ascreenshot.jpeg?tl_px=0,0&br_px=2408,1345&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=506,-6)
 
 \
-3\. Click "Select indicator"
+3\. Click "Select indicator".
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-13/0978cb54-ad2c-4381-9996-e0e8e2f7d106/ascreenshot.jpeg?tl_px=0,0&br_px=2408,1345&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=80,60)
 
 \
-4\. Select "Polar Warp Capability"
+4\. Select "Polar Warp Capability".
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-13/7392989b-4177-41d0-b732-b550bbbdca8d/ascreenshot.jpeg?tl_px=0,0&br_px=2408,1345&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=334,263)
 
@@ -36,22 +36,22 @@
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-13/71043669-9ea0-4f16-952b-a065c78e6636/ascreenshot.jpeg?tl_px=5,72&br_px=2413,1418&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=808,326)
 
 \
-7\. Once preferred location is found, drawing rectangle and selecting additional parameters is needed for triggering process.
+7\. Once the preferred location is found, draw a rectangle and select the additional parameters needed to trigger the process.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-13/1ff66795-f989-453b-aba5-b3d72a3177b7/ascreenshot.jpeg?tl_px=808,357&br_px=3216,1702&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,277)
 
 \
-8\. Click "Execute"
+8\. Click "Execute".
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-13/92594f12-ba6e-44c7-8d68-744501f88e4e/ascreenshot.jpeg?tl_px=991,666&br_px=3399,2012&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=976,318)
 
 \
-9\. Running of capability can take couple minutes, depending on the size of the area.
+9\. Running the capability can take a couple of minutes, depending on the size of the area.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-13/cf2aafb0-dcd6-4445-a1dc-051a1122e900/ascreenshot.jpeg?tl_px=0,13&br_px=2408,1358&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=30,277)
 
 \
-10\. Move through predicted images in the left panel
+10\. Move through predicted images in the left panel.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-13/aa4ccbbd-d64d-4f9d-b61d-fe1661f3639c/ascreenshot.jpeg?tl_px=0,270&br_px=2408,1615&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=55,277)
 

@@ -12,9 +12,9 @@ A: Everyone with an internet connection! It's designed for scientists, developer
 
 A: No. Everything runs in your browser. All required libraries and tools are pre-installed in the cloud workspace.
 
-## Q: Can I install additional python packages?
+## Q: Can I install additional Python packages?
 
-A: Yes! You can install packages using conda store. 
+A: Yes! You can install packages using Conda Store. 
 
 ## Q: Will my work be saved?
 
@@ -30,4 +30,4 @@ A: Use the built-in support link in the user area or email us at service+tenants
 
 ## Q: Can I suggest a feature or report a bug?
 
-A: Absolutely! We welcome feedback — either via email your workspace support panel.
+A: Absolutely! We welcome feedback — either via email or through your workspace support panel.

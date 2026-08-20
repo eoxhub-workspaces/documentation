@@ -2,7 +2,7 @@
 
 EOxHub includes robust data visualization capabilities for both raster and vector data based primarily on [eoapi](https://eoapi.dev/). These are powered by [titiler-pgstac](https://github.com/stac-utils/titiler-pgstac) and [PgSTAC](https://github.com/stac-utils/pgstac), which together enable dynamic tiling and rendering of STAC-compliant assets directly from storage based on pre-defined collection-level metadata fields.
 
-It exposes a [FastAPI](https://fastapi.tiangolo.com/) based interface, supporting image formats such as PNG and JPEG, and standard interfaces like WMTS.
+It exposes a [FastAPI](https://fastapi.tiangolo.com/)-based interface, supporting image formats such as PNG, JPEG and standard interfaces such as WMTS.
 
 Future tutorials for eoAPI will become available in the tutorial section once possible.
 
@@ -19,7 +19,7 @@ Ingesting the existing STAC items to the database can be done in multiple ways:
 
 ### Make it Searchable
 
-This service utilizes `stac-fastapi` to publish and manage metadata describing their datasets, enabling machine-readable search, query, filter and cataloging across collections.
+This service utilizes `stac-fastapi` to publish and manage metadata describing its datasets, enabling machine-readable search, querying, filtering, and cataloging across collections.
 
 ![eoapi_stac](assets/eoapi_stac.png)
 
@@ -32,7 +32,7 @@ titiler-pgSTAC is a TiTiler extension that connects to pgSTAC to support large-s
 
 ### Visualize Vector Data
 
-Utilizing [tipg](https://github.com/developmentseed/tipg) - Vector Tiling Service  for OGC Features and OGC Tiles specifications.
+It utilizes [tipg](https://github.com/developmentseed/tipg), a Vector Tiling Service for the OGC Features and OGC Tiles specifications.
 
 ![tipg](assets/tipg.png)
 
