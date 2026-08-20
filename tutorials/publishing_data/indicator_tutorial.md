@@ -3,16 +3,16 @@
 **What you’ll accomplish:** Create an indicator that displays several existing collections as layers in one dashboard view.    
 **Applications used:**  [**Data Editor**](../applications/data_editor.md), [**Publishing Dashboard**](../applications/publishing_dashboard.md)    
 **Estimated time:** 15 minutes    
-**Before you start:** You need collection file you want to group. For more information how to create collections see other tutorials: [**add geojson dataset**](../tutorials/publishing_data/geojson_tutorial.md) and [**add WMTS dataset**](../tutorials/publishing_data/wtms_tutorial.md)    
+**Before you start:** You need the collection files you want to group. For more information on how to create collections, see the other tutorials: [**Add GeoJSON Dataset**](../tutorials/publishing_data/geojson_tutorial.md) and [**add WMTS Dataset**](../tutorials/publishing_data/wtms_tutorial.md)    
 
 
 This guide provides a step-by-step process for merging multiple datasets into a single display collection using the EOxHub Data Editor.
 It documents the task of adding a new Indicator file based on existing Collection files created beforehand. It also documents usage of additional Indicator specific properties Disable and Hidden.
 
-1\. This tutorial expects already existing **Collection** files in the session, which are supposed to be grouped together in an **Indicator** file. Each collection will be shown as a layer in the final visualisation.
+1\. This tutorial expects **Collection** files to already exist in the session; these collections will be grouped together in an **Indicator** file. Each collection will be shown as a layer in the final visualisation.
 
 
-2\. Navigate to **Data Editor** in the workspace page e.g. <https://workspace.gtif-austria.hub-otc.eox.at/catalog-git-clerk>
+2\. Navigate to **Data Editor** in the workspace page e.g. <https://workspace.gtif-austria.hub-otc.eox.at/catalog-git-clerk>.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/d641459a-b8e0-4a0e-b94b-418a192b86ab/ascreenshot_6765c7f679744ca6a4e0988ff83893c9_text_export.jpeg)
 
@@ -29,7 +29,7 @@ Notice existing pre-created files in **collections**. Their **filenames** will b
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/8f5fb973-bf30-4174-b3bd-3dbc19504922/ascreenshot_44dddb50dc70427580570c970ba2a46f_text_export.jpeg)
 
 
-5\. Click "indicators"
+5\. Click "indicators".
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/fddba850-e256-40c4-ae49-d692b142d9de/ascreenshot_31b9f2e54f80400a8ee507077a374d41_text_export.jpeg)
 
@@ -39,12 +39,12 @@ Notice existing pre-created files in **collections**. Their **filenames** will b
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/f2249e35-02d2-4293-9d41-65e76ec82b8d/ascreenshot_7340442668d143c2b7a72947ec1466a8_text_export.jpeg)
 
 
-7\. Select "Edit in current session"
+7\. Select "Edit in current session".
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/1ff2b5c2-2bb8-4eb8-b2bc-171479207cbc/ascreenshot_2ea384ac0c754904a7b1189532af0696_text_export.jpeg)
 
 
-8\. Type the filename of a new indicator file with .json prefix, e.g. **"testing-indicator-new.json"**.
+8\. Type the filename of a new indicator file with the `.json` extension, e.g. **"testing-indicator-new.json"**.
 
 Click on **Add New File**
 
@@ -66,7 +66,7 @@ Click on **Add New File**
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/dd9567cc-cec8-43be-8717-5586f850bc58/ascreenshot_a71ad292f3e44f0cbe1587d9bbf0ee51_text_export.jpeg)
 
 
-12\. Each Item is a filename of a **Collection** without the **.json** suffix e.g. **LULUCF_land_use_copy_test**
+12\. Each Item is a filename of a **Collection** without the **.json** suffix e.g. **LULUCF_land_use_copy_test**.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/507cebba-058c-4fac-a1e6-e4f14955b52f/ascreenshot_d8e73657a4c24a929fb494301a925162_text_export.jpeg)
 
@@ -81,7 +81,7 @@ Click on **Add New File**
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/ab73dcd4-caa5-4a97-abd1-4a9042a7932d/ascreenshot_7e503d97de7c40dd8e6fe621f44d2c46_text_export.jpeg)
 
 
-15\. Metadata fields such as **Themes** defined on the **Collections** are **not** propagated into the **Indicator** so for indicators they must be defined here as well.
+15\. Metadata fields such as **Themes** defined on the **Collections** are **not** propagated to the **Indicator**, so they must be defined here as well.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/2fbdfaa0-86ed-499a-a00a-8d0a825fd751/ascreenshot_8bb238e851d941a59005ee7e79648a04_text_export.jpeg)
 
@@ -121,12 +121,12 @@ Click on the checkbox to activate the field.
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/4dec05d4-af9f-457e-89ea-3a4265b61cc1/ascreenshot_260e1de4a34041f8959886880c42d35f_text_export.jpeg)
 
 
-22\. If on a smaller screen, in order to see the preview instance, click on the **"Eye"** icon
+22\. If on a smaller screen, in order to see the preview instance, click on the **"Eye"** icon.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/58f9b9ae-a755-471b-8cf1-c188f3790e42/ascreenshot_232b513cee6b47249e7a56a63b0d2739_text_export.jpeg)
 
 
-23\. "Preview creation takes a few minutes to finish"
+23\. "Preview creation takes a few minutes to finish".
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/fab5f327-a8f1-4efe-a4cd-9483fe90ee67/ascreenshot_ffa38fc2bd7946a89ba4745bbbf1ed6a_text_export.jpeg)
 
@@ -136,7 +136,7 @@ Click on the checkbox to activate the field.
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/e27c546b-84c0-4493-a9c7-99344025e38b/ascreenshot_06b3ee1185c048a5aabba25b3fe974e8_text_export.jpeg)
 
 
-25\. Click "Select indicator"
+25\. Click "Select indicator".
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/622abbdf-8912-42e4-ba98-f09164625e23/ascreenshot_a8c7f7299cc445299f1f46e360da5db1_text_export.jpeg)
 
@@ -161,7 +161,7 @@ Click on the checkbox to activate the field.
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/590b97b7-1d27-4111-9fe0-9dd9436c1699/ascreenshot_a097dc6ec35548e086471a86c00ff710_text_export.jpeg)
 
 
-30\. You can then submit the session for review by clicking on the session name e.g. **testing-session**
+30\. You can then submit the session for review by clicking on the session name e.g. **testing-session**.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/37c91539-3cd3-4107-a845-0ff9eda30536/ascreenshot_2b00714707a4467e9f5aa3fe7a9bc537_text_export.jpeg)
 
@@ -171,7 +171,7 @@ Click on the checkbox to activate the field.
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/8cbbd2d6-1413-44a6-aee6-f3be38217b07/ascreenshot_620bf2573f6f44df85bd2749272b456d_text_export.jpeg)
 
 
-32\. Click "Request button"
+32\. Click "Request button".
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/09261a6f-5733-4331-83be-fcdc3954a8f6/ascreenshot_10aba9494d94458c9130fa7366d9b28d_text_export.jpeg)
 
@@ -203,6 +203,6 @@ Click on the indicator file if any changes were already done, otherwise use the 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/44c63fce-dc52-4ef1-8266-951ba0a3ba72/ascreenshot_3c46b723dbc147ac848a5d2bd66c40bc_text_export.jpeg)
 
 
-38\. Click "Save"
+38\. Click "Save".
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2026-01-28/7146a8d7-dd7c-49cf-a28a-86b9cedd6c89/ascreenshot_4863f7e81b7146c089e0bde2e0d700fd_text_export.jpeg)

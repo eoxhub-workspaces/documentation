@@ -17,9 +17,9 @@ The **File Browser** is a web-based file management application integrated into 
 
 EOxHub Workspace employs a public access system to facilitate sharing and accessing datasets:
 
-- **Public Folder**: Files placed in the `public` directory are accessible via permanent public URLs, allowing for easy sharing and integration into other applications e.g. [Data Editor](data_editor).
+- **Public Folder**: Files placed in the `public` directory are accessible via permanent public URLs, allowing for easy sharing and integration into other applications, e.g. the [Data Editor](data_editor).
 - **Shareable Links**: Users can generate shareable links for specific files or folders, providing controlled access to external collaborators.
-- **Access Control**: All areas within the File Browser are restricted to be accessed only by users of the workspace. Data in the `public` folder is openly accessible. By using the creation of shareable links other files can be made accessible to external people.
+- **Access Control**: All areas within the File Browser can only be accessed by users of the workspace. Data in the `public` folder is openly accessible. Shareable links can be used to make other files accessible to external users.
 
 
 ## Related tutorials

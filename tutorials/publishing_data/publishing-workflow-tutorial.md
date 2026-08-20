@@ -3,23 +3,23 @@
 **What you’ll accomplish:** Upload, configure, preview, and submit a geospatial dataset for publication in an EOxHub dashboard.     
 **Applications used:** [**File Browser**](../applications/file_browser.md), [**Data Editor**](../applications/data_editor.md), [**Publishing Dashboard**](../applications/publishing_dashboard.md)    
 **Estimated time:** 30–45 minutes, excluding review and approval    
-**Before you start:** You need access to an EOxHub Workspace with Dashboard as a Service and a your geospatial dataset.   
+**Before you start:** You need access to an EOxHub Workspace with Dashboard as a Service and your geospatial dataset.   
 
 
-This tutorial explains the complete workflow for preparing, uploading, styling, and publishing datasets in an EOXHub Workspace which includes multiple of the available Applications within EOxHub. It is intended as overview and does not go too deep into the options within the various steps, but provides follow on resources if more information is needed. The same steps apply across all workspace instances (e.g., GTIF Austria, Cerulean, and other environments). 
+This tutorial explains the complete workflow for preparing, uploading, styling, and publishing datasets in an EOxHub Workspace, using several of the available applications within EOxHub. It is intended as an overview and does not go into detail on all the options within the various steps, but provides links to further resources if more information is needed. The same steps apply across all workspace instances (e.g., GTIF Austria, Cerulean, and other environments). 
 
-For more information on the dedicated Applications, please further explore this documentation.
+For more information on the dedicated applications, please explore the rest of this documentation.
 
 ```{note}
-The Publishing of data in the Dashboard is only available for workspaces that have added the paid option **Dashboard as a Service (DaaS)**
+Publishing data in the Dashboard is only available for workspaces that have added the paid option **Dashboard as a Service (DaaS)**.
 ```
 
 ## Prerequisites
 
-In order to submit a data publishing request for raw resource, i.e. a data format that can directly be visualized by the dashboard (Cloud optimized GeoTIFF (COG), GeoJSON, FlatgeoBuf) you need following things:
+To submit a data publishing request for a raw resource, i.e. a data format that can be directly visualized by the Dashboard (Cloud-Optimized GeoTIFF (COG), GeoJSON, or FlatGeobuf), you need the following:
 
-1. **Have a geo file that is accessible through public URL**
-2. **Have a style definition file that is accessible through public URL**
+1. **Have a geospatial file that is accessible through a public URL.**
+2. **Have a style definition file that is accessible through a public URL.**
 
 The tutorial covers how to achieve the prerequisites within an EOxHub Workspace environment and various other aspects of the Data Publishing submission:
 
@@ -34,18 +34,18 @@ The tutorial covers how to achieve the prerequisites within an EOxHub Workspace 
 
 ## 1. Uploading Data with the File Browser
 
-For the first prerequisite (publicly available geo-file) it is possible to use the File browser application. The [**File Browser**](../applications/file_browser.md) allows adding data to a workspace.
+For the first prerequisite (a publicly available geospatial file), you can use the File Browser application. The [**File Browser**](../applications/file_browser.md) allows adding data to a workspace.
 
 A special public folder is available where you can upload the files which are expected to be published.
-You can upload files (Tiff (Cloud Optimized Geotiff - COG), GeoJSON, style files, preview images, etc.) directly in the browser.
+You can upload files (Cloud-Optimized GeoTIFF (COG), GeoJSON, style files, preview images, etc.) directly in the browser.
 
-Once a file is uploaded it can be accessed through a special URL, similar to following:
+Once a file is uploaded, it can be accessed through a special URL similar to the following:
 
 ```text
 https://workspace-ui-public.<instance>.hub.eox.at/api/public/share/public/<filename>.tif
 ```
 
-The exact url as well as a short description is provided within the README.txt inside the public folder of your workspace.
+The exact URL, as well as a short description, is provided in the README.txt file inside the public folder of your workspace.
 Presigned URLs generated from the File Browser are **temporary** and should not be used in the Dashboard configuration. Always use the permanent public URL.
 
 > ⚠️ Upload through the browser to the workspace storage has some size limitations, files over ~100 MB should be uploaded differently.
@@ -55,17 +55,17 @@ Presigned URLs generated from the File Browser are **temporary** and should not 
 Here is more information on the supported formats:
 
 * Raster Data:
-  - Use Cloud-Optimized GeoTIFF (COG)
+  - Use Cloud-Optimized GeoTIFF (COG).
     - Ideally in EPSG:3857 projection for best support performance
-    - Other projections should also work but have a performance penalty when being visualized
+    - Other projections should also work but have a performance penalty when being visualised.
   - Can be a single file or a time series (multiple files).
   - Ideally encode the date and time in the filename using ISO format: YYYY-MM-DDTHH:MM:SS.
   - Bands:
     - RGB bands (already prepared as final visualization), or
     - Data bands in which case a style will be needed (see section 3.)
 * Vector Data:
-  - Use GeoJSON if the file size is under ~10 MB, or FlatGeobuf for larger datasets
-    - Even larger datasets should be handled differently, will need dedicated tile server
+  - Use GeoJSON if the file size is under ~10 MB, or FlatGeobuf for larger datasets.
+    - Even larger datasets should be handled differently and will need a dedicated tile server.
   - Will need a style definition as described in section 3.
 
 - Files in the **`public` folder** are openly accessible and can be integrated into the Dashboard.  
@@ -79,7 +79,7 @@ Additional information on resource properties, such as raw data source can be fo
 
 COGs with numeric values (e.g., temperature) as well as vector data (GeoJSON, FlatGeobuf) require a style definition so that it is clear how they should be visualized.
 
-This section covers handling the second pre-requisite, creating and making the style available online.
+This section covers handling the second prerequisite: creating the style and making it available online.
 
 ### Style creation
 
@@ -87,7 +87,7 @@ The style is based on [OpenLayers expressions](https://openlayers.org/en/latest/
 
 Further information on styling in the eodash client can be found in the [eodash documentation](https://eodash.org/styling.html).
 
-An experimental client to help quicker iterate in the style definition is available under https://eodash.github.io/eodash-style-editor/. There you can set a URL for your dataset and work on the style definition live. Please take into account this is not a fully functioning experimental helper tool. A more streamlined integration is envisioned and the deployment of the current tool will probably change.
+An experimental client to help you iterate more quickly on the style definition is available at https://eodash.github.io/eodash-style-editor/. There you can set a URL for your dataset and work on the style definition live. Please note that this is an experimental helper tool and is not fully functional. A more streamlined integration is envisioned and the deployment of the current tool will probably change.
 
 Example: Temperature color scale with no-data handling:
 
@@ -118,8 +118,8 @@ Example: Temperature color scale with no-data handling:
 
 ### Style online deployment
 
-Using the same logic as making the cloud optimized file available online, we can use the File Browser to upload or directly create the style json file to a location within the public folder.
-If you want to create the style and copy the style configuration content from the style editor, you can click on "New file" 📄, name it for example style.json, and in the opened editor paste your configuration. Make sure to click on save button 💾 once done.
+Using the same approach as making the Cloud-Optimized file available online, we can use the File Browser to upload or directly create the style JSON file in the public folder.
+If you want to create the style and copy the style configuration from the style editor, click on "New file" 📄, name it, for example, style.json, and paste your configuration into the editor. Make sure to click the Save button 💾 once you are done.
 Then you can use the public endpoint as explained previously.
 
 There are of course other ways of making a file public, many services exist especially for a json format. Style files can become intricate depending on the use case or done as collaboration activity so it might be beneficial to use a service that provides change tracking.
@@ -132,18 +132,18 @@ The basic steps are:
 
 1. Go to **Data Editor → Start New Session**.  
 2. Automation → Create Dataset Submission:
-  - Enter Data Title and click Submit
+  - Enter Data Title and click Submit.
 3. Inside opened form:
-  - Make sure identifier has no special characters or white spaces
-  - Under **Resources**, click on the plus (+) sign
-  - Under item 1 select *Cloud Optimized Geotiff (COG) Source*.  
-  - Add to the Style field the URL to a style definition (prerequisite 2 - as described in section 2 previously)
-  - Draw a bounding box dashboard should zoom to when dataset selected (click → move mouse → click again to define rectangle)
-  - Click plus (+) TimeEntries
-  - Write a Time string in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format, e.g. YYYY-MM-DD or just year YYYY
-  - Click on the plus (+) sign of the Assets field
-  - Add an identifier string, e.g. data
-  - Paste the URL to your public file into the File field (prerequisite 1 - as described in section 1 previously)
+  - Make sure identifier has no special characters or white spaces.
+  - Under **Resources**, click on the plus (+) sign.
+  - Under item 1, select *Cloud-Optimized GeoTIFF (COG) Source*.  
+  - Add to the Style field the URL to a style definition (prerequisite 2 - as described in section 2 previously).
+  - Draw a bounding box that the Dashboard should zoom to when the dataset is selected (click → move the mouse → click again to define the rectangle).
+  - Click the plus (+) button for TimeEntries.
+  - Write a Time string in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format, e.g. YYYY-MM-DD or just year YYYY.
+  - Click on the plus (+) sign of the Assets field.
+  - Add an identifier string, e.g. data.
+  - Paste the URL to your public file into the File field (prerequisite 1 - as described in section 1 previously).
 
 Example entry for a COG resource:
 
@@ -156,7 +156,7 @@ Example entry for a COG resource:
 }
 ```
 
-This is intended as short summary, for more detailed guide with screenshots please look at [Integrating GeoJSON dataset using Data Editor](geojson_tutorial), where the shown steps are applicable to all raw resource submissions.
+For a more detailed guide with screenshots, please see [Integrating GeoJSON dataset using Data Editor](geojson_tutorial), where the shown steps are applicable to all raw resource submissions.
 
 ---
 
@@ -233,7 +233,7 @@ If multiple datasets should be shown together in the dashboard, there are mainly
 - Combine them under one Indicator definition.  
 - Update the `catalog.json` to reference the new indicator.
 
-It is possible to use the "Browse Files" button in the Data Editor to find and modify most text based files. As alternative the changes can be made directly into the github repository if that is considered an easier alternative.
+It is possible to use the "Browse Files" button in the Data Editor to find and modify most text-based files. Alternatively, the changes can be made directly in the GitHub repository if that is considered easier.
 
 Example indicator (simplified):
 
@@ -310,5 +310,5 @@ Workflow:
 
 ---
 
-This covers the main steps for publishing data by **uploading, styling, combining, and publishing** in an EOXHub Workspace.
-For more information on the used Applications further explore the documentation.
+This covers the main steps for publishing data by **uploading, styling, combining, and publishing** in an EOxHub Workspace.
+For more information about the applications used, please explore the rest of the documentation.

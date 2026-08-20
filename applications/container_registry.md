@@ -1,6 +1,6 @@
 # Container Registry
 
-We use **Zot Registry** - a lightweight, OCI-native container image registry - as repository for storing and managing container images within EOxHub Workspaces.
+We use **Zot Registry** - a lightweight, OCI-native container image registry - as a repository for storing and managing container images within EOxHub Workspaces.
 You can easily push your custom images to Zot and pull them directly into your **Argo Workflows**.
 
 The login credentials can be found in the secret **registry-login** in the [credentials manager](./secret_manager.md) of your workspace.
@@ -27,7 +27,7 @@ Authenticate with the endpoint and push your locally built images using standard
     docker tag my-image:latest registry.[workspace-name].[cluster].eox.at/my-image:latest
     ```
    
-3. Push image to registry
+3. Push the image to the registry
 
     ```shell
     docker push registry.[workspace-name].[cluster].eox.at/my-image:latest

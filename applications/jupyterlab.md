@@ -15,7 +15,7 @@
 - View and edit CSVs, images, and text files
 - Use drag-and-drop functionality across tabs
 
-In the context or EOxHub Workspaces, JupyterLab comes pre-configured with common EO and geospatial libraries, making it ideal for analysis, visualization, and prototyping. For more information, please visit the official [documentation](https://jupyterlab.readthedocs.io/)
+In the context of EOxHub Workspaces, JupyterLab comes pre-configured with common EO and geospatial libraries, making it ideal for analysis, visualization, and prototyping. For more information, please visit the official [documentation](https://jupyterlab.readthedocs.io/)
 
 ---
 
@@ -25,9 +25,9 @@ When launching JupyterLab in EOxHub, you will be asked to choose a **user profil
 
 These are examples of common profiles based on the chosen subscription plan:
 
-- **Trial Profile**: Ideal for lightweight exploration and testing, usually avavilable in workshop settings or trials
+- **Trial Profile**: Ideal for lightweight exploration and testing, usually available in workshop settings or trials
 - **Standard Profile**: Recommended for moderate EO processing
-- **Large Profile**: For heavy workloads (model training, large-scale analysis) or usage of GPPU
+- **Large Profile**: For heavy workloads (model training, large-scale analysis) or GPU usage
 
 If your use case requires more resources, longer runtimes or GPU, please reach out to request a **custom setup**.
 
