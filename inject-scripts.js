@@ -20,10 +20,11 @@ const SERVICE_MAPPING = {
     "Argo": ["argo-workflows-server"],
     "Headless Execution": ["pygeoapi-eoxhub-pygeoapi-eoxhub"],
     "Credentials Manager": ["credentials-manager"],
-    "eoAPI": ["eoapi-rw-stac", "eoapi-rw-raster", "eoapi-rw-vector", ],
+    "eoAPI": ["eoapi-rw-stac", "eoapi-rw-raster", "eoapi-rw-vector"],
     "Dask Dashboard": ["dask-gateway-dashboard"],
     "Publishing Dashboard": ["eodash"],
-    "Container Registry": ["zot"]
+    "Container Registry": ["zot"],
+    "MLflow": ["mlflow"]
 };
 
 // APPS THAT SHOULD NOT BE GREYED OUT, JUST WARNED
