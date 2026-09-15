@@ -52,7 +52,9 @@ Inside the call you can specify:\
 - **parameters** to be overwritten by the execution\
 - **full path** to the notebook \
 \
-Optionally, it is possible to include resource limits, like CPU or RAM.\
+Optionally, it is possible to include resource limits, like CPU or RAM.
+
+Cpu/memory limits can not exceed the current workspace limits from the chosen plan. The current utilization of the resource limits can be seen in the workspace root page on the visualization gauges. \
 \
 This request can be sent via any application the user prefers, not just directly with `curl`.\
 \
@@ -67,7 +69,12 @@ curl --include \\ \
 "kernel": "{full-kernel-name}",\
 "parameters_json":{\
 "a": "1",\
-"b": "2"\
+"b": "2",\
+"cpu_requests": "0.4",\
+"cpu_limit": "0.5",\
+"mem_requests": "2G",\
+"mem_limit": "4G",\
+"node_purpose": "user"\
 }\
 }\
 }'
