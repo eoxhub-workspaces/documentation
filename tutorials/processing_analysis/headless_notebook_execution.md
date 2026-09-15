@@ -67,7 +67,12 @@ curl --include \\ \
 "kernel": "{full-kernel-name}",\
 "parameters_json":{\
 "a": "1",\
-"b": "2"\
+"b": "2",\
+"cpu_requests": "0.4",\
+"cpu_limit": "0.5",\
+"mem_requests": "2G",\
+"mem_limit": "4G",\
+"node_purpose": "user"\
 }\
 }\
 }'
