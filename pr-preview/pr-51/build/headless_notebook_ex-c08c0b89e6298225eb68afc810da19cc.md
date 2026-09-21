@@ -47,9 +47,9 @@ Inside this folder, the structure can be arbitrary - separated into many other f
 
 \
 8\. To trigger the **headless execution**, you need to send a request to a specific endpoint. \
-Inside the call you can specify:\
-- a specific **kernel** (if not specified, it will automatically use the same kernel which was saved with the notebook), the input should be the **full kernel name**\
-- **parameters** to be overwritten by the execution\
+Inside the call you can specify:
+- a specific **kernel** (if not specified, it will automatically use the same kernel which was saved with the notebook), the input should be the **full kernel name**
+- **parameters** to be overwritten by the execution
 - **full path** to the notebook \
 \
 Optionally, it is possible to include resource limits, like CPU or RAM.
@@ -60,7 +60,7 @@ This request can be sent via any application the user prefers, not just directly
 \
 Here is an **example** call using curl:\
 \
-curl --include \\ \
+curl --include \
 --request POST 'https://pygeoapi-eoxhub.{your-workspace-url}/processes/execute-notebook/jobs' \
 --header 'Content-Type: application/json' \
 --data-raw '{\
@@ -78,6 +78,8 @@ curl --include \\ \
 }\
 }\
 }'
+
+The **full-kernel-name** for an example situation with conda kernel: **your-kernel** and workspace **your-workspace-url** would be: **conda-env-{your-workspace-url}-{your-workspace-url}-{your-kernel}-py**.
 
 \
 9\. Executed notebooks and their results can be found in the sub-folder **job-output**, in the same location as the originating notebooks.\
