@@ -79,6 +79,12 @@ Notebooks can use [MLflow](mlflow.md) to record experiment parameters, metrics, 
 
 ---
 
+## VS Code Remote Tunnels
+
+You can securely connect your local VS Code instance directly to your running JupyterLab workspace using [VS Code Remote Tunnels](vscode_tunnels.md). This allows you to work, run, and debug code locally in your preferred environment while leveraging the workspace's high-performance resources and custom pre-configured libraries.
+
+---
+
 ## Related tutorials
 
 - [Launch QGIS from JupyterLab](../tutorials/processing_analysis/qgis_tutorial.md)
