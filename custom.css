@@ -1,0 +1,9 @@
+/* custom.css */
+
+/* Sizing and tight margins for landing page card icons */
+.card-icon {
+  width: 80px !important;
+  max-width: 80px !important;
+  display: block !important;
+  margin: -2px auto -12px auto !important;
+}
