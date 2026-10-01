@@ -7,3 +7,19 @@
   display: block !important;
   margin: -2px auto -12px auto !important;
 }
+
+/* Center card titles and headers ONLY within the 'What Would You Like to Do?' section */
+.action-grid .sd-card-title,
+.action-grid .myst-card-title,
+.action-grid .card-title,
+.action-grid .sd-card-header,
+.action-grid .myst-card-header,
+.action-grid .card-header,
+.action-grid .sd-card-title *,
+.action-grid .myst-card-title * {
+  text-align: center !important;
+  justify-content: center !important;
+  display: flex !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}

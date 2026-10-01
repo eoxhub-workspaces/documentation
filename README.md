@@ -7,6 +7,7 @@ Whether you are building an algorithm, generating results, providing a reusable 
 ## What Would You Like to Do?
 
 ::::{grid} 1 1 2 2
+:class: action-grid
 
 :::{card} Algorithm Development
 :url: use_cases/algorithm_development.md
