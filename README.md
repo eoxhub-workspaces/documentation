@@ -11,7 +11,10 @@ Whether you are building an algorithm, generating results, providing a reusable 
 :::{card} Algorithm Development
 :url: use_cases/algorithm_development.md
 
-![Algorithm Development](use_cases/assets/usecase-algorithm-development.svg)
+```{image} use_cases/assets/usecase-algorithm-development.svg
+:align: center
+:class: card-icon
+```
 
 Explore data, experiment with new methods, and develop reproducible geospatial algorithms.
 
@@ -21,7 +24,10 @@ Explore data, experiment with new methods, and develop reproducible geospatial a
 :::{card} Result Generation
 :url: use_cases/result_generation.md
 
-![Result Generation](use_cases/assets/usecase-result-generation.svg)
+```{image} use_cases/assets/usecase-result-generation.svg
+:align: center
+:class: card-icon
+```
 
 Run algorithms consistently on demand, on a schedule, or as part of a larger processing workflow.
 
@@ -31,7 +37,10 @@ Run algorithms consistently on demand, on a schedule, or as part of a larger pro
 :::{card} Algorithm as a Service
 :url: use_cases/algorithm_as_a_service.md
 
-![Algorithm as a Service](use_cases/assets/usecase-algorithm-as-a-service.svg)
+```{image} use_cases/assets/usecase-algorithm-as-a-service.svg
+:align: center
+:class: card-icon
+```
 
 Turn an algorithm into a reusable processing capability for other users, applications, and systems.
 
@@ -41,7 +50,10 @@ Turn an algorithm into a reusable processing capability for other users, applica
 :::{card} Publish Insights
 :url: use_cases/publish_insights.md
 
-![Publish Insights](use_cases/assets/usecase-publish-insights.svg)
+```{image} use_cases/assets/usecase-publish-insights.svg
+:align: center
+:class: card-icon
+```
 
 Communicate results through interactive dashboards, maps, charts, and structured data stories.
 
