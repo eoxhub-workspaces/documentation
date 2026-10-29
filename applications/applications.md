@@ -14,6 +14,7 @@ The applications available in a particular Workspace depend on its configuration
 - **[QGIS](qgis.md)** provides a browser-based desktop environment for interactively exploring, visualizing, editing, and processing geospatial data.
 - **[MLflow](mlflow.md)** records machine-learning experiments and helps compare parameters, metrics, models, and other outputs.
 - **[Dask](dask.md)** scales Python analysis across parallel or distributed computing resources.
+- **[R](r.md)** alternative programming language support.
 - **[Conda Store](conda_store.md)** creates reproducible software environments and manages the dependencies required by an algorithm.
 - **[File Browser](file_browser.md)** provides access to input data, notebooks, scripts, and generated files stored within the Workspace.
 - **[Credentials Manager](secret_manager.md)** securely provides credentials for protected data sources, APIs, and cloud storage.

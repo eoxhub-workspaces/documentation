@@ -26,6 +26,7 @@ sections:
           - file: applications/example_notebooks
           - file: applications/dask
           - file: applications/vscode_tunnels
+          - file: applications/r
       - file: applications/mlflow
       - file: applications/narrative_editor
       - file: applications/publishing_dashboard
