@@ -10,6 +10,7 @@ This approach allows your logic to be reused consistently, integrated into dashb
 
 - **[Container Registry](../applications/container_registry.md)** stores versioned container images containing the algorithm and its required dependencies.
 - **[Argo Workflows](../applications/argo.md)** executes the containerized algorithm as a scalable, repeatable processing workflow.
+- **[Argo Versioning](../applications/argo_versioning.md)** provides version control, collaborative access modes, and profile management for workflow definitions.
 - **[eoAPI](../applications/eoapi.md)** exposes data through standardized STAC interface so they can be discovered and executed by other applications.
 - **[Headless Execution](../applications/headless_execution.md)** provides an interface for triggering processing jobs and inspecting their status, parameters, and outputs.
 - **[Publishing Dashboard](../applications/publishing_dashboard.md)** allows users to provide parameters, trigger an algorithm, and explore its generated results through a web interface.

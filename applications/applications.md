@@ -19,6 +19,7 @@ The applications available in a particular Workspace depend on its configuration
 - **[File Browser](file_browser.md)** provides access to input data, notebooks, scripts, and generated files stored within the Workspace.
 - **[Credentials Manager](secret_manager.md)** securely provides credentials for protected data sources, APIs, and cloud storage.
 - **[Container Registry](container_registry.md)** stores versioned container images when an algorithm is ready to be packaged for reproducible execution.
+- **[Argo Versioning](argo_versioning.md)** tracks workflow changes, execution history, peak resource usage, and configures environment profiles.
 
 ## Result Generation
 
@@ -27,6 +28,7 @@ The applications available in a particular Workspace depend on its configuration
 - **[JupyterLab](jupyterlab.md)** can be used to execute and validate processing interactively before moving to automated execution.
 - **[Dask](dask.md)** scales Python analysis across parallel or distributed computing resources.
 - **[Argo Workflows](argo.md)** provides scalable and repeatable execution pipelines for processing larger volumes of data.
+- **[Argo Versioning](argo_versioning.md)** manages version history, latest workflow runs, peak resource usage, and profile configurations.
 - **[Headless Execution](headless_execution.md)** runs parameterized notebooks or workflows without direct user interaction and records their jobs and outputs.
 - **[Credentials Manager](secret_manager.md)** securely provides processing jobs with access to protected data and external services.
 - **[File Browser](file_browser.md)** provides access to input data and generated outputs stored within the Workspace.
@@ -37,6 +39,7 @@ The applications available in a particular Workspace depend on its configuration
 
 - **[Container Registry](container_registry.md)** stores versioned container images containing the algorithm and its dependencies.
 - **[Argo Workflows](argo.md)** executes containerized algorithms as scalable and repeatable processing workflows.
+- **[Argo Versioning](argo_versioning.md)** provides version control, collaborative access modes, and profile logic for workflow definitions.
 - **[eoAPI](eoapi.md)** provides standardized API access to data and processing capabilities.
 - **[Headless Execution](headless_execution.md)** enables parameterized processing jobs to be triggered and monitored without opening the original development environment.
 - **[Publishing Dashboard](publishing_dashboard.md)** can provide an interactive interface where users select parameters, trigger processing, and explore generated results.

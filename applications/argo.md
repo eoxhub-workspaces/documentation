@@ -68,6 +68,10 @@ name: argo_past_runs_statistics
 Argo Workflow Server built in resource usage metrics
 ```
 
+## Workflow Versioning & Management
+
+To track changes to workflow definitions over time, inspect peak resource usage, and collaborate across team members, see **[Argo Versioning](argo_versioning.md)**.
+
 ## Related use cases
 
 - [Generate Results](../use_cases/result_generation.md)
