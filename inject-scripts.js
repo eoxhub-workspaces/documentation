@@ -18,6 +18,7 @@ const SERVICE_MAPPING = {
     "Publishing Dashboard": ["publishing"],
     "Narrative Editor": ["narratives-git-clerk", "git-clerk"],
     "Argo": ["argo-workflows-server"],
+    "Argo Versioning": ["gitargo"],
     "Headless Execution": ["pygeoapi-eoxhub-pygeoapi-eoxhub"],
     "Credentials Manager": ["credentials-manager"],
     "eoAPI": ["eoapi-rw-stac", "eoapi-rw-raster", "eoapi-rw-vector"],
