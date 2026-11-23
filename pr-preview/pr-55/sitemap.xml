@@ -86,6 +86,9 @@
     <loc>http://localhost:3000/headless-notebook-execution</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/argo-versioning-1</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/publishing-workflow-tutorial</loc>
   </url>
   <url>
