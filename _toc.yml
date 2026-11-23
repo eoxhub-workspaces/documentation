@@ -43,6 +43,7 @@ sections:
         sections:
           - file: tutorials/processing_analysis/qgis_tutorial
           - file: tutorials/processing_analysis/headless_notebook_execution
+          - file: tutorials/processing_analysis/argo_versioning
       - title: Publishing Data
         sections:
           - file: tutorials/publishing_data/publishing-workflow-tutorial
