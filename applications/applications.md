@@ -19,7 +19,6 @@ The applications available in a particular Workspace depend on its configuration
 - **[File Browser](file_browser.md)** provides access to input data, notebooks, scripts, and generated files stored within the Workspace.
 - **[Credentials Manager](secret_manager.md)** securely provides credentials for protected data sources, APIs, and cloud storage.
 - **[Container Registry](container_registry.md)** stores versioned container images when an algorithm is ready to be packaged for reproducible execution.
-- **[Argo Versioning](argo_versioning.md)** tracks workflow changes, execution history, peak resource usage, and configures environment profiles.
 
 ## Result Generation
 
