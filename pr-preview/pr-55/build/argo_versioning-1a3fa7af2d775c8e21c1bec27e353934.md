@@ -1,10 +1,15 @@
 # Creating and Editing Workflows in Argo Versioning
 
+**What you’ll accomplish:** Create an example argo workflow, save it, execute it and see resource consumption.  
+**Applications used:** [Argo Versioning](../../applications/argo_versioning.md) 
+**Estimated time:** 5-10 minutes  
+**Before you start:** You need access to a Workspace where Argo Versioning is enabled.  
+
 Learn how to build, customize, and track changes to your workflows using the Argo Versioning interface. This guide demonstrates how to create a new process, review task outputs, and see version history to ensure your automation runs exactly as intended.
 
 1\. Navigate to your EOxHub Workspace and open Argo Versioning
 
-![](https://colony-recorder.s3.us-west-1.amazonaws.com/files/2026-11-23/b2e7eb78-6df5-49a2-a324-f615fb996a5a/action-00f18017399e4c9b9fff3a7c79277689_9839e99661e9407196227cbeb8e724a8_text_export.jpeg)
+![](https://colony-recorder.s3.us-west-1.amazonaws.com/files/2026-11-23/b2e7eb78-6df5-49a2-a324-f615fb996a5a/action-00f18017399e4c9b9fff3a7c79277689_0b8aad4b0a1d481bbe50a905457d965a_text_export.jpeg)
 
 
 #### Workflow Setup
@@ -30,7 +35,7 @@ Learn how to build, customize, and track changes to your workflows using the Arg
 ![](https://colony-recorder.s3.us-west-1.amazonaws.com/files/2026-11-23/f2a1088c-0f61-49f1-89aa-3ed3f5bcae7f/action-a62b4f10a6034f3a966288de11076b27_bb542929e8284ba9b1fe9107612818ff_text_export.jpeg)
 
 
-6\. Now a pre-populated workflow definition file will be shown in the editor. You can change this to fit the workflow you would like to run.
+6\. Now a pre-populated workflow definition file will be shown in the editor. You can change this to fit the workflow you would like to run. (If you want to use [Headless Execution](../../applications/headless_execution.md) make sure to leave the `entrypoint` as `execute`)
 
 ![](https://colony-recorder.s3.us-west-1.amazonaws.com/files/2026-11-23/7f695ab3-bb7c-4fc2-ab55-2d8e3630b1f1/action-56e821a518f44607a24d58b555529aa6_d09ce97c8d3a45dab065ee7d13eb2e2c_text_export.jpeg)
 
