@@ -1,7 +1,7 @@
 # Creating and Editing Workflows in Argo Versioning
 
 **What you’ll accomplish:** Create an example argo workflow, save it, execute it and see resource consumption.  
-**Applications used:** [Argo Versioning](../../applications/argo_versioning.md) 
+**Applications used:** [Argo Versioning](../../applications/argo_versioning.md)   
 **Estimated time:** 5-10 minutes  
 **Before you start:** You need access to a Workspace where Argo Versioning is enabled.  
 
