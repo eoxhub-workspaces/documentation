@@ -1,6 +1,6 @@
 # Argo Versioning
 
-**Argo Versioning** provides version management, change tracking, and streamlined configuration for [Argo Workflows](argo.md) in EOxHub Workspaces. It is built on the open-source software [gitargo](https://github.com/eoxhub-workspaces/gitargo).
+**Argo Versioning** provides version management, change tracking, and streamlined configuration for [Argo Workflows](argo.md) in EOxHub Workspaces. It is built on the open-source software [gitargo](https://github.com/eoxhub-workspaces/gitargo) developed by EOX.
 
 After using and providing standard Argo UI within EOxHub workspaces, one larger limitation we found was how users could keep track of changes to their workflow definitions. In a collaborative environment, it was also difficult to know if a colleague had changed something, or what exactly they had changed. That is why we developed the open-source software gitargo, which is made available as **Argo Versioning** to highlight exactly that aspect.
 
@@ -23,7 +23,7 @@ Argo Versioning workflow definition diff comparison view
 Argo Versioning tries to provide all aspects needed for working with workflows throughout their lifecycle:
 
 ### Workflow Versioning & Change History
-As illustrated in {numref}`argo_versioning_history` and {numref}`argo_versioning_diffview`, Argo Versioning maintains a complete audit trail of workflow definitions. Users can inspect past versions, track who modified a workflow, compare differences between versions in the diff view, and revert to previous states when necessary.
+As illustrated in {numref}`argo_versioning_history` and {numref}`argo_versioning_diffview`, Argo Versioning maintains a complete audit trail of workflow definitions using git. Users can inspect past versions, track who modified a workflow, compare differences between versions in the diff view, and revert to previous states when necessary.
 
 ### Execution Tracking & Status
 Users can monitor the latest workflow runs directly within the application interface. As shown in {numref}`argo_versioning_runs` and {numref}`argo_versioning_overview`, the run history provides real-time status updates, step-by-step execution logs, and output details for ongoing and completed executions.
